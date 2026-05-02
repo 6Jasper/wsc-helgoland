@@ -1,60 +1,53 @@
-import PageHero from "@/components/PageHero";
-import Link from "next/link";
+import { PageHero } from "@/components/ui/PageHero";
+import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata = { title: "Arbeitsdienst" };
+
+const SAISON = [
+  { name: "Frühjahr", body: "Stege wieder in Form bringen, Boote auswassern, Reparaturen, was den Winter nicht überstanden hat." },
+  { name: "Saison", body: "Hafendienst, Veranstaltungsbetreuung, alles was während der Liege-Saison anfällt." },
+  { name: "Winter", body: "Werkstatt, Bootshalle, Inventur, Material, Bauten." },
+];
 
 export default function ArbeitsdienstPage() {
   return (
     <>
       <PageHero
-        title="Arbeitsdienst."
-        lead="Der Verein lebt von denen, die mitanpacken. Stege, Clubhaus, Bootshalle und Inventar werden in großen Teilen ehrenamtlich instand gehalten."
+        title={<>Wer aktiv ist, <span style={{ fontWeight: 600 }}>packt mit an.</span></>}
+        lead="Der WSCH funktioniert ehrenamtlich. Stege, Clubhaus, Bootshalle, Werkstatt und Inventar werden in großen Teilen von Mitgliedern selbst instand gehalten."
         image="/img/wsch_liegeplatzueberblick.jpg"
-        alt="WSCH Liegeplätze und Anlage"
+        alt="WSCH Liegeplätze"
+        height="medium"
       />
 
-      <section className="section">
-        <div className="container-x grid gap-10 lg:grid-cols-[2fr_1fr]">
-          <div className="prose-zd">
-            <span className="pill">Grundsatz</span>
-            <h2 className="mt-4 text-3xl">Wer aktives Mitglied ist, packt mit an.</h2>
-            <p className="mt-5">
-              Der WSCH funktioniert ehrenamtlich. Stege, Clubhaus, Bootshalle, Werkstatt
-              und Inventar werden in großen Teilen von Mitgliedern selbst instand
-              gehalten. Aktive Mitglieder leisten daher pro Jahr Arbeitsdienst.
-            </p>
+      <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
+        <div className="max-w-container mx-auto grid gap-14 lg:grid-cols-[1fr_1.4fr]">
+          <Reveal variant="cinematic">
+            <div className="lg:sticky lg:top-32">
+              <h2 className="m-0 text-white font-light" style={{ fontSize: "clamp(30px, 3.8vw, 50px)", lineHeight: 1.08, letterSpacing: "-.02em" }}>
+                Drei <span className="font-bold">Phasen.</span>
+              </h2>
+              <p className="body-copy mt-6">
+                Was getan wird, hängt davon ab, wann es getan wird. Frühjahr, Saison, Winter. Aktive Mitglieder leisten pro Jahr
+                Arbeitsdienst, wer keine Zeit hat, kann ablösen.
+              </p>
+              <p className="body-copy mt-4 text-[14px] text-text-dim">
+                Die konkrete Pflichtstundenzahl, der Ablösesatz und Befreiungsregelungen werden derzeit überarbeitet und folgen.
+              </p>
+            </div>
+          </Reveal>
 
-            <h3 className="mt-10 text-2xl">Saison</h3>
-            <ul className="mt-3 space-y-2 text-brand-stone/80">
-              <li>· <strong className="text-brand-deep">Frühjahr.</strong> Stege, Boote auswassern, Reparaturen.</li>
-              <li>· <strong className="text-brand-deep">Saison.</strong> Hafendienst, Veranstaltungsbetreuung.</li>
-              <li>· <strong className="text-brand-deep">Winter.</strong> Werkstatt, Bootshalle, Inventur, Material, Bauten.</li>
-            </ul>
-
-            <h3 className="mt-10 text-2xl">Ablöse</h3>
-            <p className="mt-3">
-              Wer keine Zeit oder Möglichkeit hat, kann den Arbeitsdienst über eine
-              Pauschale ablösen. Die genauen Stundensätze und Pflichtstunden sind in der
-              Arbeitsdienstordnung des Vereins geregelt.
-            </p>
-
-            <p className="mt-6 text-sm text-brand-stone/60">
-              Hinweis: Die konkrete Pflichtstundenzahl, der Ablösesatz und die
-              Befreiungsregelungen werden derzeit überarbeitet und folgen.
-            </p>
+          <div className="space-y-12">
+            {SAISON.map((s, i) => (
+              <Reveal key={s.name} variant="cinematic" delay={i * 0.05}>
+                <div className="border-t border-border-subtle pt-8">
+                  <div className="text-accent-tide text-[12px] tracking-eyebrowWide uppercase">{String(i + 1).padStart(2, "0")}</div>
+                  <h3 className="mt-3 text-white font-semibold text-[24px] md:text-[30px] tracking-tightish">{s.name}</h3>
+                  <p className="body-copy mt-4 max-w-xl">{s.body}</p>
+                </div>
+              </Reveal>
+            ))}
           </div>
-
-          <aside className="space-y-4 lg:sticky lg:top-24 self-start">
-            <div className="rounded-2xl bg-brand-deep p-6 text-brand-sand">
-              <div className="text-xs uppercase tracking-[0.2em] text-brand-sand/60">Koordination</div>
-              <p className="mt-2 text-sm text-brand-sand/80">Termine werden über den Verein angekündigt. Eintragung verbindlich.</p>
-            </div>
-            <div className="card">
-              <div className="text-xs uppercase tracking-[0.18em] text-brand-deep/60">Anfragen</div>
-              <p className="mt-2 text-sm text-brand-stone/75">über die Vereinsadresse.</p>
-              <Link href="/kontakt" className="mt-3 inline-block text-sm font-medium text-brand-sea">Kontakt →</Link>
-            </div>
-          </aside>
         </div>
       </section>
     </>

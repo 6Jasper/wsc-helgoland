@@ -1,43 +1,44 @@
-import PageHero from "@/components/PageHero";
+import { PageHero } from "@/components/ui/PageHero";
+import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata = { title: "Hafenregeln" };
 
-const sections = [
+const SECTIONS = [
   {
     title: "Anlauf und Festmachen",
     items: [
-      "Südhafen: Anlauf nur nach Vorabstimmung. Unreines Gebiet, Befahren auf eigene Gefahr und nur nach Einführung durch ein erfahrenes Vereinsmitglied.",
-      "Nordosthafen: freie Plätze können in der Regel belegt werden. Beim Hafenmeister melden.",
+      "Im Südhafen nur nach Vorabstimmung. Unreines Becken, Befahren auf eigene Gefahr und nur nach Einführung durch ein erfahrenes Mitglied.",
+      "Im Nordosthafen können freie Plätze in der Regel belegt werden. Beim Hafenmeister melden.",
       "Päckchenbildung ist nicht vorgesehen.",
-      "Maximalgeschwindigkeit im Hafen: 3 Knoten. Keine Wellen.",
+      "Maximalgeschwindigkeit drei Knoten. Keine Wellen.",
     ],
   },
   {
-    title: "Verhalten im Hafen",
+    title: "Im Hafen",
     items: [
-      "Nachtruhe ab 22:00 Uhr.",
+      "Nachtruhe ab 22 Uhr.",
       "Generatoren sind nicht zulässig.",
+      "Lackieren und Schleifen am Liegeplatz nicht erlaubt.",
+      "Mast legen oder stellen findet nicht im Hafen statt.",
       "Keine besonderen Regelungen für Hunde.",
-      "Lackier- und Schleifarbeiten im Hafen sind nicht erlaubt.",
-      "Mast legen oder stellen ist nicht erlaubt.",
     ],
   },
   {
     title: "Müll, Strom, Wasser",
     items: [
       "Müllentsorgung über das Mülltrennsystem am Sanitärcontainer.",
-      "Strom: Stromsäulen mit Münzeinwurf, im Südhafen einige, im Nordosthafen wenige. Pauschal abgerechnet.",
+      "Strom über Münzeinwurf, im Süd- und Nordosthafen jeweils einige Säulen. Pauschal abgerechnet.",
       "Wasser ist nicht an allen Stegen verfügbar.",
-      "Diesel an der Bunkerstation Jörn Rickmers im Binnenhafen, an den Hummerbuden.",
+      "Diesel an der Bunkerstation Jörn Rickmers im Binnenhafen, vor den Hummerbuden.",
     ],
   },
   {
     title: "Sicherheit",
     items: [
-      "Im Notfall 110 (Polizei) oder 112 (Feuerwehr / Rettung) wählen.",
-      "Seenotfall: DGzRS, UKW Kanal 16.",
+      "Im Notfall 110 oder 112 wählen.",
+      "Seenot über DGzRS, UKW Kanal 16.",
       "Im Brandfall Hafenmeister benachrichtigen, dann 112.",
-      "Tauchen im Hafen nur mit Genehmigung des Hafenmeisters.",
+      "Tauchen im Hafen nur mit Genehmigung.",
     ],
   },
 ];
@@ -46,48 +47,39 @@ export default function RegelnPage() {
   return (
     <>
       <PageHero
-        title="Regeln, die für alle gelten."
-        lead="Was im Hafen gilt, gilt für alle. Die offizielle Hafenordnung ist in Arbeit, hier finden Sie die wichtigsten Punkte."
+        title={<>Was im Hafen gilt, <span style={{ fontWeight: 600 }}>gilt für alle.</span></>}
+        lead="Die offizielle Hafenordnung wird derzeit überarbeitet. Bis sie steht: hier die Punkte, die im Alltag zählen."
         image="/img/wsch_topdown.jpg"
         alt="WSCH Steganlage von oben"
+        height="medium"
       />
 
-      <section className="section">
-        <div className="container-x grid gap-10 lg:grid-cols-[1fr_2fr]">
-          <aside className="lg:sticky lg:top-24 self-start">
-            <div className="rounded-2xl bg-brand-deep p-6 text-brand-sand">
-              <div className="text-xs uppercase tracking-[0.2em] text-brand-sand/60">Inhalt</div>
-              <ul className="mt-4 space-y-2 text-sm">
-                {sections.map((s, i) => (
-                  <li key={s.title}>
-                    <a href={`#${i}`} className="text-brand-sand/85 hover:text-brand-sand">
-                      {i + 1}. {s.title}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <p className="mt-4 text-xs text-brand-stone/60">
-              Die verbindliche Hafen- und Liegeplatzordnung wird derzeit überarbeitet und mit dem Liegeplatz übergeben.
-            </p>
-          </aside>
-
-          <div className="space-y-12">
-            {sections.map((s, i) => (
-              <div key={s.title} id={String(i)} className="scroll-mt-28">
-                <div className="text-xs uppercase tracking-[0.2em] text-brand-deep/60">Abschnitt {i + 1}</div>
-                <h2 className="mt-2 text-3xl">{s.title}</h2>
-                <ul className="mt-5 space-y-3">
+      <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
+        <div className="max-w-container mx-auto">
+          {SECTIONS.map((s, i) => (
+            <div key={s.title} className="grid gap-10 lg:grid-cols-[1fr_2fr] mb-20 md:mb-28 last:mb-0">
+              <Reveal variant="cinematic">
+                <div>
+                  <div className="text-text-dim text-[11px] tracking-eyebrowWide uppercase">{String(i + 1).padStart(2, "0")}</div>
+                  <h2 className="mt-4 m-0 text-white font-light" style={{ fontSize: "clamp(28px, 3.2vw, 42px)", lineHeight: 1.1, letterSpacing: "-.02em" }}>
+                    {s.title}
+                  </h2>
+                </div>
+              </Reveal>
+              <Reveal variant="cinematic" delay={0.1}>
+                <ul className="space-y-5">
                   {s.items.map((it, j) => (
-                    <li key={j} className="flex gap-3 rounded-xl border border-brand-deep/10 bg-white p-4 text-sm text-brand-stone/80">
-                      <span className="mt-0.5 inline-flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-deep text-[11px] text-brand-sand">{j + 1}</span>
+                    <li key={j} className="flex gap-5 text-text-body text-[16px] leading-relaxed border-t border-border-subtle pt-5">
+                      <span className="text-text-dim text-[12px] mt-[6px] flex-shrink-0 tracking-widest">
+                        {String(j + 1).padStart(2, "0")}
+                      </span>
                       <span>{it}</span>
                     </li>
                   ))}
                 </ul>
-              </div>
-            ))}
-          </div>
+              </Reveal>
+            </div>
+          ))}
         </div>
       </section>
     </>

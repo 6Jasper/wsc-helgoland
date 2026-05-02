@@ -1,71 +1,59 @@
-import { club } from "@/lib/nav";
-
 export const metadata = { title: "Impressum" };
 
 export default function ImpressumPage() {
   return (
-    <section className="section">
-      <div className="container-x max-w-3xl">
-        <h1 className="text-4xl">Impressum</h1>
-        <div className="mt-8 space-y-6 text-base leading-relaxed text-brand-stone/80">
+    <section className="bg-bg-primary pt-32 md:pt-40 pb-24 md:pb-32 px-6 md:px-14">
+      <div className="max-w-3xl mx-auto">
+        <h1 className="m-0 text-white font-light" style={{ fontSize: "clamp(40px, 5.4vw, 76px)", lineHeight: 1.05, letterSpacing: "-.02em" }}>
+          Impressum.
+        </h1>
+        <div className="mt-12 space-y-10 text-text-body text-[15px] leading-relaxed">
           <div>
-            <h2 className="text-xl text-brand-deep">Anbieter</h2>
-            <p className="mt-2">
-              {club.name}<br />
-              {club.address.street}<br />
-              {club.address.zip} {club.address.city}<br />
+            <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mb-3">Anbieter</div>
+            <p className="text-white">
+              Wassersportclub Helgoland e.V.<br />
+              Postfach 1125<br />
+              27498 Helgoland<br />
               Deutschland
             </p>
           </div>
-
           <div>
-            <h2 className="text-xl text-brand-deep">Vertretungsberechtigt</h2>
-            <p className="mt-2">
+            <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mb-3">Vertretungsberechtigt</div>
+            <p>
               1. Vorsitzender: Kay Martens<br />
               2. Vorsitzender: Dieter Klings
             </p>
           </div>
-
           <div>
-            <h2 className="text-xl text-brand-deep">Registereintrag</h2>
-            <p className="mt-2">
-              Eintragung im Vereinsregister.<br />
-              Registergericht: {club.register.court}<br />
-              Registernummer: {club.register.number}
+            <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mb-3">Vereinsregister</div>
+            <p>
+              Amtsgericht Pinneberg<br />
+              VR 591 PI
             </p>
           </div>
-
           <div>
-            <h2 className="text-xl text-brand-deep">Steuernummer</h2>
-            <p className="mt-2">{club.taxNumber}</p>
+            <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mb-3">Steuernummer</div>
+            <p>18/291/72014</p>
           </div>
-
           <div>
-            <h2 className="text-xl text-brand-deep">Kontakt</h2>
-            <p className="mt-2">
-              E-Mail: <a href={`mailto:${club.email}`} className="underline">{club.email}</a>
+            <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mb-3">Kontakt</div>
+            <p>
+              <a href="mailto:kontakt@wsc-helgoland.de" className="text-white hover:text-accent-tide transition-colors">
+                kontakt@wsc-helgoland.de
+              </a>
             </p>
           </div>
-
           <div>
-            <h2 className="text-xl text-brand-deep">Verantwortlich für den Inhalt</h2>
-            <p className="mt-2">
-              Vorstand des {club.name}, Anschrift wie oben.
+            <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mb-3">Verantwortlich für den Inhalt</div>
+            <p>Vorstand des Wassersportclubs Helgoland e.V., Anschrift wie oben.</p>
+          </div>
+          <div>
+            <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mb-3">Haftungshinweis</div>
+            <p>
+              Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den
+              Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
             </p>
           </div>
-
-          <div>
-            <h2 className="text-xl text-brand-deep">Haftungshinweis</h2>
-            <p className="mt-2">
-              Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die
-              Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich
-              deren Betreiber verantwortlich.
-            </p>
-          </div>
-
-          <p className="text-xs text-brand-stone/60">
-            Hinweis: Vor Live-Schaltung bitte vom Vorstand prüfen lassen.
-          </p>
         </div>
       </div>
     </section>

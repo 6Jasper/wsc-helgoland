@@ -1,72 +1,62 @@
-import { club } from "@/lib/nav";
-
 export const metadata = { title: "Datenschutz" };
 
 export default function DatenschutzPage() {
   return (
-    <section className="section">
-      <div className="container-x max-w-3xl">
-        <h1 className="text-4xl">Datenschutzerklärung</h1>
-        <div className="mt-8 space-y-6 text-base leading-relaxed text-brand-stone/80">
+    <section className="bg-bg-primary pt-32 md:pt-40 pb-24 md:pb-32 px-6 md:px-14">
+      <div className="max-w-3xl mx-auto">
+        <h1 className="m-0 text-white font-light" style={{ fontSize: "clamp(40px, 5.4vw, 76px)", lineHeight: 1.05, letterSpacing: "-.02em" }}>
+          Datenschutz.
+        </h1>
+        <div className="mt-12 space-y-10 text-text-body text-[15px] leading-relaxed">
           <p>
-            Der Schutz personenbezogener Daten ist uns wichtig. Im Folgenden informieren wir
-            über Art, Umfang und Zweck der Verarbeitung personenbezogener Daten auf dieser
-            Website.
+            Der Schutz personenbezogener Daten ist uns wichtig. Im Folgenden informieren wir über Art, Umfang und Zweck der
+            Verarbeitung personenbezogener Daten auf dieser Website.
           </p>
 
           <div>
-            <h2 className="text-xl text-brand-deep">Verantwortlicher</h2>
-            <p className="mt-2">
-              {club.name}<br />
-              {club.address.street}, {club.address.zip} {club.address.city}<br />
-              E-Mail: <a href={`mailto:${club.email}`} className="underline">{club.email}</a>
+            <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mb-3">Verantwortlicher</div>
+            <p className="text-white">
+              Wassersportclub Helgoland e.V.<br />
+              Postfach 1125, 27498 Helgoland<br />
+              <a href="mailto:kontakt@wsc-helgoland.de" className="hover:text-accent-tide transition-colors">kontakt@wsc-helgoland.de</a>
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl text-brand-deep">Server-Logs</h2>
-            <p className="mt-2">
-              Beim Besuch dieser Website werden technisch notwendige Daten verarbeitet (IP-Adresse,
-              Datum und Uhrzeit, aufgerufene Seite, Browsertyp). Rechtsgrundlage ist Art. 6 Abs. 1
-              lit. f DSGVO. Diese Daten werden nach 14 Tagen gelöscht.
+            <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mb-3">Server-Logs</div>
+            <p>
+              Beim Besuch dieser Website werden technisch notwendige Daten verarbeitet (IP-Adresse, Datum und Uhrzeit, aufgerufene
+              Seite, Browsertyp). Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Diese Daten werden nach 14 Tagen gelöscht.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl text-brand-deep">Kontaktaufnahme</h2>
-            <p className="mt-2">
-              Bei Kontaktaufnahme per E-Mail oder Telefon werden die mitgeteilten Daten
-              ausschließlich zur Bearbeitung der Anfrage verwendet. Rechtsgrundlage ist Art. 6
-              Abs. 1 lit. b und f DSGVO.
+            <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mb-3">Kontaktaufnahme</div>
+            <p>
+              Bei Kontaktaufnahme per E-Mail werden die mitgeteilten Daten ausschließlich zur Bearbeitung der Anfrage verwendet.
+              Rechtsgrundlage ist Art. 6 Abs. 1 lit. b und f DSGVO.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl text-brand-deep">Karten-Einbindung</h2>
-            <p className="mt-2">
-              Auf der Kontaktseite binden wir eine Karte von OpenStreetMap ein. Beim Aufruf
-              kann eine Verbindung zu Servern der OpenStreetMap Foundation aufgebaut werden.
+            <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mb-3">Karten-Einbindung</div>
+            <p>
+              Auf der Kontaktseite binden wir eine Karte von OpenStreetMap ein. Beim Aufruf kann eine Verbindung zu Servern der
+              OpenStreetMap Foundation aufgebaut werden.
             </p>
           </div>
 
           <div>
-            <h2 className="text-xl text-brand-deep">Bilder</h2>
-            <p className="mt-2">
-              Diese Website verwendet vorübergehend Bilder von Unsplash (Unsplash Inc., USA).
-              Beim Laden kann eine Verbindung zu deren Servern aufgebaut werden.
+            <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mb-3">Ihre Rechte</div>
+            <p>
+              Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung, Datenübertragbarkeit und
+              Widerspruch. Anfragen richten Sie bitte an die oben genannte Kontaktadresse.
             </p>
           </div>
 
-          <div>
-            <h2 className="text-xl text-brand-deep">Ihre Rechte</h2>
-            <p className="mt-2">
-              Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der
-              Verarbeitung, Datenübertragbarkeit und Widerspruch. Anfragen richten Sie bitte an
-              die oben genannte Kontaktadresse.
-            </p>
-          </div>
-
-          <p className="text-xs text-brand-stone/60">Hinweis: Dies ist ein Platzhalter-Datenschutztext für die Entwicklungsphase. Vor Live-Schaltung anwaltlich prüfen lassen.</p>
+          <p className="text-xs text-text-dim">
+            Hinweis: Dieser Text ist eine Arbeitsfassung für die Entwicklungsphase. Vor Live-Schaltung anwaltlich prüfen lassen.
+          </p>
         </div>
       </div>
     </section>

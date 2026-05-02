@@ -1,6 +1,7 @@
-import PageHero from "@/components/PageHero";
 import Image from "next/image";
 import Link from "next/link";
+import { PageHero } from "@/components/ui/PageHero";
+import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata = { title: "Clubhaus" };
 
@@ -8,80 +9,56 @@ export default function ClubhausPage() {
   return (
     <>
       <PageHero
-        title="Das Clubhaus."
-        lead="Vereinsraum am Südhafen. Das Clubhaus dient ausschließlich Vereinszwecken und ist nicht öffentlich zugänglich."
+        title={<>Ein Haus für <span style={{ fontWeight: 600 }}>uns.</span></>}
+        lead="Vereinsraum am Südhafen. Kein Restaurant, kein Touristen-Stopp, keine Sanitäranlage für Tagesgäste. Treffpunkt für Mitglieder und ausdrücklich geladene Gäste."
         image="/img/wsch_clubhaus.jpg"
-        alt="WSCH Clubhaus am Südhafen mit Schriftzug"
+        alt="WSCH Clubhaus mit Vereinsschild"
       />
 
-      <section className="section">
-        <div className="container-x grid gap-12 lg:grid-cols-2 lg:items-center">
-          <div>
-            <span className="pill">Über das Haus</span>
-            <h2 className="mt-4 text-3xl sm:text-4xl">Vereinsanlage am Südhafen.</h2>
-            <p className="mt-5 max-w-prose text-base leading-relaxed text-brand-stone/80">
-              Das Clubhaus liegt direkt an der Vereinsanlage im Südhafen. Es ist
-              Treffpunkt für Mitglieder und Veranstaltungsort für vereinsinterne Termine.
-              Eine öffentliche Bewirtschaftung gibt es nicht.
-            </p>
-            <p className="mt-4 max-w-prose text-base leading-relaxed text-brand-stone/80">
-              Genutzt wird das Clubhaus für Mitgliederversammlungen, Crewabende während
-              der Regatten, Stammtische und vereinsinterne Treffen. Schlüsselausgabe und
-              Nutzung sind in der Hausordnung geregelt.
-            </p>
-            <Link href="/mitgliedschaft" className="btn-primary mt-7">
-              Mitglied werden
-            </Link>
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-3xl">
-            <Image
-              src="/img/wsch_anlagemitclubhaus.jpg"
-              alt="Clubhaus mit Vereinsanlage und Insel im Hintergrund"
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-            />
-          </div>
+      <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
+        <div className="max-w-container mx-auto grid gap-14 lg:grid-cols-2 lg:items-center">
+          <Reveal variant="cinematic">
+            <div>
+              <h2 className="m-0 text-white font-light" style={{ fontSize: "clamp(32px, 4vw, 56px)", lineHeight: 1.05, letterSpacing: "-.02em" }}>
+                Direkt an der <span className="font-bold">Steganlage.</span>
+              </h2>
+              <p className="body-copy mt-6 max-w-prose">
+                Das Clubhaus liegt an der Vereinsanlage im Südhafen, ein paar Schritte vom Steg entfernt. Genutzt wird es für
+                Mitgliederversammlungen, Crewabende vor und nach Regatten, Stammtische und vereinsinterne Treffen.
+              </p>
+              <p className="body-copy mt-4 max-w-prose">
+                Schlüsselausgabe und Nutzung sind in der Hausordnung geregelt. Anfragen zur Mitgliedschaft oder zu
+                Vereinskooperationen über die zentrale E-Mail.
+              </p>
+              <Link
+                href="/mitgliedschaft"
+                className="inline-flex items-center gap-3 mt-8 px-7 py-3 text-[15px] font-bold rounded-full bg-white text-black hover:bg-text-primary hover:translate-x-1 transition-all duration-300 group"
+              >
+                <span>Mitglied werden</span>
+                <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+              </Link>
+            </div>
+          </Reveal>
+          <Reveal variant="cinematic" delay={0.1}>
+            <div className="relative aspect-[4/3] overflow-hidden rounded">
+              <Image src="/img/wsch_anlagemitclubhaus.jpg" alt="Vereinsanlage mit Clubhaus, Insel im Hintergrund" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+            </div>
+          </Reveal>
         </div>
       </section>
 
-      <section className="section bg-white/60">
-        <div className="container-x grid gap-10 lg:grid-cols-2 lg:items-center">
-          <div className="lg:order-2 relative aspect-[4/3] overflow-hidden rounded-3xl">
-            <Image
-              src="/img/wsch_clubhaus3.jpg"
-              alt="Clubhaus mit Bootshalle aus der Luft"
-              fill
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              className="object-cover"
-            />
+      <section className="bg-bg-surface px-6 md:px-14 py-20 md:py-[120px]">
+        <div className="max-w-container mx-auto grid gap-3 md:gap-4 sm:grid-cols-3">
+          <div className="relative aspect-[4/5] overflow-hidden rounded sm:row-span-2">
+            <Image src="/img/wsch_clubhaus3.jpg" alt="Clubhaus mit Bootshalle aus der Luft" fill sizes="(min-width: 640px) 33vw, 100vw" className="object-cover" />
           </div>
-          <div>
-            <span className="pill">Hinweis</span>
-            <h2 className="mt-4 text-3xl">Nicht öffentlich.</h2>
-            <p className="mt-5 max-w-prose text-base leading-relaxed text-brand-stone/80">
-              Das Clubhaus ist keine Gastronomie. Es gibt keinen öffentlichen
-              Restaurantbetrieb, keine Sanitäranlage für Touristen, keine offenen
-              Veranstaltungen. Nutzung ist Vereinsmitgliedern und ausdrücklich geladenen
-              Gästen vorbehalten.
-            </p>
-            <p className="mt-4 max-w-prose text-base leading-relaxed text-brand-stone/80">
-              Anfragen zur Mitgliedschaft oder zur Nutzung im Rahmen einer Vereinskooperation
-              richten Sie bitte an die Vereinsadresse.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container-x grid gap-4 sm:grid-cols-3">
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl sm:col-span-2 sm:row-span-2 sm:aspect-[3/2]">
+          <div className="relative aspect-[4/3] overflow-hidden rounded sm:col-span-2">
             <Image src="/img/wsch_anlagemitclubhaus2.jpg" alt="Vereinsanlage mit Liegeplätzen" fill sizes="(min-width: 640px) 66vw, 100vw" className="object-cover" />
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+          <div className="relative aspect-[4/3] overflow-hidden rounded">
             <Image src="/img/wsch_clubhaus2.jpg" alt="Clubhaus von der Hafenseite" fill sizes="(min-width: 640px) 33vw, 100vw" className="object-cover" />
           </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+          <div className="relative aspect-[4/3] overflow-hidden rounded">
             <Image src="/img/wsch_topdown.jpg" alt="Steganlage von oben" fill sizes="(min-width: 640px) 33vw, 100vw" className="object-cover" />
           </div>
         </div>

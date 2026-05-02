@@ -1,19 +1,20 @@
-import PageHero from "@/components/PageHero";
+import { PageHero } from "@/components/ui/PageHero";
+import { Reveal } from "@/components/ui/Reveal";
 
-export const metadata = { title: "Vorstand & Ansprechpartner" };
+export const metadata = { title: "Vorstand" };
 
-const vorstand = [
-  { role: "1. Vorsitzender", name: "Kay Martens", area: "Gesamtverein, Außenvertretung" },
-  { role: "2. Vorsitzender", name: "Dieter Klings", area: "Stellvertretung, Spartenleitung Motorboot" },
-  { role: "Schatzmeisterin", name: "Monika van Freeden", area: "Beiträge, Buchhaltung, Förderanträge" },
-  { role: "Schriftführer / Schriftführerin", name: null, area: "Protokoll, Schriftverkehr, Mitgliederakten" },
-  { role: "Hafenwart", name: null, area: "Hafenbüro, Liegeplätze, Stege, Gastlieger" },
+const VORSTAND = [
+  { role: "1. Vorsitzender", name: "Kay Martens", area: "Gesamtverein, Außenvertretung." },
+  { role: "2. Vorsitzender", name: "Dieter Klings", area: "Stellvertretung, Spartenleitung Motorboot." },
+  { role: "Schatzmeisterin", name: "Monika van Freeden", area: "Beiträge, Buchhaltung, Förderanträge." },
+  { role: "Schriftführer", name: null, area: "Protokoll, Schriftverkehr, Mitgliederakten." },
+  { role: "Hafenwart", name: null, area: "Hafenbüro, Liegeplätze, Stege." },
 ];
 
-const sparten = [
-  { role: "Spartenleitung Motorbootsparte", name: "Dieter Klings" },
-  { role: "Spartenleitung Segelsparte", name: "Sönke Würtz" },
-  { role: "Technischer Leiter Segelsparte", name: "Helge van Freeden" },
+const SPARTEN = [
+  { role: "Spartenleitung Motorboot", name: "Dieter Klings" },
+  { role: "Spartenleitung Segeln", name: "Sönke Würtz" },
+  { role: "Technischer Leiter Segeln", name: "Helge van Freeden" },
   { role: "Verantwortlich Bootshalle", name: "Helge van Freeden" },
 ];
 
@@ -21,55 +22,53 @@ export default function VorstandPage() {
   return (
     <>
       <PageHero
-        title="Vorstand & Ansprechpartner."
-        lead="Ehrenamtlicher Vorstand und die Menschen, die im Hintergrund die Sachen am Laufen halten."
+        title={<>Wer den <span style={{ fontWeight: 600 }}>Verein führt.</span></>}
+        lead="Ehrenamtlicher Vorstand und die Menschen, die die Sparten am Laufen halten. Die Kontaktaufnahme läuft über die zentrale Vereinsadresse, persönliche E-Mails veröffentlichen wir nicht."
         image="/img/wsch_anlagemitclubhaus.jpg"
-        alt="WSCH Vereinsanlage am Südhafen"
+        alt="Vereinsanlage am Südhafen"
+        height="medium"
       />
 
-      <section className="section">
-        <div className="container-x">
-          <span className="pill">Vorstand</span>
-          <h2 className="mt-4 text-3xl">Wer den Verein führt.</h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {vorstand.map((p) => (
-              <div key={p.role} className="card flex flex-col">
-                <div className="text-xs uppercase tracking-[0.18em] text-brand-deep/60">{p.role}</div>
-                <div className="mt-2 font-display text-xl text-brand-deep">
-                  {p.name ?? <span className="text-brand-stone/40">noch zu besetzen</span>}
+      <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
+        <div className="max-w-container mx-auto">
+          <Reveal variant="cinematic">
+            <h2 className="m-0 text-white font-light max-w-3xl" style={{ fontSize: "clamp(30px, 3.8vw, 50px)", lineHeight: 1.08, letterSpacing: "-.02em" }}>
+              Vorstand.
+            </h2>
+          </Reveal>
+
+          <div className="mt-14 grid gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
+            {VORSTAND.map((p, i) => (
+              <Reveal key={p.role} variant="cinematic" delay={i * 0.05}>
+                <div className="border-t border-border-subtle pt-6">
+                  <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim">{p.role}</div>
+                  <div className="mt-3 text-white text-[24px] md:text-[28px] font-semibold tracking-tightish leading-tight">
+                    {p.name ?? <span className="text-text-dim font-light">noch zu besetzen</span>}
+                  </div>
+                  <p className="body-copy mt-3 text-[14px]">{p.area}</p>
                 </div>
-                <p className="mt-3 flex-1 text-sm text-brand-stone/75">{p.area}</p>
-              </div>
+              </Reveal>
             ))}
           </div>
-          <p className="mt-6 text-xs text-brand-stone/60">
-            Eine namentliche Kontaktaufnahme erfolgt über die Vereinsadresse. Persönliche E-Mail-Adressen
-            werden auf der Webseite nicht veröffentlicht.
-          </p>
         </div>
       </section>
 
-      <section className="section bg-white/60">
-        <div className="container-x">
-          <span className="pill">Sparten und Technik</span>
-          <h2 className="mt-4 text-3xl">Verantwortlichkeiten in den Sparten.</h2>
-          <div className="mt-8 overflow-hidden rounded-2xl border border-brand-deep/10">
-            <table className="w-full text-sm">
-              <thead className="bg-white/70 text-left text-xs uppercase tracking-[0.18em] text-brand-deep/70">
-                <tr>
-                  <th className="px-4 py-3">Funktion</th>
-                  <th className="px-4 py-3">Person</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-brand-deep/10 bg-white">
-                {sparten.map((a) => (
-                  <tr key={a.role}>
-                    <td className="px-4 py-3 text-brand-deep">{a.role}</td>
-                    <td className="px-4 py-3 text-brand-stone/80">{a.name}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+      <section className="bg-bg-surface px-6 md:px-14 py-20 md:py-[140px]">
+        <div className="max-w-container mx-auto">
+          <Reveal variant="cinematic">
+            <h2 className="m-0 text-white font-light max-w-3xl" style={{ fontSize: "clamp(28px, 3.4vw, 44px)", lineHeight: 1.1, letterSpacing: "-.02em" }}>
+              Sparten und <span className="font-bold">Technik.</span>
+            </h2>
+          </Reveal>
+          <div className="mt-12 max-w-3xl">
+            {SPARTEN.map((s, i) => (
+              <Reveal key={s.role} variant="cinematic" delay={i * 0.04}>
+                <div className="flex items-baseline justify-between border-t border-border-subtle py-6 gap-8">
+                  <div className="text-text-muted text-[14px] md:text-[15px]">{s.role}</div>
+                  <div className="text-white text-[16px] md:text-[18px] font-semibold tracking-tightish text-right">{s.name}</div>
+                </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>

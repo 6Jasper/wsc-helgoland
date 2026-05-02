@@ -1,45 +1,60 @@
-import PageHero from "@/components/PageHero";
 import Link from "next/link";
+import { PageHero } from "@/components/ui/PageHero";
+import { Reveal } from "@/components/ui/Reveal";
 
 export const metadata = { title: "Satzung" };
+
+const ECKDATEN = [
+  ["Name", "Wassersportclub Helgoland e.V."],
+  ["Sitz", "27498 Helgoland"],
+  ["Vereinsregister", "Amtsgericht Pinneberg, VR 591 PI"],
+  ["Geschäftsjahr", "Kalenderjahr"],
+  ["Sparten", "Segeln, Motorboot"],
+  ["Organe", "Vorstand, Spartenversammlungen, Mitgliederversammlung"],
+];
 
 export default function SatzungPage() {
   return (
     <>
       <PageHero
-        title="Satzung."
-        lead="Rechtsgrundlage des Wassersportclubs Helgoland e.V. Verbindlich ist die im Vereinsregister beim Amtsgericht Pinneberg hinterlegte Originalfassung."
+        title={<>Satzung.</>}
+        lead="Die Rechtsgrundlage des Vereins. Verbindlich ist die im Vereinsregister beim Amtsgericht Pinneberg hinterlegte Originalfassung."
         image="/img/wsch_anlagemitclubhaus.jpg"
-        alt="WSCH Vereinsanlage am Südhafen"
+        alt="Vereinsanlage am Südhafen"
+        height="medium"
       />
 
-      <section className="section">
-        <div className="container-x max-w-3xl">
-          <span className="pill">Hinweis</span>
-          <h2 className="mt-4 text-3xl">Aktuelle Fassung folgt.</h2>
-          <p className="mt-5 text-base leading-relaxed text-brand-stone/80">
-            Die aktuelle Satzung wird derzeit für die Veröffentlichung auf der Webseite
-            aufbereitet. Bis zur Bereitstellung gilt die im Vereinsregister beim
-            Amtsgericht Pinneberg hinterlegte Fassung als verbindlich.
-          </p>
-          <p className="mt-4 text-base leading-relaxed text-brand-stone/80">
-            Eckdaten zur Vereinsstruktur:
-          </p>
-          <ul className="mt-4 space-y-2 text-base text-brand-stone/80">
-            <li>· Name: Wassersportclub Helgoland e.V.</li>
-            <li>· Sitz: 27498 Helgoland</li>
-            <li>· Vereinsregister: Amtsgericht Pinneberg, VR 591 PI</li>
-            <li>· Geschäftsjahr: Kalenderjahr</li>
-            <li>· Sparten: Segelsparte, Motorbootsparte</li>
-            <li>· Organe: Vorstand, Spartenversammlungen, Mitgliederversammlung</li>
-          </ul>
+      <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
+        <div className="max-w-3xl mx-auto">
+          <Reveal variant="cinematic">
+            <p className="body-copy text-[17px]">
+              Eine vollständige Fassung der Satzung wird derzeit für die Veröffentlichung aufbereitet. Bis zur Bereitstellung
+              gilt die im Vereinsregister hinterlegte Fassung. Sie wird auf Anfrage zugeschickt.
+            </p>
+          </Reveal>
 
-          <p className="mt-8 text-base leading-relaxed text-brand-stone/80">
-            Eine vollständige Fassung erhalten Sie auf Anfrage.
-          </p>
-          <Link href="/kontakt" className="btn-primary mt-6">
-            Satzung anfragen
-          </Link>
+          <Reveal variant="cinematic" delay={0.1}>
+            <div className="mt-14">
+              {ECKDATEN.map(([k, v]) => (
+                <div key={k} className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 sm:gap-8 border-t border-border-subtle py-6">
+                  <div className="text-text-dim text-[12px] tracking-eyebrowWide uppercase">{k}</div>
+                  <div className="text-white text-[16px] md:text-[18px]">{v}</div>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal variant="cinematic" delay={0.15}>
+            <div className="mt-12">
+              <Link
+                href="/kontakt"
+                className="inline-flex items-center gap-3 px-7 py-3 text-[15px] font-bold rounded-full border border-border-strong text-text-primary hover:border-white hover:translate-x-1 transition-all duration-300 group"
+              >
+                <span>Satzung anfordern</span>
+                <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </section>
     </>
