@@ -84,7 +84,7 @@ export default function GastliegerPage() {
               <ul className="mt-8 space-y-4">
                 {RULES.map((r) => (
                   <li key={r} className="flex gap-4 text-text-body text-[15px]">
-                    <span className="mt-[10px] block h-px w-6 bg-text-dim flex-shrink-0" />
+                    <span className="mt-[2px] text-accent-tide font-semibold flex-shrink-0 w-5 text-center" aria-hidden>×</span>
                     <span className="leading-relaxed">{r}</span>
                   </li>
                 ))}

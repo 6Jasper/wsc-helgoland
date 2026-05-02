@@ -95,7 +95,7 @@ export function HomeFeatures() {
               />
               <div className="absolute inset-0 p-7 md:p-8 flex flex-col justify-end">
                 <h3 className="text-white text-[24px] md:text-[28px] font-semibold leading-tight tracking-tightish">{f.title}</h3>
-                <p className="mt-3 text-[14px] md:text-[15px] text-white/82 leading-relaxed max-w-[36ch]">{f.body}</p>
+                <p className="mt-3 text-[14px] md:text-[15px] text-white/85 leading-relaxed max-w-[36ch]">{f.body}</p>
                 <span className="mt-5 inline-flex items-center gap-2 text-[13px] font-semibold text-white group-hover:translate-x-1 transition-transform duration-300">
                   weiterlesen
                   <span className="transition-transform duration-300">→</span>

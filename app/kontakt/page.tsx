@@ -1,8 +1,44 @@
 import Image from "next/image";
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
+import { FAQAccordion, type FaqItem } from "@/components/ui/FAQAccordion";
 
 export const metadata = { title: "Kontakt und Anfahrt" };
+
+const FAQ: FaqItem[] = [
+  {
+    q: "Wie kann ich als Gastlieger einen Liegeplatz bekommen?",
+    a: "Im Südhafen ist eine Vorabstimmung erforderlich. Schreiben Sie uns vor der Abfahrt eine kurze E-Mail. Im Nordosthafen können Sie freie Plätze in der Regel direkt beim Hafenmeister vor Ort erfragen. Päckchenliegen ist nicht vorgesehen.",
+  },
+  {
+    q: "Warum darf man den Südhafen nicht eigenständig anlaufen?",
+    a: "Im Hafenbecken liegen Trümmer eines U-Boot-Bunkers aus dem Zweiten Weltkrieg. Der Bereich gilt als unrein. Aus diesem Grund führt ein erfahrenes Vereinsmitglied Sie beim Anlauf ein.",
+  },
+  {
+    q: "Was kostet der Liegeplatz?",
+    a: "Die Liegegebühren werden pauschal abgerechnet. Strom läuft über Münzeinwurf-Säulen. Die genauen Sätze nennt Ihnen der Hafenmeister vor Ort.",
+  },
+  {
+    q: "Wie kann ich Mitglied werden?",
+    a: "Über einen schriftlichen Aufnahmeantrag mit zwei Bürgen aus dem Verein. Über die Aufnahme entscheidet die zuständige Spartenversammlung. Die Bearbeitung dauert in der Regel zwei bis drei Monate. Ein Aufnahmegespräch oder ein Sportbootführerschein sind nicht erforderlich.",
+  },
+  {
+    q: "Gibt es im Clubhaus eine Gastronomie?",
+    a: "Nein. Das Clubhaus ist Vereinsraum für Mitgliederversammlungen, Crewabende und vereinsinterne Treffen. Es gibt keinen öffentlichen Restaurantbetrieb und keine Sanitäranlagen für Tagesgäste.",
+  },
+  {
+    q: "Was unterscheidet die Helgoländer Herbstregatta von der Nordseewoche?",
+    a: "Die Herbstregatta ist eine eintägige Wettfahrt um Insel und Düne, gewertet nach Yardstick, Anfang September. Ausrichter ist allein der WSC Helgoland. Die Nordseewoche ist eine mehrtägige Hochsee-Regatta zu Pfingsten, an der wir als einer von mehreren Vereinen mitwirken.",
+  },
+  {
+    q: "Bietet der WSC Helgoland einen Bootsservice oder eine Werft an?",
+    a: "Nein. Wir betreiben Stege, eine Bootshalle und eine Werkstatt für die Mitglieder. Reparatur- oder Servicedienste für Gastlieger werden über externe Anbieter auf der Insel abgewickelt.",
+  },
+  {
+    q: "Kann ich auf der Insel mein Auto mitnehmen?",
+    a: "Helgoland ist autofrei. Auf der Insel sind Sie zu Fuß, mit dem Fahrrad oder mit Elektrofahrzeugen unterwegs.",
+  },
+];
 
 export default function KontaktPage() {
   return (
@@ -16,7 +52,7 @@ export default function KontaktPage() {
       />
 
       <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
-        <div className="max-w-container mx-auto grid gap-14 lg:grid-cols-2">
+        <div className="max-w-container mx-auto grid gap-16 lg:gap-20 lg:grid-cols-2">
           <Reveal variant="cinematic">
             <div>
               <h2 className="m-0 text-text-primary font-light" style={{ fontSize: "clamp(30px, 3.8vw, 50px)", lineHeight: 1.08, letterSpacing: "-.02em" }}>
@@ -69,7 +105,32 @@ export default function KontaktPage() {
         </div>
       </section>
 
-      <section className="bg-bg-surface">
+      <section className="bg-bg-surface px-6 md:px-14 py-20 md:py-[140px]">
+        <div className="max-w-container mx-auto">
+          <Reveal variant="cinematic">
+            <div className="text-center max-w-3xl mx-auto">
+              <h2
+                className="m-0 text-text-primary font-light"
+                style={{ fontSize: "clamp(32px, 4vw, 56px)", lineHeight: 1.08, letterSpacing: "-.02em" }}
+              >
+                Häufige <span className="font-bold">Fragen.</span>
+              </h2>
+              <p className="body-copy mt-5">
+                Was wir am häufigsten gefragt werden, gesammelt an einem Ort. Sollte Ihre Frage hier nicht stehen, schreiben Sie
+                uns einfach.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal variant="cinematic" delay={0.1}>
+            <div className="mt-14 max-w-3xl mx-auto">
+              <FAQAccordion items={FAQ} />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="bg-bg-primary">
         <div className="max-w-container mx-auto px-6 md:px-14 py-16 md:py-[120px]">
           <Reveal variant="cinematic">
             <div className="overflow-hidden rounded shadow-soft">

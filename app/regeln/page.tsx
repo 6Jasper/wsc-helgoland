@@ -68,9 +68,7 @@ export default function RegelnPage() {
                 <ul className="space-y-5">
                   {s.items.map((it, j) => (
                     <li key={j} className="flex gap-5 text-text-body text-[16px] leading-relaxed border-t border-border-subtle pt-5">
-                      <span className="text-text-dim text-[12px] mt-[6px] flex-shrink-0 tracking-widest">
-                        {String(j + 1).padStart(2, "0")}
-                      </span>
+                      <span className="text-accent-tide font-semibold text-[16px] mt-[1px] flex-shrink-0 w-5 text-center" aria-hidden>×</span>
                       <span>{it}</span>
                     </li>
                   ))}

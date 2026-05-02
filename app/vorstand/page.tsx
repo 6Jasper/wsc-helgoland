@@ -56,11 +56,14 @@ export default function VorstandPage() {
       <section className="bg-bg-surface px-6 md:px-14 py-20 md:py-[140px]">
         <div className="max-w-container mx-auto">
           <Reveal variant="cinematic">
-            <h2 className="m-0 text-text-primary font-light max-w-3xl" style={{ fontSize: "clamp(28px, 3.4vw, 44px)", lineHeight: 1.1, letterSpacing: "-.02em" }}>
+            <h2
+              className="m-0 mx-auto text-text-primary font-light text-center"
+              style={{ fontSize: "clamp(28px, 3.4vw, 44px)", lineHeight: 1.1, letterSpacing: "-.02em" }}
+            >
               Sparten und <span className="font-bold">Technik.</span>
             </h2>
           </Reveal>
-          <div className="mt-12 max-w-3xl">
+          <div className="mt-12 mx-auto max-w-3xl">
             {SPARTEN.map((s, i) => (
               <Reveal key={s.role} variant="cinematic" delay={i * 0.04}>
                 <div className="flex items-baseline justify-between border-t border-border-subtle py-6 gap-8">
