@@ -7,8 +7,6 @@ const VORSTAND = [
   { role: "1. Vorsitzender", name: "Kay Martens", area: "Gesamtverein, Außenvertretung." },
   { role: "2. Vorsitzender", name: "Dieter Klings", area: "Stellvertretung, Spartenleitung Motorboot." },
   { role: "Schatzmeisterin", name: "Monika van Freeden", area: "Beiträge, Buchhaltung, Förderanträge." },
-  { role: "Schriftführer", name: null, area: "Protokoll, Schriftverkehr, Mitgliederakten." },
-  { role: "Hafenwart", name: null, area: "Hafenbüro, Liegeplätze, Stege." },
 ];
 
 const SPARTEN = [
