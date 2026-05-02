@@ -34,32 +34,9 @@ export default function KontaktPage() {
                 <span>kontakt@wsc-helgoland.de</span>
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </a>
-              <div className="mt-14 grid gap-10 sm:grid-cols-2">
-                <div>
-                  <div
-                    className="text-text-primary font-light tracking-tightish"
-                    style={{ fontSize: "clamp(34px, 3.6vw, 52px)", lineHeight: 1, letterSpacing: "-.025em" }}
-                  >
-                    110 <span className="text-text-dim font-light">·</span> 112
-                  </div>
-                  <div className="mt-4 h-px w-10 bg-accent-warm" />
-                  <p className="mt-4 text-text-body text-[14px] leading-relaxed">
-                    Polizei und Rettung. Erste Wahl, auch im Hafen.
-                  </p>
-                </div>
-                <div>
-                  <div
-                    className="text-text-primary font-light tracking-tightish"
-                    style={{ fontSize: "clamp(28px, 3vw, 44px)", lineHeight: 1.05, letterSpacing: "-.02em" }}
-                  >
-                    UKW <span className="font-bold">Kanal 16</span>
-                  </div>
-                  <div className="mt-4 h-px w-10 bg-accent-tide" />
-                  <p className="mt-4 text-text-body text-[14px] leading-relaxed">
-                    DGzRS Bremen. Seenotruf rund um die Uhr.
-                  </p>
-                </div>
-              </div>
+              <p className="mt-8 text-[13px] text-text-dim max-w-md">
+                In der Saison antworten wir in der Regel innerhalb weniger Tage, im Winter manchmal etwas später.
+              </p>
             </div>
           </Reveal>
 

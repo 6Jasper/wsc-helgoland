@@ -31,8 +31,8 @@ const HAEFEN: Hafen[] = [
   {
     name: "Südhafen",
     intro: "Hier liegt eine der beiden Vereinsanlagen des WSCH.",
-    image: "/img/wsch_suedhafen.jpg",
-    alt: "WSCH Steganlage im Südhafen",
+    image: "/img/wsch_suedhafenluftbild.jpg",
+    alt: "Südhafen Helgoland aus der Luft",
     body:
       "Schutzhafen mit der Hauptsteganlage des Vereins. Der Südhafen gilt als unrein: An der Stelle der heutigen Stege stand bis Kriegsende ein U-Boot-Bunker, dessen Trümmer bis heute im Hafenbecken liegen. Wer hier festmachen möchte, fährt nicht eigenständig ein, sondern wird von einem Mitglied geführt.",
     facts: [

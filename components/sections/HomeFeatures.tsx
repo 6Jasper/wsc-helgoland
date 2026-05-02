@@ -25,8 +25,8 @@ const FEATURES: Feature[] = [
     href: "/gastlieger",
     title: "Informationen für Gastlieger",
     body: "Helgoland ist keine Marina. Wir geben freie Plätze unserer Mitglieder frei. Was vor dem Anlauf zu wissen ist.",
-    image: "/img/wsch_suedhafen.jpg",
-    alt: "Südhafen mit WSCH Vereinsanlage",
+    image: "/img/wsch_liegeplatz.jpg",
+    alt: "WSCH Liegeplätze mit Insel im Hintergrund",
   },
   {
     href: "/regatten",

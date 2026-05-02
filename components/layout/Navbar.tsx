@@ -42,16 +42,21 @@ export default function Navbar() {
       }`}
     >
       <div className="px-6 md:px-14">
-        <div className="mx-auto max-w-[1280px] flex items-center justify-between h-[72px] md:h-[88px]">
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0 transition-opacity hover:opacity-80" aria-label="WSC Helgoland · Startseite">
-            <span className="grid h-10 w-10 md:h-11 md:w-11 place-items-center rounded-full bg-white/95 overflow-hidden shadow-soft">
-              <Image src="/img/wsch_logo.png" alt="" width={44} height={44} className="h-9 w-9 md:h-10 md:w-10 object-contain" priority />
-            </span>
+        <div className="mx-auto max-w-[1280px] flex items-center justify-between h-[80px] md:h-[96px]">
+          <Link href="/" className="flex items-center gap-3 flex-shrink-0 transition-opacity hover:opacity-85" aria-label="WSC Helgoland · Startseite">
+            <Image
+              src="/img/wsch_logo.png"
+              alt="WSC Helgoland"
+              width={56}
+              height={56}
+              className="h-12 w-auto md:h-14 object-contain"
+              priority
+            />
             <span className="hidden sm:block leading-tight">
-              <span className={`block text-sm md:text-[15px] font-semibold tracking-tightish transition-colors ${onDarkHero ? "text-white" : "text-text-primary"}`}>
+              <span className={`block text-sm md:text-[15px] font-semibold tracking-tightish transition-colors ${onDarkHero ? "text-white drop-shadow-[0_1px_4px_rgba(0,0,0,0.55)]" : "text-text-primary"}`}>
                 WSC Helgoland
               </span>
-              <span className={`block text-[10px] md:text-[11px] tracking-eyebrowWide uppercase transition-colors ${onDarkHero ? "text-white/70" : "text-text-dim"}`}>
+              <span className={`block text-[10px] md:text-[11px] tracking-eyebrowWide uppercase transition-colors ${onDarkHero ? "text-white/85 drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]" : "text-text-dim"}`}>
                 e.V. · seit 1965
               </span>
             </span>
@@ -61,10 +66,11 @@ export default function Navbar() {
             {NAV_ITEMS.map((item) => {
               const active = isActive(item.href);
               const baseColor = onDarkHero
-                ? active ? "text-white" : "text-white/75 hover:text-white"
+                ? active ? "text-white" : "text-white/85 hover:text-white"
                 : active ? "text-text-primary" : "text-text-muted hover:text-text-primary";
+              const shadow = onDarkHero ? "drop-shadow-[0_1px_4px_rgba(0,0,0,0.5)]" : "";
               return (
-                <Link key={item.href} href={item.href} className={`text-[14px] font-medium transition-colors ${baseColor}`}>
+                <Link key={item.href} href={item.href} className={`text-[14px] font-medium transition-colors ${baseColor} ${shadow}`}>
                   {item.label}
                 </Link>
               );
@@ -74,7 +80,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileOpen((v) => !v)}
-            className={`xl:hidden flex flex-col gap-[5px] p-2 cursor-pointer rounded transition-opacity hover:opacity-80 ${onDarkHero ? "" : ""}`}
+            className="xl:hidden flex flex-col gap-[5px] p-2 cursor-pointer rounded transition-opacity hover:opacity-80"
             aria-label="Menü öffnen"
             aria-expanded={mobileOpen}
           >

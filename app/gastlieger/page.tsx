@@ -73,7 +73,7 @@ export default function GastliegerPage() {
         <div className="max-w-container mx-auto grid gap-12 lg:grid-cols-2 lg:items-center">
           <Reveal variant="cinematic">
             <div className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
-              <Image src="/img/wsch_suedhafen.jpg" alt="WSCH Steganlage im Südhafen" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+              <Image src="/img/wsch_topdown.jpg" alt="WSCH Steganlage von oben" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
             </div>
           </Reveal>
           <Reveal variant="cinematic" delay={0.1}>
@@ -94,86 +94,29 @@ export default function GastliegerPage() {
         </div>
       </section>
 
-      <section className="relative bg-bg-primary overflow-hidden">
-        <div className="absolute inset-0 pointer-events-none">
-          <Image
-            src="/img/06092025_regatta-28.jpg"
-            alt=""
-            fill
-            sizes="100vw"
-            className="object-cover"
-            style={{ filter: "brightness(.45) saturate(.8)" }}
-          />
-          <div
-            className="absolute inset-0"
-            style={{
-              background: "linear-gradient(180deg, rgba(14,23,34,.6) 0%, rgba(14,23,34,.45) 50%, rgba(14,23,34,.85) 100%)",
-            }}
-          />
-        </div>
-
-        <div className="relative px-6 md:px-14 py-24 md:py-[160px]">
-          <div className="max-w-container mx-auto">
-            <Reveal variant="cinematic">
-              <h2
-                className="m-0 text-white font-light max-w-3xl"
-                style={{ fontSize: "clamp(32px, 4.2vw, 56px)", lineHeight: 1.08, letterSpacing: "-.02em" }}
-              >
-                Im <span className="font-bold">Notfall.</span>
-              </h2>
-              <p className="text-white/80 mt-5 max-w-xl text-[16px] leading-relaxed">
-                Drei Wege, je nach Lage. Im Zweifel die kürzeste Nummer wählen.
+      <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[120px]">
+        <div className="max-w-container mx-auto grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-center">
+          <Reveal variant="cinematic">
+            <h2 className="m-0 text-text-primary font-light" style={{ fontSize: "clamp(28px, 3.4vw, 44px)", lineHeight: 1.1, letterSpacing: "-.02em" }}>
+              Hafenordnung <span className="font-bold">folgt.</span>
+            </h2>
+          </Reveal>
+          <Reveal variant="cinematic" delay={0.1}>
+            <div>
+              <p className="body-copy max-w-prose">
+                Eine offizielle Hafen- und Liegeplatzordnung wird derzeit überarbeitet. Sie regelt unter anderem den Anlauf, die
+                Liegeplatzvergabe und das Verhalten im Notfall. Bis sie veröffentlicht ist, halten Sie sich bitte an die
+                Hinweise des Hafenmeisters vor Ort.
               </p>
-            </Reveal>
-
-            <div className="mt-16 md:mt-20 grid gap-12 md:gap-16 md:grid-cols-3">
-              <Reveal variant="cinematic" delay={0.05}>
-                <div>
-                  <div
-                    className="text-white font-light tracking-tightish"
-                    style={{ fontSize: "clamp(48px, 5.6vw, 84px)", lineHeight: 1, letterSpacing: "-.025em" }}
-                  >
-                    110 <span className="text-white/50 font-light">·</span> 112
-                  </div>
-                  <div className="mt-5 h-px w-12 bg-accent-warm" />
-                  <p className="mt-5 text-white/80 text-[15px] leading-relaxed max-w-[28ch]">
-                    Polizei und Rettung. Erste Wahl, auch im Hafen.
-                  </p>
-                </div>
-              </Reveal>
-
-              <Reveal variant="cinematic" delay={0.1}>
-                <div>
-                  <div
-                    className="text-white font-light tracking-tightish"
-                    style={{ fontSize: "clamp(40px, 4.4vw, 64px)", lineHeight: 1, letterSpacing: "-.02em" }}
-                  >
-                    UKW <span className="font-bold">Kanal 16</span>
-                  </div>
-                  <div className="mt-5 h-px w-12 bg-accent-tide" />
-                  <p className="mt-5 text-white/80 text-[15px] leading-relaxed max-w-[28ch]">
-                    DGzRS Bremen. Seenotruf, rund um die Uhr besetzt.
-                  </p>
-                </div>
-              </Reveal>
-
-              <Reveal variant="cinematic" delay={0.15}>
-                <div>
-                  <a
-                    href="mailto:kontakt@wsc-helgoland.de"
-                    className="block text-white hover:text-accent-tide transition-colors duration-300 font-light tracking-tightish break-all"
-                    style={{ fontSize: "clamp(22px, 2.4vw, 32px)", lineHeight: 1.1, letterSpacing: "-.02em" }}
-                  >
-                    kontakt@<wbr />wsc-helgoland.de
-                  </a>
-                  <div className="mt-5 h-px w-12 bg-white/40" />
-                  <p className="mt-5 text-white/80 text-[15px] leading-relaxed max-w-[28ch]">
-                    Für alles, was Zeit hat. Antwort in der Regel binnen 48 Stunden.
-                  </p>
-                </div>
-              </Reveal>
+              <a
+                href="mailto:kontakt@wsc-helgoland.de"
+                className="inline-flex items-center gap-3 mt-8 px-7 py-3 text-[15px] font-bold rounded-full bg-text-primary text-white hover:bg-accent-deep hover:translate-x-1 transition-all duration-300 group"
+              >
+                <span>Bei Fragen schreiben Sie uns</span>
+                <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+              </a>
             </div>
-          </div>
+          </Reveal>
         </div>
       </section>
     </>

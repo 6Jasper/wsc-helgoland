@@ -35,9 +35,7 @@ const SECTIONS = [
   {
     title: "Sicherheit",
     items: [
-      "Im Notfall 110 (Polizei) oder 112 (Rettung) wählen.",
-      "Seenotfälle über die DGzRS, UKW Kanal 16.",
-      "Im Brandfall zuerst den Hafenmeister informieren, dann 112 wählen.",
+      "Im Brand- oder Notfall zuerst den Hafenmeister informieren.",
       "Tauchen im Hafen nur mit Genehmigung des Hafenmeisters.",
     ],
   },

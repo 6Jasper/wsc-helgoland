@@ -9,9 +9,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-10 md:gap-12">
             <div className="sm:col-span-2 md:col-span-5">
               <div className="flex items-center gap-4">
-                <span className="grid h-14 w-14 place-items-center rounded-full bg-white shadow-soft">
-                  <Image src="/img/wsch_logo.png" alt="" width={56} height={56} className="h-12 w-12 object-contain" />
-                </span>
+                <Image src="/img/wsch_logo.png" alt="WSC Helgoland Stander" width={72} height={72} className="h-16 w-auto object-contain" />
                 <div>
                   <div className="text-xl font-semibold tracking-tightish text-text-primary">Wassersportclub Helgoland e.V.</div>
                   <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mt-1">gegründet 1965</div>
