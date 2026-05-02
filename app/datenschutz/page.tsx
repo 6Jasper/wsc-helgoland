@@ -4,18 +4,18 @@ export default function DatenschutzPage() {
   return (
     <section className="bg-bg-primary pt-32 md:pt-40 pb-24 md:pb-32 px-6 md:px-14">
       <div className="max-w-3xl mx-auto">
-        <h1 className="m-0 text-white font-light" style={{ fontSize: "clamp(40px, 5.4vw, 76px)", lineHeight: 1.05, letterSpacing: "-.02em" }}>
+        <h1 className="m-0 text-text-primary font-light" style={{ fontSize: "clamp(40px, 5.4vw, 76px)", lineHeight: 1.05, letterSpacing: "-.02em" }}>
           Datenschutz.
         </h1>
         <div className="mt-12 space-y-10 text-text-body text-[15px] leading-relaxed">
           <p>
-            Der Schutz personenbezogener Daten ist uns wichtig. Im Folgenden informieren wir über Art, Umfang und Zweck der
-            Verarbeitung personenbezogener Daten auf dieser Website.
+            Der Schutz Ihrer personenbezogenen Daten ist uns wichtig. Im Folgenden informieren wir Sie über Art, Umfang und Zweck
+            der Verarbeitung personenbezogener Daten auf dieser Website.
           </p>
 
           <div>
             <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mb-3">Verantwortlicher</div>
-            <p className="text-white">
+            <p className="text-text-primary">
               Wassersportclub Helgoland e.V.<br />
               Postfach 1125, 27498 Helgoland<br />
               <a href="mailto:kontakt@wsc-helgoland.de" className="hover:text-accent-tide transition-colors">kontakt@wsc-helgoland.de</a>
@@ -33,8 +33,8 @@ export default function DatenschutzPage() {
           <div>
             <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mb-3">Kontaktaufnahme</div>
             <p>
-              Bei Kontaktaufnahme per E-Mail werden die mitgeteilten Daten ausschließlich zur Bearbeitung der Anfrage verwendet.
-              Rechtsgrundlage ist Art. 6 Abs. 1 lit. b und f DSGVO.
+              Bei einer Kontaktaufnahme per E-Mail werden die mitgeteilten Daten ausschließlich zur Bearbeitung Ihrer Anfrage
+              verwendet. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b und f DSGVO.
             </p>
           </div>
 
@@ -55,7 +55,7 @@ export default function DatenschutzPage() {
           </div>
 
           <p className="text-xs text-text-dim">
-            Hinweis: Dieser Text ist eine Arbeitsfassung für die Entwicklungsphase. Vor Live-Schaltung anwaltlich prüfen lassen.
+            Hinweis: Dieser Text ist eine Arbeitsfassung. Vor Live-Schaltung ist eine anwaltliche Prüfung empfohlen.
           </p>
         </div>
       </div>

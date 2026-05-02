@@ -1,30 +1,30 @@
+import Image from "next/image";
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
-import Image from "next/image";
 
-export const metadata = { title: "Gastlieger" };
+export const metadata = { title: "Informationen für Gastlieger" };
 
 const STEPS = [
   {
     title: "Vor der Abfahrt",
-    body: "Wer im Südhafen festmachen will, schreibt vor der Abfahrt eine kurze E-Mail. Wir prüfen, ob ein Platz frei ist und ob ein Mitglied vor Ort einweisen kann. Im Nordosthafen läuft die Vergabe direkt über den Hafenmeister, da reicht das Eintreffen.",
+    body: "Wer im Südhafen festmachen möchte, schreibt vor der Abfahrt eine kurze E-Mail an den Verein. Wir prüfen, ob ein Platz frei ist und ob ein Mitglied vor Ort die Einweisung übernehmen kann. Im Nordosthafen läuft die Vergabe direkt über den Hafenmeister vor Ort.",
   },
   {
-    title: "Anlauf",
-    body: "Beim Anlauf gilt: keine Eile, drei Knoten im Hafen. Wer im Südhafen einläuft, lässt sich führen. Die Trümmer des U-Boot-Bunkers liegen genau dort, wo man am liebsten geradeaus durchziehen würde.",
+    title: "Anlauf und Einweisung",
+    body: "Im Hafen gilt eine Höchstgeschwindigkeit von drei Knoten. Wer in den Südhafen einläuft, wird von einem Mitglied eingewiesen, weil im Hafenbecken Trümmer eines früheren U-Boot-Bunkers liegen. Im Nordosthafen können Sie die freien Plätze beim Hafenmeister erfragen.",
   },
   {
     title: "Festmachen",
     body: "Päckchenliegen ist nicht vorgesehen. Liegeplätze werden zugewiesen oder, im Nordosthafen, vom Hafenmeister zugeordnet.",
   },
   {
-    title: "Abrechnung",
-    body: "Strom über Münzeinwurf, Liegegebühr pauschal. Genaue Sätze beim Hafenmeister. Wasser ist nicht an allen Stegen verfügbar, Diesel an der Bunkerstation Jörn Rickmers im Binnenhafen, vor den Hummerbuden.",
+    title: "Strom, Wasser, Diesel",
+    body: "Strom an den Säulen läuft über Münzeinwurf, die Liegegebühr ist pauschal. Die genauen Sätze nennt Ihnen der Hafenmeister vor Ort. Wasser ist nicht an allen Stegen verfügbar. Diesel bunkern Sie an der Bunkerstation Jörn Rickmers im Binnenhafen, vor den Hummerbuden.",
   },
 ];
 
 const RULES = [
-  "Maximale Geschwindigkeit drei Knoten im Hafen.",
+  "Höchstgeschwindigkeit drei Knoten im Hafen.",
   "Nachtruhe ab 22 Uhr.",
   "Generatoren sind nicht zulässig.",
   "Lackieren und Schleifen am Liegeplatz nicht erlaubt.",
@@ -36,8 +36,8 @@ export default function GastliegerPage() {
   return (
     <>
       <PageHero
-        title={<>Bevor Sie <span style={{ fontWeight: 600 }}>einlaufen.</span></>}
-        lead="Helgoland ist keine Marina. Der Verein gibt freie Plätze seiner Mitglieder frei, vornehmlich an befreundete Vereine und Gastsegler vom Festland. Was zu wissen ist, bevor die Insel sich aus dem Dunst schält."
+        title={<>Informationen für <span style={{ fontWeight: 600 }}>Gastlieger.</span></>}
+        lead="Helgoland ist keine Marina. Der Wassersportclub Helgoland gibt freie Plätze seiner Mitglieder an Gastsegler frei, vornehmlich an befreundete Vereine und Gäste vom Festland."
         image="/img/wsch_liegeplatzueberblick.jpg"
         alt="WSCH Liegeplätze mit Insel"
       />
@@ -46,12 +46,11 @@ export default function GastliegerPage() {
         <div className="max-w-container mx-auto grid gap-14 lg:grid-cols-[1fr_1.4fr]">
           <Reveal variant="cinematic">
             <div className="lg:sticky lg:top-32">
-              <h2 className="m-0 text-white font-light" style={{ fontSize: "clamp(30px, 3.6vw, 48px)", lineHeight: 1.1, letterSpacing: "-.02em" }}>
-                Vier <span className="font-bold">Etappen.</span>
+              <h2 className="m-0 text-text-primary font-light" style={{ fontSize: "clamp(30px, 3.6vw, 48px)", lineHeight: 1.1, letterSpacing: "-.02em" }}>
+                Anlauf in <span className="font-bold">vier Schritten.</span>
               </h2>
               <p className="body-copy mt-5">
-                Der Anlauf verläuft fast immer gleich. Wer schon einmal hier festgemacht hat, kennt die Reihenfolge. Wer zum ersten
-                Mal kommt, liest sie sich kurz durch.
+                So läuft der Anlauf in der Regel ab. Bei Fragen melden Sie sich vor der Überfahrt einmal kurz bei uns.
               </p>
             </div>
           </Reveal>
@@ -61,7 +60,7 @@ export default function GastliegerPage() {
               <Reveal key={s.title} variant="cinematic" delay={i * 0.05}>
                 <div className="border-t border-border-subtle pt-8">
                   <div className="text-text-dim text-[12px] tracking-eyebrowWide uppercase">{String(i + 1).padStart(2, "0")}</div>
-                  <h3 className="mt-3 text-white font-semibold text-[24px] md:text-[28px] tracking-tightish">{s.title}</h3>
+                  <h3 className="mt-3 text-text-primary font-semibold text-[24px] md:text-[28px] tracking-tightish">{s.title}</h3>
                   <p className="body-copy mt-4 max-w-xl">{s.body}</p>
                 </div>
               </Reveal>
@@ -73,14 +72,14 @@ export default function GastliegerPage() {
       <section className="relative bg-bg-surface px-6 md:px-14 py-20 md:py-[140px] overflow-hidden">
         <div className="max-w-container mx-auto grid gap-12 lg:grid-cols-2 lg:items-center">
           <Reveal variant="cinematic">
-            <div className="relative aspect-[4/3] overflow-hidden rounded">
+            <div className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
               <Image src="/img/wsch_suedhafen.jpg" alt="WSCH Steganlage im Südhafen" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
             </div>
           </Reveal>
           <Reveal variant="cinematic" delay={0.1}>
             <div>
-              <h2 className="m-0 text-white font-light" style={{ fontSize: "clamp(30px, 3.8vw, 50px)", lineHeight: 1.08, letterSpacing: "-.02em" }}>
-                Im Hafen <span className="font-bold">gilt für alle dasselbe.</span>
+              <h2 className="m-0 text-text-primary font-light" style={{ fontSize: "clamp(30px, 3.8vw, 50px)", lineHeight: 1.08, letterSpacing: "-.02em" }}>
+                Was im Hafen <span className="font-bold">gilt.</span>
               </h2>
               <ul className="mt-8 space-y-4">
                 {RULES.map((r) => (
@@ -103,13 +102,12 @@ export default function GastliegerPage() {
             fill
             sizes="100vw"
             className="object-cover"
-            style={{ filter: "brightness(.18) saturate(.7)" }}
+            style={{ filter: "brightness(.45) saturate(.8)" }}
           />
           <div
             className="absolute inset-0"
             style={{
-              background:
-                "linear-gradient(180deg, rgba(7,11,15,.85) 0%, rgba(7,11,15,.55) 50%, rgba(7,11,15,.95) 100%)",
+              background: "linear-gradient(180deg, rgba(14,23,34,.6) 0%, rgba(14,23,34,.45) 50%, rgba(14,23,34,.85) 100%)",
             }}
           />
         </div>
@@ -121,9 +119,9 @@ export default function GastliegerPage() {
                 className="m-0 text-white font-light max-w-3xl"
                 style={{ fontSize: "clamp(32px, 4.2vw, 56px)", lineHeight: 1.08, letterSpacing: "-.02em" }}
               >
-                Wenn etwas <span className="font-bold">schiefgeht.</span>
+                Im <span className="font-bold">Notfall.</span>
               </h2>
-              <p className="body-copy mt-5 max-w-xl">
+              <p className="text-white/80 mt-5 max-w-xl text-[16px] leading-relaxed">
                 Drei Wege, je nach Lage. Im Zweifel die kürzeste Nummer wählen.
               </p>
             </Reveal>
@@ -135,7 +133,7 @@ export default function GastliegerPage() {
                     className="text-white font-light tracking-tightish"
                     style={{ fontSize: "clamp(48px, 5.6vw, 84px)", lineHeight: 1, letterSpacing: "-.025em" }}
                   >
-                    110 <span className="text-text-dim font-light">·</span> 112
+                    110 <span className="text-white/50 font-light">·</span> 112
                   </div>
                   <div className="mt-5 h-px w-12 bg-accent-warm" />
                   <p className="mt-5 text-white/80 text-[15px] leading-relaxed max-w-[28ch]">
@@ -168,9 +166,9 @@ export default function GastliegerPage() {
                   >
                     kontakt@<wbr />wsc-helgoland.de
                   </a>
-                  <div className="mt-5 h-px w-12 bg-text-dim" />
+                  <div className="mt-5 h-px w-12 bg-white/40" />
                   <p className="mt-5 text-white/80 text-[15px] leading-relaxed max-w-[28ch]">
-                    Für alles, was Zeit hat. Antwort meist binnen achtundvierzig Stunden.
+                    Für alles, was Zeit hat. Antwort in der Regel binnen 48 Stunden.
                   </p>
                 </div>
               </Reveal>

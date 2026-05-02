@@ -17,14 +17,14 @@ export const metadata: Metadata = {
     template: "%s | WSC Helgoland",
   },
   description:
-    "Heimathafen für Segler auf Helgoland. Vereinsanlagen im Süd- und Nordosthafen, Helgoländer Herbstregatta, Mitveranstalter der Nordseewoche.",
+    "Der Wassersportclub Helgoland e.V. organisiert seit 1965 den Sportbootverkehr auf Helgoland. Vereinsanlagen im Süd- und Nordosthafen, Helgoländer Herbstregatta, Mitveranstalter der Nordseewoche.",
   metadataBase: new URL("https://wsc-helgoland.de"),
   openGraph: {
     type: "website",
     locale: "de_DE",
     title: "Wassersportclub Helgoland e.V.",
     description:
-      "Heimathafen für Segler auf Helgoland. Vereinsanlagen im Süd- und Nordosthafen, Helgoländer Herbstregatta.",
+      "Segel- und Motorbootverein auf Helgoland. Vereinsanlagen im Süd- und Nordosthafen, Helgoländer Herbstregatta.",
   },
 };
 

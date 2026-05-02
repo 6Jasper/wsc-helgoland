@@ -7,27 +7,27 @@ const SECTIONS = [
   {
     title: "Anlauf und Festmachen",
     items: [
-      "Im Südhafen nur nach Vorabstimmung. Unreines Becken, Befahren auf eigene Gefahr und nur nach Einführung durch ein erfahrenes Mitglied.",
-      "Im Nordosthafen können freie Plätze in der Regel belegt werden. Beim Hafenmeister melden.",
+      "Ein Anlauf des Südhafens ist nur nach vorheriger Abstimmung möglich. Befahren erfolgt auf eigene Gefahr und nur nach Einweisung durch ein erfahrenes Mitglied.",
+      "Im Nordosthafen können freie Plätze in der Regel belegt werden. Bitte beim Hafenmeister vor Ort melden.",
       "Päckchenbildung ist nicht vorgesehen.",
-      "Maximalgeschwindigkeit drei Knoten. Keine Wellen.",
+      "Höchstgeschwindigkeit drei Knoten. Keine Wellen.",
     ],
   },
   {
     title: "Im Hafen",
     items: [
       "Nachtruhe ab 22 Uhr.",
-      "Generatoren sind nicht zulässig.",
-      "Lackieren und Schleifen am Liegeplatz nicht erlaubt.",
+      "Generatoren sind im Hafen nicht zulässig.",
+      "Lackier- und Schleifarbeiten am Liegeplatz sind nicht erlaubt.",
       "Mast legen oder stellen findet nicht im Hafen statt.",
-      "Keine besonderen Regelungen für Hunde.",
+      "Für Hunde gelten keine besonderen Regelungen.",
     ],
   },
   {
     title: "Müll, Strom, Wasser",
     items: [
-      "Müllentsorgung über das Mülltrennsystem am Sanitärcontainer.",
-      "Strom über Münzeinwurf, im Süd- und Nordosthafen jeweils einige Säulen. Pauschal abgerechnet.",
+      "Mülltrennung über das Mülltrennsystem am Sanitärcontainer.",
+      "Strom über Münzeinwurf-Säulen, im Süd- und Nordosthafen jeweils einige Säulen vorhanden. Die Stromkosten werden pauschal abgerechnet.",
       "Wasser ist nicht an allen Stegen verfügbar.",
       "Diesel an der Bunkerstation Jörn Rickmers im Binnenhafen, vor den Hummerbuden.",
     ],
@@ -35,10 +35,10 @@ const SECTIONS = [
   {
     title: "Sicherheit",
     items: [
-      "Im Notfall 110 oder 112 wählen.",
-      "Seenot über DGzRS, UKW Kanal 16.",
-      "Im Brandfall Hafenmeister benachrichtigen, dann 112.",
-      "Tauchen im Hafen nur mit Genehmigung.",
+      "Im Notfall 110 (Polizei) oder 112 (Rettung) wählen.",
+      "Seenotfälle über die DGzRS, UKW Kanal 16.",
+      "Im Brandfall zuerst den Hafenmeister informieren, dann 112 wählen.",
+      "Tauchen im Hafen nur mit Genehmigung des Hafenmeisters.",
     ],
   },
 ];
@@ -47,8 +47,8 @@ export default function RegelnPage() {
   return (
     <>
       <PageHero
-        title={<>Was im Hafen gilt, <span style={{ fontWeight: 600 }}>gilt für alle.</span></>}
-        lead="Die offizielle Hafenordnung wird derzeit überarbeitet. Bis sie steht: hier die Punkte, die im Alltag zählen."
+        title={<>Hafen<span style={{ fontWeight: 600 }}>regeln.</span></>}
+        lead="Eine offizielle Hafenordnung wird derzeit überarbeitet. Bis sie veröffentlicht ist, finden Sie hier die Punkte, die im Alltag gelten."
         image="/img/wsch_topdown.jpg"
         alt="WSCH Steganlage von oben"
         height="medium"
@@ -61,7 +61,7 @@ export default function RegelnPage() {
               <Reveal variant="cinematic">
                 <div>
                   <div className="text-text-dim text-[11px] tracking-eyebrowWide uppercase">{String(i + 1).padStart(2, "0")}</div>
-                  <h2 className="mt-4 m-0 text-white font-light" style={{ fontSize: "clamp(28px, 3.2vw, 42px)", lineHeight: 1.1, letterSpacing: "-.02em" }}>
+                  <h2 className="mt-4 m-0 text-text-primary font-light" style={{ fontSize: "clamp(28px, 3.2vw, 42px)", lineHeight: 1.1, letterSpacing: "-.02em" }}>
                     {s.title}
                   </h2>
                 </div>

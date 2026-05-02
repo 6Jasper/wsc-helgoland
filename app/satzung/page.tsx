@@ -28,8 +28,8 @@ export default function SatzungPage() {
         <div className="max-w-3xl mx-auto">
           <Reveal variant="cinematic">
             <p className="body-copy text-[17px]">
-              Eine vollständige Fassung der Satzung wird derzeit für die Veröffentlichung aufbereitet. Bis zur Bereitstellung
-              gilt die im Vereinsregister hinterlegte Fassung. Sie wird auf Anfrage zugeschickt.
+              Eine vollständige Fassung der Satzung wird derzeit für die Veröffentlichung auf der Webseite aufbereitet. Bis dahin
+              gilt die im Vereinsregister hinterlegte Fassung. Auf Anfrage senden wir Ihnen die aktuelle Satzung zu.
             </p>
           </Reveal>
 
@@ -38,7 +38,7 @@ export default function SatzungPage() {
               {ECKDATEN.map(([k, v]) => (
                 <div key={k} className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2 sm:gap-8 border-t border-border-subtle py-6">
                   <div className="text-text-dim text-[12px] tracking-eyebrowWide uppercase">{k}</div>
-                  <div className="text-white text-[16px] md:text-[18px]">{v}</div>
+                  <div className="text-text-primary text-[16px] md:text-[18px]">{v}</div>
                 </div>
               ))}
             </div>
@@ -48,7 +48,7 @@ export default function SatzungPage() {
             <div className="mt-12">
               <Link
                 href="/kontakt"
-                className="inline-flex items-center gap-3 px-7 py-3 text-[15px] font-bold rounded-full border border-border-strong text-text-primary hover:border-white hover:translate-x-1 transition-all duration-300 group"
+                className="inline-flex items-center gap-3 px-7 py-3 text-[15px] font-bold rounded-full border border-border-strong text-text-primary hover:border-text-primary hover:translate-x-1 transition-all duration-300 group"
               >
                 <span>Satzung anfordern</span>
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>

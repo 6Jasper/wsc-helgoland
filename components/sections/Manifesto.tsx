@@ -4,29 +4,26 @@ import { Reveal } from "@/components/ui/Reveal";
 
 export function Manifesto() {
   return (
-    <section className="relative bg-bg-primary text-white overflow-hidden px-6 md:px-14 pt-24 md:pt-[160px] pb-12 md:pb-20">
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          background: "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(91,169,217,0.12), transparent 70%)",
-        }}
-      />
+    <section className="relative bg-bg-primary text-text-primary overflow-hidden px-6 md:px-14 pt-24 md:pt-[160px] pb-12 md:pb-20">
       <div className="relative max-w-stage mx-auto">
         <Reveal variant="cinematic">
           <p
-            className="m-0 text-white"
+            className="m-0"
             style={{
               fontWeight: 300,
-              fontSize: "clamp(26px, 3.2vw, 48px)",
-              lineHeight: 1.3,
+              fontSize: "clamp(24px, 2.9vw, 42px)",
+              lineHeight: 1.35,
               letterSpacing: "-.02em",
               textWrap: "balance",
+              color: "rgba(14,23,34,0.9)",
             }}
           >
-            <span style={{ fontWeight: 700 }}>Hier kommt niemand zufällig vorbei.</span>{" "}
-            Wer in Helgoland festmacht, hat sich entschieden. Der WSCH ist ein Verein im klassischen Sinn: ehrenamtlich, eigen, ein
-            bisschen ruppig. Stege werden selbst gebaut, das Clubhaus selbst betrieben, und der Hafen will gelernt sein.{" "}
-            <span style={{ fontWeight: 700 }}>Aber wer einmal Mitglied ist, bleibt.</span>
+            Helgoland liegt rund 70 Kilometer vor der Küste, mitten in der Deutschen Bucht. Der Wassersportclub Helgoland kümmert
+            sich seit 1965 um die Sportbootliegeplätze auf der Insel und betreibt zwei Vereinsanlagen, eine im Südhafen und eine
+            im Nordosthafen.{" "}
+            <span style={{ fontWeight: 700 }}>
+              Wir sind ein eingetragener Verein mit ehrenamtlichem Vorstand und aktiven Mitgliedern.
+            </span>
           </p>
         </Reveal>
       </div>

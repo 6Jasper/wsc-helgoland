@@ -4,17 +4,17 @@ import { Reveal } from "@/components/ui/Reveal";
 export const metadata = { title: "Arbeitsdienst" };
 
 const SAISON = [
-  { name: "Frühjahr", body: "Stege wieder in Form bringen, Boote auswassern, Reparaturen, was den Winter nicht überstanden hat." },
-  { name: "Saison", body: "Hafendienst, Veranstaltungsbetreuung, alles was während der Liege-Saison anfällt." },
-  { name: "Winter", body: "Werkstatt, Bootshalle, Inventur, Material, Bauten." },
+  { name: "Frühjahr", body: "Stege wieder in Betrieb nehmen, Boote auswassern, Reparaturen erledigen, die im Winter angefallen sind." },
+  { name: "Saison", body: "Hafendienst, Veranstaltungsbetreuung und alles, was während der Liegesaison anfällt." },
+  { name: "Winter", body: "Werkstattarbeiten, Bootshalle, Inventur, Materialpflege, Bauten." },
 ];
 
 export default function ArbeitsdienstPage() {
   return (
     <>
       <PageHero
-        title={<>Wer aktiv ist, <span style={{ fontWeight: 600 }}>packt mit an.</span></>}
-        lead="Der WSCH funktioniert ehrenamtlich. Stege, Clubhaus, Bootshalle, Werkstatt und Inventar werden in großen Teilen von Mitgliedern selbst instand gehalten."
+        title={<>Arbeits<span style={{ fontWeight: 600 }}>dienst.</span></>}
+        lead="Der Wassersportclub Helgoland funktioniert ehrenamtlich. Stege, Clubhaus, Bootshalle, Werkstatt und Inventar werden in großen Teilen durch die Mitglieder selbst instand gehalten."
         image="/img/wsch_liegeplatzueberblick.jpg"
         alt="WSCH Liegeplätze"
         height="medium"
@@ -24,15 +24,16 @@ export default function ArbeitsdienstPage() {
         <div className="max-w-container mx-auto grid gap-14 lg:grid-cols-[1fr_1.4fr]">
           <Reveal variant="cinematic">
             <div className="lg:sticky lg:top-32">
-              <h2 className="m-0 text-white font-light" style={{ fontSize: "clamp(30px, 3.8vw, 50px)", lineHeight: 1.08, letterSpacing: "-.02em" }}>
+              <h2 className="m-0 text-text-primary font-light" style={{ fontSize: "clamp(30px, 3.8vw, 50px)", lineHeight: 1.08, letterSpacing: "-.02em" }}>
                 Drei <span className="font-bold">Phasen.</span>
               </h2>
               <p className="body-copy mt-6">
-                Was getan wird, hängt davon ab, wann es getan wird. Frühjahr, Saison, Winter. Aktive Mitglieder leisten pro Jahr
-                Arbeitsdienst, wer keine Zeit hat, kann ablösen.
+                Die Arbeiten richten sich nach der Saison. Aktive Mitglieder leisten pro Jahr eine bestimmte Stundenzahl
+                Arbeitsdienst. Wer keine Zeit hat, kann diesen über eine Pauschale ablösen.
               </p>
               <p className="body-copy mt-4 text-[14px] text-text-dim">
-                Die konkrete Pflichtstundenzahl, der Ablösesatz und Befreiungsregelungen werden derzeit überarbeitet und folgen.
+                Die genaue Pflichtstundenzahl, der Ablösesatz und die Befreiungsregelungen werden derzeit überarbeitet und
+                folgen.
               </p>
             </div>
           </Reveal>
@@ -42,7 +43,7 @@ export default function ArbeitsdienstPage() {
               <Reveal key={s.name} variant="cinematic" delay={i * 0.05}>
                 <div className="border-t border-border-subtle pt-8">
                   <div className="text-accent-tide text-[12px] tracking-eyebrowWide uppercase">{String(i + 1).padStart(2, "0")}</div>
-                  <h3 className="mt-3 text-white font-semibold text-[24px] md:text-[30px] tracking-tightish">{s.name}</h3>
+                  <h3 className="mt-3 text-text-primary font-semibold text-[24px] md:text-[30px] tracking-tightish">{s.name}</h3>
                   <p className="body-copy mt-4 max-w-xl">{s.body}</p>
                 </div>
               </Reveal>

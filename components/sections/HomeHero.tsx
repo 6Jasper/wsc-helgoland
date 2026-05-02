@@ -21,7 +21,7 @@ export function HomeHero() {
   }, []);
 
   return (
-    <section className="relative w-full overflow-hidden bg-bg-primary min-h-[640px] md:min-h-[760px]" style={{ height: "100vh" }}>
+    <section className="relative w-full overflow-hidden min-h-[640px] md:min-h-[760px]" style={{ height: "100vh" }}>
       <div
         className="absolute inset-0"
         style={{
@@ -37,7 +37,7 @@ export function HomeHero() {
           priority
           sizes="100vw"
           className="object-cover"
-          style={{ filter: "brightness(.5) contrast(1.06)" }}
+          style={{ filter: "brightness(.62) contrast(1.04)" }}
         />
       </div>
 
@@ -45,7 +45,7 @@ export function HomeHero() {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "linear-gradient(180deg, rgba(0,0,0,.6) 0%, rgba(0,0,0,0) 28%, rgba(0,0,0,0) 55%, rgba(0,0,0,.85) 100%)",
+            "linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 55%, rgba(0,0,0,.7) 100%)",
         }}
       />
 
@@ -65,25 +65,25 @@ export function HomeHero() {
             transition: `opacity 1.6s ${SOFT_EASE}, transform 1.6s ${SOFT_EASE}`,
           }}
         >
-          Heimathafen,
+          Wassersportclub
           <br />
-          <span style={{ fontWeight: 600 }}>weit draußen.</span>
+          <span style={{ fontWeight: 600 }}>Helgoland.</span>
         </h1>
         <p
-          className="text-white/[.78] text-[15px] md:text-[18px]"
+          className="text-white/90 text-[15px] md:text-[18px]"
           style={{
             margin: 0,
             marginTop: "clamp(20px, 3vw, 32px)",
             fontWeight: 400,
             lineHeight: 1.55,
-            maxWidth: 620,
+            maxWidth: 640,
             opacity: phase >= 2 ? 1 : 0,
             transform: phase >= 2 ? "translateY(0)" : "translateY(12px)",
             transition: `opacity 1.4s ${SOFT_EASE}, transform 1.4s ${SOFT_EASE}`,
           }}
         >
-          Siebzig Kilometer vor der Küste, am roten Felsen. Der Wassersportclub Helgoland betreut Vereinsanlagen im Süd- und
-          Nordosthafen, richtet die Helgoländer Herbstregatta aus und ist Mitveranstalter der Nordseewoche.
+          Seit 1965 organisieren wir den Sportbootverkehr auf der Insel. Vereinsanlagen im Süd- und Nordosthafen, ein Clubhaus,
+          die Helgoländer Herbstregatta und die Mitveranstaltung der Nordseewoche.
         </p>
         <div
           className="mt-9 flex flex-wrap gap-3"
@@ -95,14 +95,14 @@ export function HomeHero() {
         >
           <Link
             href="/gastlieger"
-            className="inline-flex items-center gap-3 px-7 py-3 text-[15px] font-bold rounded-full bg-white text-black hover:bg-text-primary hover:translate-x-1 transition-all duration-300 group"
+            className="inline-flex items-center gap-3 px-7 py-3 text-[15px] font-bold rounded-full bg-white text-text-primary hover:bg-bg-surface hover:translate-x-1 transition-all duration-300 group"
           >
-            <span>Vor dem Anlauf</span>
+            <span>Informationen für Gastlieger</span>
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
           </Link>
           <Link
             href="/mitgliedschaft"
-            className="inline-flex items-center gap-3 px-7 py-3 text-[15px] font-bold rounded-full border border-border-strong text-text-primary hover:border-white hover:translate-x-1 transition-all duration-300 group"
+            className="inline-flex items-center gap-3 px-7 py-3 text-[15px] font-bold rounded-full border border-white/40 text-white hover:border-white hover:translate-x-1 transition-all duration-300 group"
           >
             <span>Mitglied werden</span>
             <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>

@@ -6,25 +6,25 @@ const config: Config = {
     extend: {
       colors: {
         bg: {
-          primary: "#070B0F",
-          surface: "#0E141B",
-          panel: "#131C26",
-          black: "#000000",
+          primary: "#F4EFE6",
+          surface: "#FBF7EE",
+          panel: "#FFFFFF",
+          ink: "#0E1722",
         },
         border: {
-          subtle: "rgba(180,210,235,0.08)",
-          strong: "rgba(255,255,255,0.14)",
+          subtle: "rgba(14,23,34,0.10)",
+          strong: "rgba(14,23,34,0.22)",
         },
         text: {
-          primary: "#eef3f7",
-          muted: "rgba(200,220,235,0.62)",
-          dim: "rgba(255,255,255,0.5)",
-          body: "rgba(255,255,255,0.74)",
+          primary: "#0E1722",
+          muted: "rgba(14,23,34,0.62)",
+          dim: "rgba(14,23,34,0.45)",
+          body: "rgba(14,23,34,0.78)",
         },
         accent: {
-          tide: "#5BA9D9",
-          deep: "#1F4E73",
-          warm: "#D9824A",
+          tide: "#1F4E73",
+          deep: "#0B2A4A",
+          warm: "#B85B2D",
         },
       },
       fontFamily: {
@@ -42,7 +42,8 @@ const config: Config = {
         full: "9999px",
       },
       boxShadow: {
-        glow: "0 0 80px rgba(91,169,217,0.18)",
+        glow: "0 0 80px rgba(31,78,115,0.15)",
+        soft: "0 1px 2px rgba(14,23,34,0.04), 0 8px 24px rgba(14,23,34,0.06)",
       },
       maxWidth: {
         container: "1280px",

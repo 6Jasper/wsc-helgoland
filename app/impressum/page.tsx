@@ -4,13 +4,13 @@ export default function ImpressumPage() {
   return (
     <section className="bg-bg-primary pt-32 md:pt-40 pb-24 md:pb-32 px-6 md:px-14">
       <div className="max-w-3xl mx-auto">
-        <h1 className="m-0 text-white font-light" style={{ fontSize: "clamp(40px, 5.4vw, 76px)", lineHeight: 1.05, letterSpacing: "-.02em" }}>
+        <h1 className="m-0 text-text-primary font-light" style={{ fontSize: "clamp(40px, 5.4vw, 76px)", lineHeight: 1.05, letterSpacing: "-.02em" }}>
           Impressum.
         </h1>
         <div className="mt-12 space-y-10 text-text-body text-[15px] leading-relaxed">
           <div>
             <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mb-3">Anbieter</div>
-            <p className="text-white">
+            <p className="text-text-primary">
               Wassersportclub Helgoland e.V.<br />
               Postfach 1125<br />
               27498 Helgoland<br />
@@ -38,7 +38,7 @@ export default function ImpressumPage() {
           <div>
             <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mb-3">Kontakt</div>
             <p>
-              <a href="mailto:kontakt@wsc-helgoland.de" className="text-white hover:text-accent-tide transition-colors">
+              <a href="mailto:kontakt@wsc-helgoland.de" className="text-text-primary hover:text-accent-tide transition-colors">
                 kontakt@wsc-helgoland.de
               </a>
             </p>

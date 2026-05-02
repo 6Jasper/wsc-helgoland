@@ -11,11 +11,11 @@ type Props = {
 
 export function Button({ href, children, variant = "primary", external, className = "" }: Props) {
   const base =
-    "inline-flex items-center gap-3 px-7 py-3 text-[15px] font-bold tracking-[0.01em] rounded-full transition-all duration-300 group cursor-pointer select-none active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary";
+    "inline-flex items-center gap-3 px-7 py-3 text-[15px] font-bold tracking-[0.01em] rounded-full transition-all duration-300 group cursor-pointer select-none active:scale-[0.97] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-tide focus-visible:ring-offset-2";
   const styles =
     variant === "primary"
-      ? "bg-white text-black hover:bg-text-primary hover:translate-x-1"
-      : "border border-border-strong text-text-primary hover:border-white hover:translate-x-1";
+      ? "bg-text-primary text-white hover:bg-accent-deep hover:translate-x-1"
+      : "border border-border-strong text-text-primary hover:border-text-primary hover:translate-x-1";
 
   const inner = (
     <>

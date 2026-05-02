@@ -3,10 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #070B0F;
-  --bg-surface: #0E141B;
-  --text-primary: #eef3f7;
-  --accent-tide: #5BA9D9;
+  --bg-primary: #F4EFE6;
+  --bg-surface: #FBF7EE;
+  --text-primary: #0E1722;
+  --accent-tide: #1F4E73;
 }
 
 html,
@@ -24,7 +24,7 @@ body {
 
 ::selection {
   background: var(--accent-tide);
-  color: #000;
+  color: #fff;
 }
 
 a {
@@ -51,7 +51,7 @@ textarea:focus-visible,
 select:focus-visible,
 summary:focus-visible,
 [tabindex]:not([tabindex="-1"]):focus-visible {
-  outline: 2px solid #ffffff;
+  outline: 2px solid var(--accent-tide);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -99,19 +99,19 @@ textarea:disabled,
     font-weight: 700;
     letter-spacing: -0.015em;
     line-height: 1.1;
-    color: #eef3f7;
+    color: #0E1722;
   }
   .h-hero {
     font-size: clamp(48px, 6vw, 96px);
     font-weight: 700;
     letter-spacing: -0.015em;
     line-height: 1.05;
-    color: #ffffff;
+    color: #0E1722;
   }
   .body-copy {
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.74);
+    color: rgba(14, 23, 34, 0.78);
   }
 }

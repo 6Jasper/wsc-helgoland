@@ -24,7 +24,7 @@ export function SectionHeader({
       style={{ maxWidth: isCenter ? maxTitle : undefined }}
     >
       <h2
-        className="text-balance text-white font-light m-0"
+        className="text-balance text-text-primary font-light m-0"
         style={{
           fontSize: "clamp(34px, 4.4vw, 64px)",
           lineHeight: 1.08,

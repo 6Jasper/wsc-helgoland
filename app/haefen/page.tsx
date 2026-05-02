@@ -16,41 +16,41 @@ type Hafen = {
 const HAEFEN: Hafen[] = [
   {
     name: "Vorhafen",
-    intro: "Schutzhafen des Bundes.",
+    intro: "Schutz- und Sicherheitshafen des Bundes.",
     image: "/img/wsch_vorhafen.jpg",
-    alt: "Vorhafen Helgoland im Gegenlicht",
+    alt: "Vorhafen Helgoland",
     body:
-      "Schutz- und Sicherheitshafen, im Eigentum des Bundes. Hier legen unter anderem die MS Helgoland und die Versorgungsschiffe an. Der Helgolandkai wurde zuletzt komplett neu gebaut. Sportbootliegeplätze des WSCH gibt es hier nicht.",
+      "Der Vorhafen ist der Schutz- und Sicherheitshafen Helgolands und steht im Eigentum des Bundes. Hier legen die MS Helgoland und die Versorgungsschiffe an. Der Helgolandkai wurde zuletzt komplett neu gebaut. Liegeplätze für Sportboote gibt es im Vorhafen nicht.",
     facts: [
       ["Eigentümer", "Bund"],
       ["Funktion", "Versorgung, Berufsschifffahrt"],
-      ["WSCH", "kein Liegeplatz"],
-      ["Stand", "Helgolandkai neu"],
+      ["Sportboote", "kein WSCH-Liegeplatz"],
+      ["Stand", "Helgolandkai neu gebaut"],
     ],
   },
   {
     name: "Südhafen",
-    intro: "Vereinsanlage im unreinen Becken.",
+    intro: "Hier liegt eine der beiden Vereinsanlagen des WSCH.",
     image: "/img/wsch_suedhafen.jpg",
     alt: "WSCH Steganlage im Südhafen",
     body:
-      "Schutzhafen mit Sportbootliegeplätzen und der Steganlage des Vereins. An Stelle der heutigen Stege stand bis 1945 ein U-Boot-Bunker. Dessen Trümmer liegen bis heute im Hafenbecken. Wer hier festmacht, fährt nicht eigenständig ein, sondern wird von einem Mitglied geführt.",
+      "Schutzhafen mit der Hauptsteganlage des Vereins. Der Südhafen gilt als unrein: An der Stelle der heutigen Stege stand bis Kriegsende ein U-Boot-Bunker, dessen Trümmer bis heute im Hafenbecken liegen. Wer hier festmachen möchte, fährt nicht eigenständig ein, sondern wird von einem Mitglied geführt.",
     facts: [
       ["Eigentümer", "Bund"],
       ["Steganlage", "WSCH"],
-      ["Untergrund", "unrein, Trümmer"],
+      ["Hinweis", "Trümmer im Hafenbecken"],
       ["Anlauf", "nur nach Einführung"],
     ],
   },
   {
     name: "Binnenhafen",
-    intro: "Gemeindehafen, kein Sportboot.",
+    intro: "Gemeindehafen mit Passagieranlandung.",
     image: "/img/wsch_binnenhafen.jpg",
     alt: "Binnenhafen Helgoland mit Hummerbuden",
     body:
-      "Hafen der Gemeinde, Anlandung des Halunder Jet und der Nordlicht. Sportboote dürfen nicht festmachen. Hier liegen die Börteboote und die Dünenfähre, hier steht die Bunkerstation für Diesel direkt vor den Hummerbuden. Zuletzt vertieft.",
+      "Der Binnenhafen gehört der Gemeinde Helgoland. Hier legen die Passagierfähren Halunder Jet und Nordlicht an. Sportboote dürfen im Binnenhafen nicht festmachen. Die Bunkerstation für Sportboot-Diesel liegt direkt vor den Hummerbuden. Der Hafen wurde zuletzt vertieft.",
     facts: [
-      ["Eigentümer", "Gemeinde"],
+      ["Eigentümer", "Gemeinde Helgoland"],
       ["Passagierfähren", "Halunder Jet, Nordlicht"],
       ["Sportboote", "Anlegen verboten"],
       ["Diesel", "Bunkerstation"],
@@ -58,13 +58,13 @@ const HAEFEN: Hafen[] = [
   },
   {
     name: "Nordosthafen",
-    intro: "Vereinsanlage und Motorbootsparte.",
+    intro: "Zweite Vereinsanlage des WSCH.",
     image: "/img/wsch_nordosthafen.jpg",
     alt: "Nordosthafen mit WSCH Liegeplätzen",
     body:
-      "Hafen der Gemeinde, mit der zweiten Steganlage des Vereins. Hier liegen vor allem die Motorboote der Mitglieder. Bei östlichen Winden fährt die Dünenfähre vom Nordosthafen ab. An der Lesehalle gilt Anlegeverbot. Eingerahmt vom Neubau des Aquariums.",
+      "Auch der Nordosthafen gehört der Gemeinde. Hier liegt die zweite Steganlage des Vereins, an der vor allem die Motorboote der Mitglieder festmachen. Bei östlichen Winden fährt die Dünenfähre vom Nordosthafen ab. An der Lesehalle gilt Anlegeverbot.",
     facts: [
-      ["Eigentümer", "Gemeinde"],
+      ["Eigentümer", "Gemeinde Helgoland"],
       ["Steganlage", "WSCH"],
       ["Hauptnutzer", "Motorbootsparte"],
       ["Hinweis", "Lesehalle, Anlegeverbot"],
@@ -72,11 +72,11 @@ const HAEFEN: Hafen[] = [
   },
   {
     name: "Landungsbrücke",
-    intro: "Düne, Börteboote, Anlegeverbot.",
+    intro: "Anlegestelle für Dünenfähre und Börteboote.",
     image: "/img/wsch_landungsbruecke.jpg",
     alt: "Landungsbrücke Helgoland von oben",
     body:
-      "Anlegestelle der Dünenfähre und Liegeplatz der Börteboote. Brücke 3 wurde kürzlich entfernt. Für Sportboote gilt Anlegeverbot.",
+      "An der Landungsbrücke legt die Dünenfähre an, hier liegen auch die Börteboote. Brücke 3 wurde kürzlich entfernt. Für Sportboote gilt Anlegeverbot.",
     facts: [
       ["Funktion", "Dünenfähre, Börteboote"],
       ["Anlegen", "verboten"],
@@ -99,8 +99,8 @@ export default function HaefenPage() {
   return (
     <>
       <PageHero
-        title={<>Fünf Häfen, <span style={{ fontWeight: 600 }}>ein Felsen.</span></>}
-        lead="Helgoland verteilt seinen Schiffsverkehr auf mehrere Hafenbereiche. Wer wo liegt, hängt von Tiefe, Eigentum und Geschichte ab. Die Vereinsanlagen des WSCH liegen im Süd- und Nordosthafen."
+        title={<>Die <span style={{ fontWeight: 600 }}>Häfen Helgolands.</span></>}
+        lead="Die Insel verfügt über fünf Hafenbereiche mit unterschiedlicher Nutzung. Der Wassersportclub Helgoland betreibt seine Vereinsanlagen im Süd- und Nordosthafen."
         image="/img/wsch_helgolandweit.jpg"
         alt="Helgoland mit Düne aus der Ferne"
         height="medium"
@@ -108,29 +108,29 @@ export default function HaefenPage() {
 
       <div className="bg-bg-primary">
         {HAEFEN.map((h, i) => (
-          <section key={h.name} className="px-6 md:px-14 py-20 md:py-[120px] border-b border-border-subtle">
+          <section key={h.name} className={`px-6 md:px-14 py-20 md:py-[120px] border-b border-border-subtle ${i % 2 === 1 ? "bg-bg-surface" : ""}`}>
             <div className={`max-w-container mx-auto grid gap-12 lg:gap-16 lg:grid-cols-2 lg:items-center ${i % 2 === 1 ? "lg:[&>div:first-child]:order-2" : ""}`}>
               <Reveal variant="cinematic">
-                <div className="relative aspect-[4/3] overflow-hidden rounded">
+                <div className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
                   <Image src={h.image} alt={h.alt} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
                 </div>
               </Reveal>
 
               <Reveal variant="cinematic" delay={0.1}>
                 <div>
-                  <div className="text-text-dim text-[14px] mb-4">{h.intro}</div>
+                  <div className="text-text-muted text-[15px] mb-4">{h.intro}</div>
                   <h2
-                    className="m-0 text-white font-light"
+                    className="m-0 text-text-primary font-light"
                     style={{ fontSize: "clamp(34px, 4.4vw, 60px)", lineHeight: 1.05, letterSpacing: "-.02em" }}
                   >
                     {h.name}
                   </h2>
                   <p className="body-copy mt-6 max-w-prose">{h.body}</p>
-                  <dl className="mt-8 grid grid-cols-2 gap-4 text-[13px]">
+                  <dl className="mt-8 grid grid-cols-2 gap-4 text-[14px]">
                     {h.facts.map(([k, v]) => (
                       <div key={k} className="border-l border-border-subtle pl-4">
                         <dt className="text-[11px] tracking-eyebrowWide uppercase text-text-dim">{k}</dt>
-                        <dd className="mt-1 text-white">{v}</dd>
+                        <dd className="mt-1 text-text-primary">{v}</dd>
                       </div>
                     ))}
                   </dl>
@@ -141,52 +141,53 @@ export default function HaefenPage() {
         ))}
       </div>
 
-      <section className="relative bg-bg-surface text-white px-6 md:px-14 py-20 md:py-[140px]">
+      <section className="relative bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
         <div className="max-w-container mx-auto grid gap-12 lg:grid-cols-2 lg:items-center">
           <Reveal variant="cinematic">
-            <div className="relative aspect-[4/3] overflow-hidden rounded">
+            <div className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
               <Image src="/img/wsch_untiefe2.jpg" alt="Steine im Südhafen bei Niedrigwasser" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
             </div>
           </Reveal>
           <Reveal variant="cinematic" delay={0.1}>
             <div>
               <h2
-                className="m-0 text-white font-light"
+                className="m-0 text-text-primary font-light"
                 style={{ fontSize: "clamp(32px, 4vw, 56px)", lineHeight: 1.08, letterSpacing: "-.02em" }}
               >
-                Im Südhafen liegt <span className="font-bold">Geschichte am Grund.</span>
+                Hinweis zum <span className="font-bold">Südhafen.</span>
               </h2>
               <p className="body-copy mt-6 max-w-prose">
-                Bis 1945 stand hier der größte deutsche U-Boot-Bunker der Nordsee. Was nach der Sprengung der Insel 1947 übrig
-                blieb, liegt bis heute im Hafenbecken. Bei Niedrigwasser werden Steine, Beton und Eisen sichtbar.
+                Bis 1945 stand an der Stelle der heutigen Steganlage der größte deutsche U-Boot-Bunker der Nordsee. Nach der
+                Sprengung der Insel 1947 sind Reste des Bunkers im Hafenbecken liegengeblieben. Bei Niedrigwasser werden Steine
+                und Beton sichtbar.
               </p>
               <p className="body-copy mt-4 max-w-prose">
-                Wer im Südhafen festmachen will, stimmt das vorab mit dem Verein ab und wird von einem Mitglied eingeführt.
-                Befahren auf eigene Gefahr.
+                Wer im Südhafen festmachen möchte, stimmt das vorab mit dem Verein ab und wird von einem Mitglied eingewiesen.
+                Befahren erfolgt auf eigene Gefahr.
               </p>
             </div>
           </Reveal>
         </div>
       </section>
 
-      <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
+      <section className="bg-bg-surface px-6 md:px-14 py-20 md:py-[140px]">
         <div className="max-w-container mx-auto">
           <Reveal variant="cinematic">
             <h2
-              className="m-0 text-white font-light max-w-3xl"
+              className="m-0 text-text-primary font-light max-w-3xl"
               style={{ fontSize: "clamp(28px, 3.4vw, 44px)", lineHeight: 1.1, letterSpacing: "-.02em" }}
             >
               Die Anlage <span className="font-bold">aus der Luft.</span>
             </h2>
             <p className="body-copy mt-5 max-w-xl">
-              Drohnenaufnahmen vom Süd- und Nordosthafen. Wer vom Festland kommt, sieht hier sein Hafenrevier zum ersten Mal.
+              Drohnenaufnahmen vom Süd- und Nordosthafen.
             </p>
           </Reveal>
 
           <Reveal variant="cinematic" delay={0.15}>
             <div className="mt-12 grid gap-3 md:gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {GALERIE.map((g) => (
-                <div key={g.src} className="relative aspect-[4/3] overflow-hidden rounded">
+                <div key={g.src} className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
                   <Image
                     src={g.src}
                     alt={g.alt}

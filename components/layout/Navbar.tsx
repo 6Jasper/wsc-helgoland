@@ -33,48 +33,54 @@ export default function Navbar() {
 
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
+  const onDarkHero = !scrolled;
+
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 border-b transition duration-300 ${
-        scrolled ? "border-border-subtle bg-bg-primary/85 backdrop-blur-md" : "border-transparent bg-transparent"
+        scrolled ? "border-border-subtle bg-bg-primary/90 backdrop-blur-md" : "border-transparent bg-transparent"
       }`}
     >
       <div className="px-6 md:px-14">
         <div className="mx-auto max-w-[1280px] flex items-center justify-between h-[72px] md:h-[88px]">
           <Link href="/" className="flex items-center gap-3 flex-shrink-0 transition-opacity hover:opacity-80" aria-label="WSC Helgoland · Startseite">
-            <span className="grid h-10 w-10 md:h-11 md:w-11 place-items-center rounded-full bg-white/95 overflow-hidden">
+            <span className="grid h-10 w-10 md:h-11 md:w-11 place-items-center rounded-full bg-white/95 overflow-hidden shadow-soft">
               <Image src="/img/wsch_logo.png" alt="" width={44} height={44} className="h-9 w-9 md:h-10 md:w-10 object-contain" priority />
             </span>
             <span className="hidden sm:block leading-tight">
-              <span className="block text-sm md:text-[15px] font-semibold text-white tracking-tightish">WSC Helgoland</span>
-              <span className="block text-[10px] md:text-[11px] tracking-eyebrowWide uppercase text-text-dim">e.V. · seit 1965</span>
+              <span className={`block text-sm md:text-[15px] font-semibold tracking-tightish transition-colors ${onDarkHero ? "text-white" : "text-text-primary"}`}>
+                WSC Helgoland
+              </span>
+              <span className={`block text-[10px] md:text-[11px] tracking-eyebrowWide uppercase transition-colors ${onDarkHero ? "text-white/70" : "text-text-dim"}`}>
+                e.V. · seit 1965
+              </span>
             </span>
           </Link>
 
           <nav className="hidden xl:flex items-center gap-7">
-            {NAV_ITEMS.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`text-[14px] font-medium transition-colors ${
-                  isActive(item.href) ? "text-text-primary" : "text-text-dim hover:text-text-primary"
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {NAV_ITEMS.map((item) => {
+              const active = isActive(item.href);
+              const baseColor = onDarkHero
+                ? active ? "text-white" : "text-white/75 hover:text-white"
+                : active ? "text-text-primary" : "text-text-muted hover:text-text-primary";
+              return (
+                <Link key={item.href} href={item.href} className={`text-[14px] font-medium transition-colors ${baseColor}`}>
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
 
           <button
             type="button"
             onClick={() => setMobileOpen((v) => !v)}
-            className="xl:hidden flex flex-col gap-[5px] p-2 cursor-pointer rounded transition-opacity hover:opacity-80"
+            className={`xl:hidden flex flex-col gap-[5px] p-2 cursor-pointer rounded transition-opacity hover:opacity-80 ${onDarkHero ? "" : ""}`}
             aria-label="Menü öffnen"
             aria-expanded={mobileOpen}
           >
-            <span className={`block h-px w-6 bg-text-primary transition-transform ${mobileOpen ? "translate-y-[6px] rotate-45" : ""}`} />
-            <span className={`block h-px w-6 bg-text-primary transition-opacity ${mobileOpen ? "opacity-0" : "opacity-100"}`} />
-            <span className={`block h-px w-6 bg-text-primary transition-transform ${mobileOpen ? "-translate-y-[6px] -rotate-45" : ""}`} />
+            <span className={`block h-px w-6 transition-all ${onDarkHero ? "bg-white" : "bg-text-primary"} ${mobileOpen ? "translate-y-[6px] rotate-45" : ""}`} />
+            <span className={`block h-px w-6 transition-opacity ${onDarkHero ? "bg-white" : "bg-text-primary"} ${mobileOpen ? "opacity-0" : "opacity-100"}`} />
+            <span className={`block h-px w-6 transition-all ${onDarkHero ? "bg-white" : "bg-text-primary"} ${mobileOpen ? "-translate-y-[6px] -rotate-45" : ""}`} />
           </button>
         </div>
       </div>
@@ -88,7 +94,7 @@ export default function Navbar() {
                   key={item.href}
                   href={item.href}
                   className={`text-[22px] font-medium transition-colors ${
-                    isActive(item.href) ? "text-text-primary" : "text-text-dim hover:text-text-primary"
+                    isActive(item.href) ? "text-text-primary" : "text-text-muted hover:text-text-primary"
                   }`}
                 >
                   {item.label}
