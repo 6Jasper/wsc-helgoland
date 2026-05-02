@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { navGroups, club } from "@/lib/nav";
 
@@ -6,18 +7,21 @@ export default function Footer() {
     <footer className="mt-24 border-t border-brand-deep/10 bg-brand-deep text-brand-sand">
       <div className="container-x grid gap-12 py-16 md:grid-cols-4">
         <div className="md:col-span-1">
-          <div className="font-display text-2xl">{club.shortName}</div>
-          <p className="mt-3 text-sm text-brand-sand/70 max-w-prose">
+          <div className="flex items-center gap-3">
+            <span className="grid h-12 w-12 place-items-center rounded-full bg-white">
+              <Image src="/img/wsch_logo.png" alt="WSCH Stander" width={48} height={48} className="h-11 w-11 object-contain" />
+            </span>
+            <div className="font-display text-2xl">{club.shortName}</div>
+          </div>
+          <p className="mt-4 text-sm text-brand-sand/70 max-w-prose">
             {club.tagline}
           </p>
           <div className="mt-6 text-sm text-brand-sand/70">
+            <div>{club.name}</div>
             <div>{club.address.street}</div>
             <div>{club.address.zip} {club.address.city}</div>
             <div className="mt-3">
               <a href={`mailto:${club.email}`} className="hover:text-brand-sand">{club.email}</a>
-            </div>
-            <div>
-              <a href={`tel:${club.phone.replace(/\s+/g, "")}`} className="hover:text-brand-sand">{club.phone}</a>
             </div>
           </div>
         </div>

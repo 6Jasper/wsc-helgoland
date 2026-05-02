@@ -8,79 +8,80 @@ export default function GastliegerPage() {
   return (
     <>
       <PageHero
-        title="Willkommen, Gastlieger."
-        lead="Alles, was du vor und nach der Hafeneinfahrt wissen solltest. Vom Anlauf bis zur Abreise."
-        image="https://picsum.photos/seed/wsc-gastlieger-hero/2000/1100"
-        alt="Hafen mit vertäuten Yachten"
+        title="Gastliegerinfo."
+        lead="Wer auf Helgoland anläuft, sollte wissen: Der WSCH ist keine Marina. Wir vergeben freie Vereinsplätze, vornehmlich an Gäste aus befreundeten Vereinen."
+        image="/img/wsch_liegeplatzueberblick.jpg"
+        alt="Liegeplätze des WSCH am Südhafen"
       />
 
       <section className="section">
         <div className="container-x grid gap-12 lg:grid-cols-[2fr_1fr]">
           <div className="prose-zd">
-            <span className="pill">Anlauf</span>
-            <h2 className="mt-4 text-3xl">So läuft der Anlauf in Helgoland.</h2>
+            <span className="pill">Grundsätzliches</span>
+            <h2 className="mt-4 text-3xl">Kein Marinacharakter.</h2>
             <p className="mt-5">
-              Funkkontakt zum Hafenmeister auf UKW Kanal 11, sobald du in Sichtweite bist.
-              Du erhältst einen Liegeplatz oder die Anweisung, an einer freien Stelle
-              festzumachen. In Stoßzeiten an Pfingsten oder im Hochsommer ist
-              Päckchenbildung üblich, das ist Helgoland-Standard.
-            </p>
-            <p>
-              Nach dem Festmachen bitte umgehend im Hafenbüro anmelden. Dort werden
-              Hafengeld, Strom, Müll, Sauna und alles weitere abgewickelt. Mitglieder
-              befreundeter Vereine erhalten gegen Vorlage des Bootsausweises Rabatt.
+              Einen klassischen Gastliegerbetrieb mit Marinacharakter gibt es bei uns
+              nicht. Stattdessen werden lediglich freie Plätze unserer Vereinsmitglieder
+              freigegeben, vornehmlich an Vereinsmitglieder vom Festland, die auf
+              Helgoland keinen festen Liegeplatz haben.
             </p>
 
-            <h3 className="mt-10 text-2xl">Hafengeld</h3>
+            <h3 className="mt-10 text-2xl">Anlauf Südhafen</h3>
             <p className="mt-3">
-              Das Hafengeld richtet sich nach der Bootslänge und der Liegedauer. Eine
-              vollständige Tarifübersicht hängt im Hafenbüro aus und liegt im Clubhaus aus.
-              Strom und Wasser werden separat abgerechnet, der Stromanschluss erfolgt über
-              CEE-blau.
+              Der Südhafen ist unreines Gebiet. Im Hafenbecken liegen Trümmer eines
+              U-Boot-Bunkers aus dem Zweiten Weltkrieg. Ein Anlaufen ist
+              <strong className="text-brand-deep"> nur nach Vorabstimmung</strong> möglich.
+              Eine Einführung durch ein erfahrenes Vereinsmitglied ist Voraussetzung.
+              Befahren und Liegen erfolgen auf eigene Gefahr.
+            </p>
+
+            <h3 className="mt-10 text-2xl">Anlauf Nordosthafen</h3>
+            <p className="mt-3">
+              Im Nordosthafen können freie Plätze in der Regel belegt werden. Bitte
+              direkt beim Hafenmeister melden. Päckchenbildung ist nicht vorgesehen.
             </p>
 
             <h3 className="mt-10 text-2xl">Versorgung an Bord</h3>
             <ul className="mt-3 space-y-2 text-brand-stone/80">
-              <li>· Frischwasser an allen Stegen, mit Schlüssel vom Hafenbüro</li>
-              <li>· Strom 230V CEE-blau, Bezahlung über Wertmarke oder Pauschale</li>
-              <li>· Diesel an der Tankstelle im Südhafen, Öffnungszeiten saisonal</li>
-              <li>· Fäkalienabsaugung über mobile Pumpe, Anmeldung im Hafenbüro</li>
-              <li>· Müllentsorgung über Container am Hafenkopf</li>
+              <li>· <strong className="text-brand-deep">Strom Südhafen:</strong> einige Stromsäulen mit Münzeinwurf, pauschal abgerechnet</li>
+              <li>· <strong className="text-brand-deep">Strom Nordosthafen:</strong> wenige Stromsäulen, ebenfalls pauschal</li>
+              <li>· <strong className="text-brand-deep">Diesel:</strong> Bunkerstation Jörn Rickmers, im Binnenhafen an den Hummerbuden</li>
+              <li>· <strong className="text-brand-deep">Müll:</strong> Mülltrennsystem am Sanitärcontainer</li>
+              <li>· <strong className="text-brand-deep">Wasser:</strong> nicht an allen Stegen verfügbar</li>
             </ul>
 
-            <h3 className="mt-10 text-2xl">Clubhaus & Sanitär</h3>
+            <h3 className="mt-10 text-2xl">Im Hafen</h3>
             <p className="mt-3">
-              Gastlieger nutzen das Sanitärhaus am Steg 3. Duschen, Toiletten und
-              Waschmaschinen sind ganzjährig verfügbar. Das Clubhaus mit Bar, Küche und
-              Crewecke ist in der Saison täglich geöffnet, Gäste sind willkommen.
+              Höchstgeschwindigkeit 3 Knoten. Nachtruhe ab 22:00 Uhr. Generatoren sind
+              nicht zulässig. Lackier- und Schleifarbeiten sind im Hafen nicht erlaubt,
+              Mast legen oder stellen ebenfalls nicht.
             </p>
 
-            <h3 className="mt-10 text-2xl">Abreise</h3>
+            <h3 className="mt-10 text-2xl">Notruf</h3>
             <p className="mt-3">
-              Bitte vor dem Ablegen kurz im Hafenbüro abmelden, damit der Liegeplatz
-              vergeben werden kann. Wer ein Päckchen verlässt, hilft den Nachbarn beim
-              Umlegen, bevor er ablegt.
+              Im Notfall <strong className="text-brand-deep">110</strong> (Polizei) oder
+              <strong className="text-brand-deep"> 112</strong> (Feuerwehr / Rettung) wählen.
+              Seenotfall: DGzRS über UKW Kanal 16.
             </p>
           </div>
 
           <aside className="space-y-4 lg:sticky lg:top-24 self-start">
             <div className="rounded-2xl bg-brand-deep p-6 text-brand-sand">
-              <div className="text-xs uppercase tracking-[0.2em] text-brand-sand/60">Hafenfunk</div>
-              <div className="mt-2 font-display text-3xl">UKW 11</div>
-              <p className="mt-2 text-sm text-brand-sand/80">Hafenmeister rufen, sobald die Insel querab steht.</p>
+              <div className="text-xs uppercase tracking-[0.2em] text-brand-sand/60">Südhafen</div>
+              <p className="mt-2 text-sm text-brand-sand/80">Anlauf nur nach Vorabstimmung. Unreines Gebiet, Befahren auf eigene Gefahr.</p>
             </div>
             <div className="card">
-              <div className="text-xs uppercase tracking-[0.18em] text-brand-deep/60">Hafenbüro</div>
-              <a href={`tel:${club.phoneHafen.replace(/\s+/g, "")}`} className="mt-2 block font-display text-2xl text-brand-deep">{club.phoneHafen}</a>
-              <p className="mt-1 text-sm text-brand-stone/70">Saison 08:00 bis 20:00 Uhr</p>
+              <div className="text-xs uppercase tracking-[0.18em] text-brand-deep/60">Nordosthafen</div>
+              <p className="mt-2 text-sm text-brand-stone/75">Freie Plätze können in der Regel belegt werden. Beim Hafenmeister melden.</p>
             </div>
             <div className="card">
-              <div className="text-xs uppercase tracking-[0.18em] text-brand-deep/60">E-Mail Gastlieger</div>
-              <a href={`mailto:${club.emailGastlieger}`} className="mt-2 block text-base text-brand-deep break-all">{club.emailGastlieger}</a>
+              <div className="text-xs uppercase tracking-[0.18em] text-brand-deep/60">Kontakt</div>
+              <a href={`mailto:${club.email}`} className="mt-2 block text-base text-brand-deep break-all">{club.email}</a>
+              <p className="mt-2 text-xs text-brand-stone/70">Antwort in der Regel binnen 48 Stunden.</p>
             </div>
             <div className="card">
               <div className="text-xs uppercase tracking-[0.18em] text-brand-deep/60">Notruf</div>
-              <p className="mt-2 text-sm text-brand-stone/75">Seenotrettung über DGzRS, UKW 16 oder Telefon 124 124.</p>
+              <p className="mt-2 text-sm text-brand-stone/75">110 / 112 · DGzRS UKW Kanal 16</p>
             </div>
             <Link href="/regeln" className="btn-ghost w-full">
               Hafenregeln lesen

@@ -11,7 +11,7 @@ export const navGroups = [
   {
     label: "Hafen",
     items: [
-      { href: "/haefen", label: "Die zwei Häfen" },
+      { href: "/haefen", label: "Häfen Helgolands" },
       { href: "/gastlieger", label: "Gastlieger" },
       { href: "/regeln", label: "Hafenregeln" },
       { href: "/clubhaus", label: "Clubhaus" },
@@ -20,7 +20,7 @@ export const navGroups = [
   {
     label: "Segeln",
     items: [
-      { href: "/nordseewoche", label: "Nordseewoche" },
+      { href: "/regatten", label: "Regatten" },
     ],
   },
 ];
@@ -29,7 +29,7 @@ export const flatNav = [
   { href: "/haefen", label: "Häfen" },
   { href: "/gastlieger", label: "Gastlieger" },
   { href: "/mitgliedschaft", label: "Mitgliedschaft" },
-  { href: "/nordseewoche", label: "Nordseewoche" },
+  { href: "/regatten", label: "Regatten" },
   { href: "/clubhaus", label: "Clubhaus" },
   { href: "/vorstand", label: "Vorstand" },
   { href: "/kontakt", label: "Kontakt" },
@@ -37,16 +37,19 @@ export const flatNav = [
 
 export const club = {
   name: "Wassersportclub Helgoland e.V.",
-  shortName: "WSC Helgoland",
+  shortName: "WSCH",
+  longShortName: "WSC Helgoland",
   tagline: "Segeln, Ankommen, Dazugehören. Auf Deutschlands einziger Hochseeinsel.",
   address: {
-    street: "Am Südhafen 1",
+    street: "Postfach 1125",
     zip: "27498",
     city: "Helgoland",
   },
-  phone: "+49 4725 0000000",
-  phoneHafen: "+49 4725 0000001",
-  email: "info@wsc-helgoland.de",
-  emailGastlieger: "gastlieger@wsc-helgoland.de",
-  founded: 1962,
+  email: "kontakt@wsc-helgoland.de",
+  founded: 1965,
+  register: {
+    court: "Amtsgericht Pinneberg",
+    number: "VR 591 PI",
+  },
+  taxNumber: "18/291/72014",
 };

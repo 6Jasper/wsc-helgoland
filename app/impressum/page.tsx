@@ -21,8 +21,8 @@ export default function ImpressumPage() {
           <div>
             <h2 className="text-xl text-brand-deep">Vertretungsberechtigt</h2>
             <p className="mt-2">
-              1. Vorsitzender: Dr. Jens Hartmann<br />
-              2. Vorsitzende: Maren Tietjen
+              1. Vorsitzender: Kay Martens<br />
+              2. Vorsitzender: Dieter Klings
             </p>
           </div>
 
@@ -30,15 +30,19 @@ export default function ImpressumPage() {
             <h2 className="text-xl text-brand-deep">Registereintrag</h2>
             <p className="mt-2">
               Eintragung im Vereinsregister.<br />
-              Registergericht: Amtsgericht Pinneberg<br />
-              Registernummer: VR 0000 (Platzhalter)
+              Registergericht: {club.register.court}<br />
+              Registernummer: {club.register.number}
             </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl text-brand-deep">Steuernummer</h2>
+            <p className="mt-2">{club.taxNumber}</p>
           </div>
 
           <div>
             <h2 className="text-xl text-brand-deep">Kontakt</h2>
             <p className="mt-2">
-              Telefon: <a href={`tel:${club.phone.replace(/\s+/g, "")}`} className="underline">{club.phone}</a><br />
               E-Mail: <a href={`mailto:${club.email}`} className="underline">{club.email}</a>
             </p>
           </div>
@@ -59,7 +63,9 @@ export default function ImpressumPage() {
             </p>
           </div>
 
-          <p className="text-xs text-brand-stone/60">Hinweis: Dies ist ein Platzhalter-Impressum für die Entwicklungsphase. Vor Live-Schaltung von der Geschäftsstelle prüfen lassen.</p>
+          <p className="text-xs text-brand-stone/60">
+            Hinweis: Vor Live-Schaltung bitte vom Vorstand prüfen lassen.
+          </p>
         </div>
       </div>
     </section>

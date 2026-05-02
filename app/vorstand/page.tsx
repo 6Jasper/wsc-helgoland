@@ -1,23 +1,20 @@
 import PageHero from "@/components/PageHero";
-import { club } from "@/lib/nav";
 
 export const metadata = { title: "Vorstand & Ansprechpartner" };
 
 const vorstand = [
-  { role: "1. Vorsitzender", name: "Dr. Jens Hartmann", contact: "vorstand@wsc-helgoland.de", area: "Gesamtverein, Außenvertretung, Strategie" },
-  { role: "2. Vorsitzender", name: "Maren Tietjen", contact: "stellvertretung@wsc-helgoland.de", area: "Mitglieder, Veranstaltungen, Nordseewoche" },
-  { role: "Kassenwart", name: "Friedrich Dose", contact: "kasse@wsc-helgoland.de", area: "Beiträge, Buchhaltung, Förderanträge" },
-  { role: "Schriftführer", name: "Anna Petersen", contact: "schriftfuehrung@wsc-helgoland.de", area: "Protokoll, Schriftverkehr, Mitgliederakten" },
-  { role: "Hafenwart", name: "Klaus-Dieter Brandt", contact: "hafen@wsc-helgoland.de", area: "Hafenbüro, Liegeplätze, Stege, Gastlieger" },
-  { role: "Jugendwart", name: "Lasse Krüger", contact: "jugend@wsc-helgoland.de", area: "Optimisten, Jollen, Ausbildung, Camp" },
+  { role: "1. Vorsitzender", name: "Kay Martens", area: "Gesamtverein, Außenvertretung" },
+  { role: "2. Vorsitzender", name: "Dieter Klings", area: "Stellvertretung, Spartenleitung Motorboot" },
+  { role: "Schatzmeisterin", name: "Monika van Freeden", area: "Beiträge, Buchhaltung, Förderanträge" },
+  { role: "Schriftführer / Schriftführerin", name: null, area: "Protokoll, Schriftverkehr, Mitgliederakten" },
+  { role: "Hafenwart", name: null, area: "Hafenbüro, Liegeplätze, Stege, Gastlieger" },
 ];
 
-const ansprechpartner = [
-  { area: "Sicherheit & Notfall", name: "Hafenmeister-Bereitschaft", contact: club.phoneHafen },
-  { area: "Werkstatt & Technik", name: "Werkstattgruppe", contact: "werkstatt@wsc-helgoland.de" },
-  { area: "Clubhaus & Küche", name: "Hauswart", contact: "haus@wsc-helgoland.de" },
-  { area: "Presse & Medien", name: "Presseteam", contact: "presse@wsc-helgoland.de" },
-  { area: "Datenschutz", name: "Beauftragter", contact: "datenschutz@wsc-helgoland.de" },
+const sparten = [
+  { role: "Spartenleitung Motorbootsparte", name: "Dieter Klings" },
+  { role: "Spartenleitung Segelsparte", name: "Sönke Würtz" },
+  { role: "Technischer Leiter Segelsparte", name: "Helge van Freeden" },
+  { role: "Verantwortlich Bootshalle", name: "Helge van Freeden" },
 ];
 
 export default function VorstandPage() {
@@ -25,9 +22,9 @@ export default function VorstandPage() {
     <>
       <PageHero
         title="Vorstand & Ansprechpartner."
-        lead="Sechs Köpfe, ein ehrenamtlicher Vorstand. Plus die Menschen, die im Hintergrund die Sachen am Laufen halten."
-        image="https://picsum.photos/seed/wsc-vorstand-hero/2000/1100"
-        alt="Mitglieder eines Segelclubs im Gespräch"
+        lead="Ehrenamtlicher Vorstand und die Menschen, die im Hintergrund die Sachen am Laufen halten."
+        image="/img/wsch_anlagemitclubhaus.jpg"
+        alt="WSCH Vereinsanlage am Südhafen"
       />
 
       <section className="section">
@@ -38,47 +35,42 @@ export default function VorstandPage() {
             {vorstand.map((p) => (
               <div key={p.role} className="card flex flex-col">
                 <div className="text-xs uppercase tracking-[0.18em] text-brand-deep/60">{p.role}</div>
-                <div className="mt-2 font-display text-xl text-brand-deep">{p.name}</div>
+                <div className="mt-2 font-display text-xl text-brand-deep">
+                  {p.name ?? <span className="text-brand-stone/40">noch zu besetzen</span>}
+                </div>
                 <p className="mt-3 flex-1 text-sm text-brand-stone/75">{p.area}</p>
-                <a
-                  href={`mailto:${p.contact}`}
-                  className="mt-4 break-all text-sm font-medium text-brand-sea hover:text-brand-deep"
-                >
-                  {p.contact}
-                </a>
               </div>
             ))}
           </div>
+          <p className="mt-6 text-xs text-brand-stone/60">
+            Eine namentliche Kontaktaufnahme erfolgt über die Vereinsadresse. Persönliche E-Mail-Adressen
+            werden auf der Webseite nicht veröffentlicht.
+          </p>
         </div>
       </section>
 
       <section className="section bg-white/60">
         <div className="container-x">
-          <span className="pill">Weitere Ansprechpartner</span>
-          <h2 className="mt-4 text-3xl">Für alles andere.</h2>
+          <span className="pill">Sparten und Technik</span>
+          <h2 className="mt-4 text-3xl">Verantwortlichkeiten in den Sparten.</h2>
           <div className="mt-8 overflow-hidden rounded-2xl border border-brand-deep/10">
             <table className="w-full text-sm">
               <thead className="bg-white/70 text-left text-xs uppercase tracking-[0.18em] text-brand-deep/70">
                 <tr>
-                  <th className="px-4 py-3">Bereich</th>
-                  <th className="px-4 py-3">Person / Team</th>
-                  <th className="px-4 py-3">Kontakt</th>
+                  <th className="px-4 py-3">Funktion</th>
+                  <th className="px-4 py-3">Person</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-brand-deep/10 bg-white">
-                {ansprechpartner.map((a) => (
-                  <tr key={a.area}>
-                    <td className="px-4 py-3 text-brand-deep">{a.area}</td>
-                    <td className="px-4 py-3">{a.name}</td>
-                    <td className="px-4 py-3 text-brand-stone/75 break-all">{a.contact}</td>
+                {sparten.map((a) => (
+                  <tr key={a.role}>
+                    <td className="px-4 py-3 text-brand-deep">{a.role}</td>
+                    <td className="px-4 py-3 text-brand-stone/80">{a.name}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="mt-4 text-xs text-brand-stone/60">
-            Personennamen sind Platzhalter und werden nach Mitgliederversammlung aktualisiert.
-          </p>
         </div>
       </section>
     </>

@@ -34,3 +34,13 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Interne Briefings und Source-Material (nicht ins Public Repo)
+/CONTEXT.md
+/inhalte-briefing-wsch.txt
+/WSC HELGOLAND WEBSITE.docx
+/wsch_bilder/
+/pictures/
+/Herbstregatta Logo.bmp
+/herbstregatta logo.png
+/wsch_logo.png

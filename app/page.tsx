@@ -8,8 +8,8 @@ export default function HomePage() {
     <>
       <section className="relative isolate min-h-[88vh] overflow-hidden">
         <Image
-          src="https://picsum.photos/seed/wsc-hero-helgoland/2000/1200"
-          alt="Segelyachten auf rauer See bei goldenem Licht"
+          src="/img/wsch_topdown.jpg"
+          alt="WSCH Steganlage am Südhafen aus der Vogelperspektive"
           fill
           priority
           sizes="100vw"
@@ -26,12 +26,12 @@ export default function HomePage() {
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-brand-sand/90">
             Der Wassersportclub Helgoland e.V. verbindet Mitglieder, Gastlieger und Freunde
-            der Insel. Zwei Häfen, ein Clubhaus, eine der traditionsreichsten Regatten
-            Nordeuropas und Menschen, die das Meer ernst nehmen.
+            der Insel. Vereinsanlagen im Süd- und Nordosthafen, das Clubhaus, die
+            Helgoländer Herbstregatta und Menschen, die das Meer ernst nehmen.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <Link href="/gastlieger" className="btn-primary bg-brand-sand text-brand-deep hover:bg-white">
-              Als Gastlieger anlaufen
+              Gastliegerinfo
             </Link>
             <Link href="/mitgliedschaft" className="btn-ghost bg-brand-sand/10 text-brand-sand border-brand-sand/40 hover:bg-brand-sand/20">
               Mitglied werden
@@ -46,21 +46,22 @@ export default function HomePage() {
             <span className="pill">Über den Club</span>
             <h2 className="mt-4 text-3xl sm:text-4xl">Ein Verein, geprägt von Wind, Wasser und der Insel selbst.</h2>
             <p className="mt-5 max-w-prose text-base leading-relaxed text-brand-stone/80">
-              Helgoland liegt 70 Kilometer vor der Küste, mitten in der Deutschen Bucht.
-              Wer hier festmacht, kommt nicht zufällig vorbei. Der WSC betreut den
-              Sportbootverkehr in beiden Häfen, organisiert die Nordseewoche und ist
-              Anlaufstelle für alle, die ankommen, bleiben oder durchsegeln.
+              Helgoland liegt rund 70 Kilometer vor der Küste, mitten in der Deutschen
+              Bucht. Wer hier festmacht, kommt nicht zufällig vorbei. Der WSCH betreibt
+              Vereinsanlagen im Süd- und Nordosthafen und ist Anlaufstelle für Mitglieder
+              vom Festland und befreundete Vereine.
             </p>
             <p className="mt-4 max-w-prose text-base leading-relaxed text-brand-stone/80">
-              Wir sind ein eingetragener Verein mit aktiven Mitgliedern, einem ehrenamtlichen
-              Vorstand und einem Clubhaus, das im Sommer kaum schläft. Im Winter wird gewartet,
-              geplant, gebaut und gerichtet. Im Frühjahr läuft alles wieder an.
+              Wir sind ein eingetragener Verein mit aktiven Mitgliedern, einem
+              ehrenamtlichen Vorstand und einem Clubhaus, das im Sommer kaum schläft.
+              Im Winter wird gewartet, geplant, gebaut und gerichtet. Im Frühjahr läuft
+              alles wieder an.
             </p>
           </div>
           <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
             <Image
-              src="https://picsum.photos/seed/wsc-club-hafen/1400/1750"
-              alt="Hafen mit vertäuten Segelbooten am Kai"
+              src="/img/wsch_anlagemitclubhaus.jpg"
+              alt="WSCH Steganlage und Clubhaus mit Insel im Hintergrund"
               fill
               sizes="(min-width: 1024px) 40vw, 100vw"
               className="object-cover"
@@ -78,37 +79,37 @@ export default function HomePage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             <InfoCard
               title="Gastlieger"
-              body="Anlaufverfahren, Liegeplatzvergabe, Hafengebühren, Versorgung an Bord. Was du brauchst, bevor du in Helgoland einläufst."
+              body="Anlaufverfahren, Liegeplatzvergabe und Versorgung. Was du brauchst, bevor du in Helgoland einläufst."
               href="/gastlieger"
               cta="Gastlieger-Infos"
             />
             <InfoCard
-              title="Die zwei Häfen"
-              body="Binnenhafen und Südhafen. Welcher Hafen passt zu deinem Boot? Tiefen, Zugänge, Strömung, Wind."
+              title="Häfen Helgolands"
+              body="Vorhafen, Südhafen, Binnenhafen, Nordosthafen, Landungsbrücke. Welcher Hafen, welche Nutzung, welche Risiken."
               href="/haefen"
-              cta="Häfen vergleichen"
+              cta="Häfen ansehen"
             />
             <InfoCard
               title="Clubhaus"
-              body="Treffpunkt für Mitglieder und Gäste. Öffnungszeiten, Küche, Bar, Crewecke, Duschen, Waschmaschine."
+              body="Treffpunkt für Mitglieder am Südhafen. Nicht öffentlich zugänglich, ausschließlich Vereinszwecke."
               href="/clubhaus"
               cta="Clubhaus entdecken"
             />
             <InfoCard
-              title="Nordseewoche"
-              body="Eines der ältesten Hochsee-Regatta-Formate Deutschlands. Termine, Klassen, Anmeldung."
-              href="/nordseewoche"
-              cta="Zur Regatta"
+              title="Regatten"
+              body="Helgoländer Herbstregatta jährlich Anfang September, Mitveranstaltung Nordseewoche, Störtebeker Opti-Cup."
+              href="/regatten"
+              cta="Zu den Regatten"
             />
             <InfoCard
               title="Mitgliedschaft"
-              body="Beiträge, Aufnahmeverfahren, Rechte und Pflichten. Wer Mitglied wird, gehört dazu."
+              body="Aufnahme über Antrag mit zwei Bürgen, Entscheidung in der Spartenversammlung. Wer Mitglied wird, gehört dazu."
               href="/mitgliedschaft"
               cta="Mitglied werden"
             />
             <InfoCard
               title="Hafenregeln"
-              body="Geschwindigkeit, Liegeordnung, Müll, Strom, Lautstärke. Was im Hafen gilt, gilt für alle."
+              body="3 Knoten, Nachtruhe ab 22 Uhr, kein Generator. Was im Hafen gilt, gilt für alle."
               href="/regeln"
               cta="Regeln lesen"
             />
@@ -120,28 +121,27 @@ export default function HomePage() {
         <div className="container-x grid gap-10 lg:grid-cols-[1.1fr_1fr] lg:items-center">
           <div className="relative aspect-[5/4] overflow-hidden rounded-3xl">
             <Image
-              src="https://picsum.photos/seed/wsc-nordseewoche-thumb/1600/1280"
-              alt="Segelboote in einer Regatta auf hoher See"
+              src="/img/06092025_regatta-19.jpg"
+              alt="Segelboote vor Helgoland bei der Helgoländer Herbstregatta"
               fill
               sizes="(min-width: 1024px) 55vw, 100vw"
               className="object-cover"
             />
           </div>
           <div>
-            <span className="pill">Nordseewoche</span>
-            <h2 className="mt-4 text-3xl sm:text-4xl">Pfingsten gehört dem Wind.</h2>
+            <span className="pill">Helgoländer Herbstregatta</span>
+            <h2 className="mt-4 text-3xl sm:text-4xl">Anfang September, um Insel und Düne.</h2>
             <p className="mt-5 max-w-prose text-base leading-relaxed text-brand-stone/80">
-              Die Nordseewoche ist seit Jahrzehnten Pflichttermin für Hochseesegler aus
-              Deutschland, Dänemark, den Niederlanden und Skandinavien. Über Pfingsten
-              verwandeln sich beide Häfen in ein Lager aus Yachten, Crews und gespannten
-              Wettervorhersagen.
+              Die Herbstregatta ist die jährliche Traditionsregatta des WSCH für
+              seegängige Segelyachten. Wettfahrt um Insel und Düne, gewertet nach
+              Yardstick.
             </p>
             <p className="mt-4 max-w-prose text-base leading-relaxed text-brand-stone/80">
-              Der WSC ist Mitveranstalter und betreut Crews, Verpflegung und Land-Programm.
-              Auch wer nicht startet, ist willkommen.
+              Daneben ist der WSCH Mitveranstalter der Nordseewoche und richtet den
+              Störtebeker Opti-Cup für den Nachwuchs aus.
             </p>
-            <Link href="/nordseewoche" className="btn-primary mt-7">
-              Programm & Anmeldung
+            <Link href="/regatten" className="btn-primary mt-7">
+              Alle Regatten
             </Link>
           </div>
         </div>
@@ -151,27 +151,31 @@ export default function HomePage() {
         <div className="container-x grid gap-10 md:grid-cols-3">
           <div className="md:col-span-1">
             <span className="pill bg-brand-sand/15 text-brand-sand border-brand-sand/30">Kontakt</span>
-            <h2 className="mt-4 text-3xl text-brand-sand">Wir sind erreichbar. Auch bei Wind 7.</h2>
+            <h2 className="mt-4 text-3xl text-brand-sand">Erreichbar per Mail.</h2>
             <p className="mt-5 max-w-prose text-base leading-relaxed text-brand-sand/80">
-              Hafenmeister, Vorstand, Clubhaus. Die Nummern unten sind während der Saison
-              regelmäßig besetzt, außerhalb auf Anrufbeantworter mit Rückruf.
+              Anfragen erreichen uns am zuverlässigsten per E-Mail. Wir antworten
+              in der Regel binnen 48 Stunden.
             </p>
           </div>
           <div className="md:col-span-2 grid gap-4 sm:grid-cols-2">
-            <div className="rounded-2xl border border-brand-sand/15 p-6">
-              <div className="text-xs uppercase tracking-[0.2em] text-brand-sand/50">Hafenbüro</div>
-              <a href={`tel:${club.phoneHafen.replace(/\s+/g, "")}`} className="mt-2 block font-display text-2xl">{club.phoneHafen}</a>
-              <div className="mt-1 text-sm text-brand-sand/70">Saison 08:00 bis 20:00 Uhr</div>
-            </div>
-            <div className="rounded-2xl border border-brand-sand/15 p-6">
-              <div className="text-xs uppercase tracking-[0.2em] text-brand-sand/50">Geschäftsstelle</div>
-              <a href={`tel:${club.phone.replace(/\s+/g, "")}`} className="mt-2 block font-display text-2xl">{club.phone}</a>
-              <div className="mt-1 text-sm text-brand-sand/70">Mo bis Fr 09:00 bis 16:00 Uhr</div>
-            </div>
             <div className="rounded-2xl border border-brand-sand/15 p-6 sm:col-span-2">
               <div className="text-xs uppercase tracking-[0.2em] text-brand-sand/50">E-Mail</div>
               <a href={`mailto:${club.email}`} className="mt-2 block font-display text-2xl">{club.email}</a>
-              <div className="mt-1 text-sm text-brand-sand/70">Antwort in der Regel binnen 48 Stunden.</div>
+            </div>
+            <div className="rounded-2xl border border-brand-sand/15 p-6">
+              <div className="text-xs uppercase tracking-[0.2em] text-brand-sand/50">Anschrift</div>
+              <div className="mt-2 text-sm text-brand-sand/85">
+                {club.name}<br />
+                {club.address.street}<br />
+                {club.address.zip} {club.address.city}
+              </div>
+            </div>
+            <div className="rounded-2xl border border-brand-sand/15 p-6">
+              <div className="text-xs uppercase tracking-[0.2em] text-brand-sand/50">Notruf</div>
+              <div className="mt-2 text-sm text-brand-sand/85">
+                Polizei 110 · Rettung 112<br />
+                DGzRS Seenot UKW Kanal 16
+              </div>
             </div>
           </div>
         </div>

@@ -6,45 +6,38 @@ const sections = [
   {
     title: "Anlauf und Festmachen",
     items: [
-      "Anmeldung beim Hafenmeister auf UKW Kanal 11, sobald Helgoland in Sichtweite ist.",
-      "Liegeplatz wird zugewiesen. Eigenmächtiges Belegen freier Plätze nicht zulässig.",
-      "Im Päckchen: Leinen über See, Stromkabel sauber führen, gegenseitige Rücksicht.",
+      "Südhafen: Anlauf nur nach Vorabstimmung. Unreines Gebiet, Befahren auf eigene Gefahr und nur nach Einführung durch ein erfahrenes Vereinsmitglied.",
+      "Nordosthafen: freie Plätze können in der Regel belegt werden. Beim Hafenmeister melden.",
+      "Päckchenbildung ist nicht vorgesehen.",
       "Maximalgeschwindigkeit im Hafen: 3 Knoten. Keine Wellen.",
     ],
   },
   {
     title: "Verhalten im Hafen",
     items: [
-      "Nachtruhe ab 22:00 Uhr. Crew-Abende dürfen sein, Schreiäußerungen nicht.",
-      "Generatoren und laute Maschinen ab 21:00 Uhr nicht mehr betreiben.",
-      "Hunde an Land an der Leine.",
-      "Grillen nur in dafür ausgewiesenen Bereichen.",
+      "Nachtruhe ab 22:00 Uhr.",
+      "Generatoren sind nicht zulässig.",
+      "Keine besonderen Regelungen für Hunde.",
+      "Lackier- und Schleifarbeiten im Hafen sind nicht erlaubt.",
+      "Mast legen oder stellen ist nicht erlaubt.",
     ],
   },
   {
     title: "Müll, Strom, Wasser",
     items: [
-      "Mülltrennung in den Containern am Hafenkopf.",
-      "Strom CEE-blau, eigenes Kabel mitbringen, kein Schuko-Adapter dauerhaft.",
-      "Wasser sparsam verwenden, kein Bootswaschen mit Schlauch in der Hauptsaison.",
-      "Fäkalientanks ausschließlich über die Absauganlage entleeren.",
+      "Müllentsorgung über das Mülltrennsystem am Sanitärcontainer.",
+      "Strom: Stromsäulen mit Münzeinwurf, im Südhafen einige, im Nordosthafen wenige. Pauschal abgerechnet.",
+      "Wasser ist nicht an allen Stegen verfügbar.",
+      "Diesel an der Bunkerstation Jörn Rickmers im Binnenhafen, an den Hummerbuden.",
     ],
   },
   {
     title: "Sicherheit",
     items: [
-      "Schwimmwesten bei Kindern auf den Stegen Pflicht.",
-      "Feuerlöscher und Rettungsringe sind Standorte einzuhalten, nicht entfernen.",
-      "Im Brand- oder Notfall: Hafenmeister rufen, dann 112.",
+      "Im Notfall 110 (Polizei) oder 112 (Feuerwehr / Rettung) wählen.",
+      "Seenotfall: DGzRS, UKW Kanal 16.",
+      "Im Brandfall Hafenmeister benachrichtigen, dann 112.",
       "Tauchen im Hafen nur mit Genehmigung des Hafenmeisters.",
-    ],
-  },
-  {
-    title: "Veränderungen",
-    items: [
-      "Reparaturarbeiten an Bord ja, Schleifen und Lackieren in der Saison nur mit Absprache.",
-      "Mastlegen oder -stellen nur mit Anmeldung.",
-      "Tender bitte am vorgesehenen Steg sichern, nicht am Stegkopf.",
     ],
   },
 ];
@@ -54,9 +47,9 @@ export default function RegelnPage() {
     <>
       <PageHero
         title="Regeln, die für alle gelten."
-        lead="Was im Hafen gilt, gilt für alle. Bewährte Hafenregeln, kurz formuliert."
-        image="https://picsum.photos/seed/wsc-regeln-hero/2000/1100"
-        alt="Hafen aus der Vogelperspektive"
+        lead="Was im Hafen gilt, gilt für alle. Die offizielle Hafenordnung ist in Arbeit, hier finden Sie die wichtigsten Punkte."
+        image="/img/wsch_topdown.jpg"
+        alt="WSCH Steganlage von oben"
       />
 
       <section className="section">
@@ -75,7 +68,7 @@ export default function RegelnPage() {
               </ul>
             </div>
             <p className="mt-4 text-xs text-brand-stone/60">
-              Verbindliche Hafenordnung liegt im Hafenbüro aus und wird mit dem Liegeplatz übergeben.
+              Die verbindliche Hafen- und Liegeplatzordnung wird derzeit überarbeitet und mit dem Liegeplatz übergeben.
             </p>
           </aside>
 

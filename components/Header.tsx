@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { flatNav, club } from "@/lib/nav";
@@ -11,9 +12,18 @@ export default function Header() {
     <header className="sticky top-0 z-50 border-b border-brand-deep/10 bg-brand-sand/85 backdrop-blur">
       <div className="container-x flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <span className="grid h-9 w-9 place-items-center rounded-full bg-brand-deep text-brand-sand font-display text-base">W</span>
+          <span className="grid h-10 w-10 place-items-center rounded-full bg-white shadow-sm overflow-hidden">
+            <Image
+              src="/img/wsch_logo.png"
+              alt="WSCH Stander"
+              width={40}
+              height={40}
+              className="h-9 w-9 object-contain"
+              priority
+            />
+          </span>
           <div className="leading-tight">
-            <div className="font-display text-base text-brand-deep">{club.shortName}</div>
+            <div className="font-display text-base text-brand-deep">{club.longShortName}</div>
             <div className="text-[11px] uppercase tracking-[0.18em] text-brand-deep/60">e.V. seit {club.founded}</div>
           </div>
         </Link>
