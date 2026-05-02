@@ -15,7 +15,7 @@ const SPARTEN = [
   { role: "Spartenleitung Motorboot", name: "Dieter Klings" },
   { role: "Spartenleitung Segeln", name: "Sönke Würtz" },
   { role: "Technischer Leiter Segeln", name: "Helge van Freeden" },
-  { role: "Verantwortlich Bootshalle", name: "Helge van Freeden" },
+  { role: "Hallenwart", name: "Helge van Freeden" },
 ];
 
 export default function VorstandPage() {

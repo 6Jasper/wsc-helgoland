@@ -37,6 +37,7 @@ export default function Footer() {
                 <li><Link href="/haefen" className="text-text-body hover:text-text-primary transition-colors">Häfen</Link></li>
                 <li><Link href="/gastlieger" className="text-text-body hover:text-text-primary transition-colors">Gastlieger</Link></li>
                 <li><Link href="/regeln" className="text-text-body hover:text-text-primary transition-colors">Hafenregeln</Link></li>
+                <li><Link href="/hallenordnung" className="text-text-body hover:text-text-primary transition-colors">Hallenordnung</Link></li>
                 <li><Link href="/clubhaus" className="text-text-body hover:text-text-primary transition-colors">Clubhaus</Link></li>
               </ul>
             </div>

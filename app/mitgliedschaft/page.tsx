@@ -7,24 +7,31 @@ export const metadata = { title: "Mitglied werden" };
 const STEPS = [
   {
     no: "01",
-    title: "Aufnahmeantrag stellen",
-    body: "Sie senden uns den ausgefüllten Aufnahmeantrag zu. Erforderlich sind die Unterschriften zweier Vereinsmitglieder als Bürgen. Wer noch keinen Kontakt im Verein hat, schreibt uns vorab eine kurze E-Mail.",
+    title: "Aufnahmeantrag herunterladen und ausfüllen",
+    body: "Sie laden das Antragsformular herunter und füllen es aus. Erforderlich sind Ihre Daten, Bankverbindung für den SEPA-Lastschrifteinzug der Beiträge sowie die Auswahl der Mitgliedskategorie.",
   },
   {
     no: "02",
-    title: "Spartenversammlung entscheidet",
-    body: "Über die Aufnahme entscheidet die zuständige Spartenversammlung, also die Segel- oder Motorbootsparte. Diese Entscheidung kann je nach Versammlungstermin etwas Zeit beanspruchen, in der Regel zwei bis drei Monate.",
+    title: "Zwei Bürgen finden",
+    body: "Der Antrag muss von zwei aktiven, erwachsenen Vereinsmitgliedern befürwortet werden. Wer noch keinen Kontakt im Verein hat, schreibt uns vorab. Es findet sich.",
   },
   {
     no: "03",
-    title: "Aufnahme und Beitrag",
-    body: "Bei einer positiven Entscheidung werden Sie in der nächsten Mitgliederversammlung begrüßt. Ab diesem Zeitpunkt zahlen Sie den Jahresbeitrag und haben Stimmrecht in den Versammlungen.",
+    title: "Antrag einreichen",
+    body: "Der unterschriebene Antrag geht an den Vorstand. Bei Jugendlichen sind die Unterschriften der gesetzlichen Vertreter notwendig.",
   },
   {
     no: "04",
-    title: "Mitgestalten und mitanpacken",
-    body: "Stege, Bootshalle, Werkstatt und Clubhaus werden in großen Teilen durch ehrenamtliche Arbeit der Mitglieder gepflegt. Aktive Mitglieder leisten daher einen jährlichen Arbeitsdienst. Wer keine Zeit hat, kann diesen über eine Pauschale ablösen.",
+    title: "Spartenversammlung entscheidet",
+    body: "Über die Aufnahme entscheidet die Mitgliederversammlung oder die zuständige Spartenversammlung (Segel oder Motorboot). Bei Zustimmung folgt die Begrüßung in der nächsten Mitgliederversammlung. Die Bearbeitung dauert in der Regel zwei bis drei Monate.",
   },
+];
+
+const KATEGORIEN = [
+  { name: "Aktives Mitglied · Segeln", body: "Volle Mitgliedschaft mit Liegeplatz-Anrecht und Stimmrecht in der Segelsparte." },
+  { name: "Aktives Mitglied · Motorboot", body: "Volle Mitgliedschaft mit Liegeplatz-Anrecht und Stimmrecht in der Motorbootsparte." },
+  { name: "Jugendsparte", body: "Für Mitglieder unter 18 Jahren. Die Zustimmung der gesetzlichen Vertreter wird benötigt." },
+  { name: "Passives Mitglied", body: "Förderndes Mitglied ohne Stimmrecht in der Mitgliederversammlung. Auch juristische Personen." },
 ];
 
 export default function MitgliedschaftPage() {
@@ -32,7 +39,7 @@ export default function MitgliedschaftPage() {
     <>
       <PageHero
         title={<>Mitglied <span style={{ fontWeight: 600 }}>werden.</span></>}
-        lead="Wir sind ein eingetragener Verein mit ehrenamtlichem Vorstand. Über die Aufnahme neuer Mitglieder entscheidet die Spartenversammlung, ein Aufnahmegespräch findet nicht statt."
+        lead="Wir sind ein eingetragener Verein mit ehrenamtlichem Vorstand. Über die Aufnahme neuer Mitglieder entscheidet die Spartenversammlung. Ein Aufnahmegespräch findet nicht statt."
         image="/img/wsch_anlagemitclubhaus.jpg"
         alt="Vereinsanlage mit Clubhaus"
       />
@@ -45,9 +52,19 @@ export default function MitgliedschaftPage() {
                 Vom Antrag <span className="font-bold">zur Mitgliedschaft.</span>
               </h2>
               <p className="body-copy mt-6">
-                Vier Schritte, in der Regel zwei bis drei Monate. Sie brauchen zwei Bürgen aus dem Verein. Ein Aufnahmegespräch
-                oder ein Sportbootführerschein sind nicht erforderlich.
+                Vier Schritte, in der Regel zwei bis drei Monate. Sie brauchen zwei Bürgen aus dem Verein und unterschreiben mit
+                der Antragsstellung, dass Sie die Satzung anerkennen. Ein Aufnahmegespräch oder ein Sportbootführerschein sind
+                nicht erforderlich.
               </p>
+              <a
+                href="/dokumente/wsch-aufnahmeantrag.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 mt-8 px-7 py-3 text-[15px] font-bold rounded-full bg-text-primary text-white hover:bg-accent-deep hover:translate-x-1 transition-all duration-300 group"
+              >
+                <span>Aufnahmeantrag (PDF)</span>
+                <span className="transition-transform duration-300 group-hover:translate-x-1">↓</span>
+              </a>
             </div>
           </Reveal>
 
@@ -65,28 +82,51 @@ export default function MitgliedschaftPage() {
         </div>
       </section>
 
-      <section className="relative bg-bg-surface px-6 md:px-14 py-20 md:py-[140px]">
+      <section className="bg-bg-surface px-6 md:px-14 py-20 md:py-[140px]">
+        <div className="max-w-container mx-auto">
+          <Reveal variant="cinematic">
+            <div className="text-center max-w-3xl mx-auto">
+              <h2 className="m-0 text-text-primary font-light" style={{ fontSize: "clamp(30px, 3.8vw, 50px)", lineHeight: 1.08, letterSpacing: "-.02em" }}>
+                Vier <span className="font-bold">Mitgliedskategorien.</span>
+              </h2>
+              <p className="body-copy mt-5">
+                Auf dem Aufnahmeantrag wählen Sie die für Sie passende Kategorie aus.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal variant="cinematic" delay={0.1}>
+            <div className="mt-14 grid gap-4 md:gap-5 sm:grid-cols-2">
+              {KATEGORIEN.map((k) => (
+                <div key={k.name} className="rounded bg-bg-panel border border-border-subtle p-7 md:p-8 shadow-soft">
+                  <div className="text-text-primary text-[18px] md:text-[20px] font-semibold tracking-tightish">{k.name}</div>
+                  <p className="mt-3 text-text-body text-[14px] md:text-[15px] leading-relaxed">{k.body}</p>
+                </div>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
         <div className="max-w-container mx-auto grid gap-12 lg:grid-cols-2 lg:items-center">
           <Reveal variant="cinematic">
             <div>
               <h2 className="m-0 text-text-primary font-light" style={{ fontSize: "clamp(30px, 3.6vw, 48px)", lineHeight: 1.1, letterSpacing: "-.02em" }}>
-                Beiträge und <span className="font-bold">Pflichten.</span>
+                Beitrag und <span className="font-bold">Arbeitsdienst.</span>
               </h2>
               <p className="body-copy mt-6 max-w-prose">
-                Die aktuelle Beitragsstruktur ist in der Beitragsordnung des Vereins geregelt. Die verbindlichen Sätze und
-                Mitgliedskategorien erhalten Sie auf Anfrage.
+                Der Jahresbeitrag wird Anfang April per SEPA-Lastschrift eingezogen. Bei der Aufnahme ist zusätzlich ein
+                Aufnahmebeitrag fällig. Die Höhe ist in der Beitrags- und Gebührenordnung geregelt und wird auf Anfrage
+                mitgeteilt.
               </p>
               <p className="body-copy mt-4 max-w-prose">
-                Aktive Mitglieder leisten einen jährlichen Arbeitsdienst. Stundenzahl, Befreiungsregelungen und Ablösesatz stehen
-                in der Arbeitsdienstordnung. Die Kündigungsfristen sind in der Satzung geregelt.
+                Bootsbesitzer sind zur Teilnahme am Arbeitsdienst verpflichtet. Wer fernbleibt, kann den Dienst durch
+                freiwillige Meldung zum Wartungsdienst nachholen. Wird er nicht nachgeholt, wird ein Geldbetrag in Rechnung
+                gestellt, der von der Mitgliederversammlung festgelegt wird.
               </p>
-              <a
-                href="mailto:kontakt@wsc-helgoland.de"
-                className="inline-flex items-center gap-3 mt-8 px-7 py-3 text-[15px] font-bold rounded-full bg-text-primary text-white hover:bg-accent-deep hover:translate-x-1 transition-all duration-300 group"
-              >
-                <span>Aufnahmeantrag anfordern</span>
-                <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
-              </a>
+              <p className="body-copy mt-4 max-w-prose">
+                Ein Austritt ist mit einer Frist von mindestens 30 Tagen zum Schluss des Geschäftsjahres möglich.
+              </p>
             </div>
           </Reveal>
           <Reveal variant="cinematic" delay={0.1}>
