@@ -95,31 +95,87 @@ export default function GastliegerPage() {
         </div>
       </section>
 
-      <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[120px]">
-        <div className="max-w-container mx-auto grid gap-8 md:grid-cols-3">
-          <Reveal variant="cinematic">
-            <div className="border-l border-accent-tide/60 pl-6 py-2">
-              <div className="text-[11px] tracking-eyebrowWide uppercase text-accent-tide">Notruf</div>
-              <div className="mt-3 text-white font-semibold text-[28px]">110 · 112</div>
-              <p className="body-copy mt-3 text-[14px]">Polizei und Rettung. Erste Wahl auch im Hafen.</p>
+      <section className="relative bg-bg-primary overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <Image
+            src="/img/06092025_regatta-28.jpg"
+            alt=""
+            fill
+            sizes="100vw"
+            className="object-cover"
+            style={{ filter: "brightness(.18) saturate(.7)" }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(180deg, rgba(7,11,15,.85) 0%, rgba(7,11,15,.55) 50%, rgba(7,11,15,.95) 100%)",
+            }}
+          />
+        </div>
+
+        <div className="relative px-6 md:px-14 py-24 md:py-[160px]">
+          <div className="max-w-container mx-auto">
+            <Reveal variant="cinematic">
+              <h2
+                className="m-0 text-white font-light max-w-3xl"
+                style={{ fontSize: "clamp(32px, 4.2vw, 56px)", lineHeight: 1.08, letterSpacing: "-.02em" }}
+              >
+                Wenn etwas <span className="font-bold">schiefgeht.</span>
+              </h2>
+              <p className="body-copy mt-5 max-w-xl">
+                Drei Wege, je nach Lage. Im Zweifel die kürzeste Nummer wählen.
+              </p>
+            </Reveal>
+
+            <div className="mt-16 md:mt-20 grid gap-12 md:gap-16 md:grid-cols-3">
+              <Reveal variant="cinematic" delay={0.05}>
+                <div>
+                  <div
+                    className="text-white font-light tracking-tightish"
+                    style={{ fontSize: "clamp(48px, 5.6vw, 84px)", lineHeight: 1, letterSpacing: "-.025em" }}
+                  >
+                    110 <span className="text-text-dim font-light">·</span> 112
+                  </div>
+                  <div className="mt-5 h-px w-12 bg-accent-warm" />
+                  <p className="mt-5 text-white/80 text-[15px] leading-relaxed max-w-[28ch]">
+                    Polizei und Rettung. Erste Wahl, auch im Hafen.
+                  </p>
+                </div>
+              </Reveal>
+
+              <Reveal variant="cinematic" delay={0.1}>
+                <div>
+                  <div
+                    className="text-white font-light tracking-tightish"
+                    style={{ fontSize: "clamp(40px, 4.4vw, 64px)", lineHeight: 1, letterSpacing: "-.02em" }}
+                  >
+                    UKW <span className="font-bold">Kanal 16</span>
+                  </div>
+                  <div className="mt-5 h-px w-12 bg-accent-tide" />
+                  <p className="mt-5 text-white/80 text-[15px] leading-relaxed max-w-[28ch]">
+                    DGzRS Bremen. Seenotruf, rund um die Uhr besetzt.
+                  </p>
+                </div>
+              </Reveal>
+
+              <Reveal variant="cinematic" delay={0.15}>
+                <div>
+                  <a
+                    href="mailto:kontakt@wsc-helgoland.de"
+                    className="block text-white hover:text-accent-tide transition-colors duration-300 font-light tracking-tightish break-all"
+                    style={{ fontSize: "clamp(22px, 2.4vw, 32px)", lineHeight: 1.1, letterSpacing: "-.02em" }}
+                  >
+                    kontakt@<wbr />wsc-helgoland.de
+                  </a>
+                  <div className="mt-5 h-px w-12 bg-text-dim" />
+                  <p className="mt-5 text-white/80 text-[15px] leading-relaxed max-w-[28ch]">
+                    Für alles, was Zeit hat. Antwort meist binnen achtundvierzig Stunden.
+                  </p>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
-          <Reveal variant="cinematic" delay={0.05}>
-            <div className="border-l border-accent-tide/60 pl-6 py-2">
-              <div className="text-[11px] tracking-eyebrowWide uppercase text-accent-tide">Seenot</div>
-              <div className="mt-3 text-white font-semibold text-[28px]">UKW Kanal 16</div>
-              <p className="body-copy mt-3 text-[14px]">DGzRS Bremen. Rund um die Uhr besetzt.</p>
-            </div>
-          </Reveal>
-          <Reveal variant="cinematic" delay={0.1}>
-            <div className="border-l border-accent-tide/60 pl-6 py-2">
-              <div className="text-[11px] tracking-eyebrowWide uppercase text-accent-tide">Anfrage</div>
-              <a href="mailto:kontakt@wsc-helgoland.de" className="mt-3 block text-white font-semibold text-[20px] break-all hover:text-accent-tide transition-colors">
-                kontakt@wsc-helgoland.de
-              </a>
-              <p className="body-copy mt-3 text-[14px]">Antwort in der Regel binnen 48 Stunden.</p>
-            </div>
-          </Reveal>
+          </div>
         </div>
       </section>
     </>

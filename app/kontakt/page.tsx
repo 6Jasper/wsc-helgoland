@@ -34,14 +34,30 @@ export default function KontaktPage() {
                 <span>kontakt@wsc-helgoland.de</span>
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </a>
-              <div className="mt-12 grid gap-6 sm:grid-cols-2">
-                <div className="border-l border-accent-tide/60 pl-5">
-                  <div className="text-[11px] tracking-eyebrowWide uppercase text-accent-tide">Notruf</div>
-                  <div className="mt-2 text-white">Polizei 110 · Rettung 112</div>
+              <div className="mt-14 grid gap-10 sm:grid-cols-2">
+                <div>
+                  <div
+                    className="text-white font-light tracking-tightish"
+                    style={{ fontSize: "clamp(34px, 3.6vw, 52px)", lineHeight: 1, letterSpacing: "-.025em" }}
+                  >
+                    110 <span className="text-text-dim font-light">·</span> 112
+                  </div>
+                  <div className="mt-4 h-px w-10 bg-accent-warm" />
+                  <p className="mt-4 text-white/75 text-[14px] leading-relaxed">
+                    Polizei und Rettung. Erste Wahl, auch im Hafen.
+                  </p>
                 </div>
-                <div className="border-l border-accent-tide/60 pl-5">
-                  <div className="text-[11px] tracking-eyebrowWide uppercase text-accent-tide">Seenot</div>
-                  <div className="mt-2 text-white">DGzRS, UKW Kanal 16</div>
+                <div>
+                  <div
+                    className="text-white font-light tracking-tightish"
+                    style={{ fontSize: "clamp(28px, 3vw, 44px)", lineHeight: 1.05, letterSpacing: "-.02em" }}
+                  >
+                    UKW <span className="font-bold">Kanal 16</span>
+                  </div>
+                  <div className="mt-4 h-px w-10 bg-accent-tide" />
+                  <p className="mt-4 text-white/75 text-[14px] leading-relaxed">
+                    DGzRS Bremen. Seenotruf rund um die Uhr.
+                  </p>
                 </div>
               </div>
             </div>
