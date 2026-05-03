@@ -87,9 +87,23 @@ export function ImageGallery({ images, className, itemClassName }: Props) {
                 close();
               }}
               aria-label="Schließen"
-              className="absolute top-5 right-5 md:top-8 md:right-8 w-11 h-11 rounded-full border border-white/30 text-white text-[20px] flex items-center justify-center hover:border-white hover:bg-white/10 transition-colors z-10"
+              className="absolute top-5 right-5 md:top-8 md:right-8 w-12 h-12 md:w-14 md:h-14 rounded-full bg-white text-black text-[22px] md:text-[26px] font-light flex items-center justify-center shadow-lg hover:bg-text-primary hover:scale-105 active:scale-95 transition-all z-20 cursor-pointer"
             >
-              ✕
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
+                className="md:w-7 md:h-7"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
             </button>
 
             {images.length > 1 && (
