@@ -28,18 +28,13 @@ export default function Footer() {
                 className="group mt-8 inline-flex items-center gap-3 text-text-dim hover:text-text-primary transition-colors"
               >
                 <span className="text-[10px] tracking-eyebrowWide uppercase">gestaltet von</span>
-                <span className="flex items-center gap-2">
-                  <span
-                    className="grid h-7 w-7 place-items-center rounded-sm bg-text-primary text-white font-bold tracking-tightish transition-transform duration-300 group-hover:translate-x-0.5"
-                    style={{ fontSize: 14, letterSpacing: "-0.04em" }}
-                    aria-hidden
-                  >
-                    Z
-                  </span>
-                  <span className="text-[13px] font-semibold tracking-tightish text-text-muted group-hover:text-text-primary transition-colors">
-                    Zehden Digital
-                  </span>
-                </span>
+                <Image
+                  src="/img/zehden-digital-logo.png"
+                  alt="Zehden Digital"
+                  width={480}
+                  height={104}
+                  className="h-6 md:h-7 w-auto object-contain transition-transform duration-300 group-hover:translate-x-0.5"
+                />
               </a>
             </div>
 
