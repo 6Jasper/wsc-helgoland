@@ -1,5 +1,6 @@
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
+import { PhotoCredit } from "@/components/ui/PhotoCredit";
 
 export const metadata = { title: "Hallenordnung Bootshalle" };
 
@@ -325,6 +326,8 @@ export default function HallenordnungPage() {
           </div>
         </div>
       </section>
+
+      <PhotoCredit />
     </>
   );
 }

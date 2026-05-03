@@ -19,6 +19,28 @@ export default function Footer() {
                 Der Wassersportclub Helgoland e.V. ist ein Segel- und Motorbootverein. Wir betreiben Vereinsanlagen im Süd- und
                 Nordosthafen, richten die Helgoländer Herbstregatta aus und sind Mitveranstalter der Nordseewoche.
               </p>
+
+              <a
+                href="https://zehdendigital.de"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Webseite gestaltet von Zehden Digital"
+                className="group mt-8 inline-flex items-center gap-3 text-text-dim hover:text-text-primary transition-colors"
+              >
+                <span className="text-[10px] tracking-eyebrowWide uppercase">gestaltet von</span>
+                <span className="flex items-center gap-2">
+                  <span
+                    className="grid h-7 w-7 place-items-center rounded-sm bg-text-primary text-white font-bold tracking-tightish transition-transform duration-300 group-hover:translate-x-0.5"
+                    style={{ fontSize: 14, letterSpacing: "-0.04em" }}
+                    aria-hidden
+                  >
+                    Z
+                  </span>
+                  <span className="text-[13px] font-semibold tracking-tightish text-text-muted group-hover:text-text-primary transition-colors">
+                    Zehden Digital
+                  </span>
+                </span>
+              </a>
             </div>
 
             <div className="md:col-span-2">
@@ -64,31 +86,6 @@ export default function Footer() {
             </div>
             <div className="max-w-xl">
               Vereinsregister Amtsgericht Pinneberg VR 591 PI · Steuernummer 18/291/72014
-            </div>
-          </div>
-
-          <div className="mt-6 pt-6 border-t border-border-subtle flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs text-text-dim">
-            <div>
-              Drohnenaufnahmen:{" "}
-              <a
-                href="https://falmstudios.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-muted hover:text-text-primary transition-colors underline-offset-4 hover:underline"
-              >
-                falmstudios.com
-              </a>
-            </div>
-            <div>
-              Webseiten-Design:{" "}
-              <a
-                href="https://zehdendigital.de"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-text-muted hover:text-text-primary transition-colors underline-offset-4 hover:underline"
-              >
-                zehdendigital.de
-              </a>
             </div>
           </div>
         </div>

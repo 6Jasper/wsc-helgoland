@@ -1,5 +1,6 @@
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
+import { PhotoCredit } from "@/components/ui/PhotoCredit";
 
 export const metadata = { title: "Vorstand und Ansprechpartner" };
 
@@ -73,6 +74,8 @@ export default function VorstandPage() {
           </div>
         </div>
       </section>
+
+      <PhotoCredit />
     </>
   );
 }

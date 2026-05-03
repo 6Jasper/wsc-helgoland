@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
+import { PhotoCredit } from "@/components/ui/PhotoCredit";
 import { FAQAccordion, type FaqItem } from "@/components/ui/FAQAccordion";
 
 export const metadata = { title: "Kontakt und Anfahrt" };
@@ -144,6 +145,8 @@ export default function KontaktPage() {
       <section className="relative w-full h-[42vh] min-h-[320px] overflow-hidden">
         <Image src="/img/helgoland_panorama-4.jpg" alt="Sonnenuntergang über Helgoland und Düne" fill sizes="100vw" className="object-cover" />
       </section>
+
+      <PhotoCredit />
     </>
   );
 }

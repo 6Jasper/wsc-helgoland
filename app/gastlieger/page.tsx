@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
+import { PhotoCredit } from "@/components/ui/PhotoCredit";
 
 export const metadata = { title: "Informationen für Gastlieger" };
 
@@ -279,6 +280,8 @@ export default function GastliegerPage() {
           </Reveal>
         </div>
       </section>
+
+      <PhotoCredit />
     </>
   );
 }

@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { ImageGallery, type GalleryImage } from "@/components/ui/ImageGallery";
+import { PhotoCredit } from "@/components/ui/PhotoCredit";
 
 export const metadata = { title: "Clubhaus" };
 
@@ -75,6 +76,8 @@ export default function ClubhausPage() {
           </Reveal>
         </div>
       </section>
+
+      <PhotoCredit />
     </>
   );
 }

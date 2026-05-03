@@ -1,5 +1,6 @@
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
+import { PhotoCredit } from "@/components/ui/PhotoCredit";
 
 export const metadata = { title: "Satzung" };
 
@@ -205,6 +206,8 @@ export default function SatzungPage() {
           </div>
         </div>
       </section>
+
+      <PhotoCredit />
     </>
   );
 }

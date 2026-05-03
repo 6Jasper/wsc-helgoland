@@ -4,6 +4,7 @@ import { HomeFeatures } from "@/components/sections/HomeFeatures";
 import { HomeRegatta } from "@/components/sections/HomeRegatta";
 import { HomeFacts } from "@/components/sections/HomeFacts";
 import { HomeContact } from "@/components/sections/HomeContact";
+import { PhotoCredit } from "@/components/ui/PhotoCredit";
 
 export default function HomePage() {
   return (
@@ -14,6 +15,7 @@ export default function HomePage() {
       <HomeRegatta />
       <HomeFacts />
       <HomeContact />
+      <PhotoCredit />
     </>
   );
 }

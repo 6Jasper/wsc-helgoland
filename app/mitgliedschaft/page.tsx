@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
+import { PhotoCredit } from "@/components/ui/PhotoCredit";
 
 export const metadata = { title: "Mitglied werden" };
 
@@ -139,6 +140,8 @@ export default function MitgliedschaftPage() {
           </Reveal>
         </div>
       </section>
+
+      <PhotoCredit />
     </>
   );
 }

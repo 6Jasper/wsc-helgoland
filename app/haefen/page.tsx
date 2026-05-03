@@ -2,6 +2,7 @@ import Image from "next/image";
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
 import { ImageGallery } from "@/components/ui/ImageGallery";
+import { PhotoCredit } from "@/components/ui/PhotoCredit";
 
 export const metadata = { title: "Häfen Helgolands" };
 
@@ -199,6 +200,8 @@ export default function HaefenPage() {
           </Reveal>
         </div>
       </section>
+
+      <PhotoCredit />
     </>
   );
 }
