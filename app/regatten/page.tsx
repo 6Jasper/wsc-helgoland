@@ -72,7 +72,7 @@ export default function RegattenPage() {
           </Reveal>
           <Reveal variant="cinematic" delay={0.1}>
             <div className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
-              <Image src="/img/wsch_nordseewoche-3.jpg" alt="Yachten unterwegs" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+              <Image src="/img/wsch_opticup.jpg" alt="Optimisten beim Störtebeker Opti-Cup vor den Klippen Helgolands" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
             </div>
           </Reveal>
         </div>

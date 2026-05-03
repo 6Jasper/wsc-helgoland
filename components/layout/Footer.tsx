@@ -24,6 +24,7 @@ export default function Footer() {
             <div className="md:col-span-2">
               <div className="text-[11px] tracking-eyebrowWide uppercase text-text-dim mb-5">Verein</div>
               <ul className="space-y-3">
+                <li><Link href="/ueber-uns" className="text-text-body hover:text-text-primary transition-colors">Über uns</Link></li>
                 <li><Link href="/vorstand" className="text-text-body hover:text-text-primary transition-colors">Vorstand</Link></li>
                 <li><Link href="/satzung" className="text-text-body hover:text-text-primary transition-colors">Satzung</Link></li>
                 <li><Link href="/mitgliedschaft" className="text-text-body hover:text-text-primary transition-colors">Mitgliedschaft</Link></li>

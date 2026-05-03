@@ -12,6 +12,7 @@ const NAV_ITEMS = [
   { label: "Regatten", href: "/regatten" },
   { label: "Clubhaus", href: "/clubhaus" },
   { label: "Vorstand", href: "/vorstand" },
+  { label: "Über uns", href: "/ueber-uns" },
   { label: "Kontakt", href: "/kontakt" },
 ];
 
