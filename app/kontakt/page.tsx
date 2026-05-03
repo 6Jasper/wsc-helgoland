@@ -34,10 +34,6 @@ const FAQ: FaqItem[] = [
     q: "Bietet der WSC Helgoland einen Bootsservice oder eine Werft an?",
     a: "Nein. Wir betreiben Stege, eine Bootshalle und eine Werkstatt für die Mitglieder. Reparatur- oder Servicedienste für Gastlieger werden über externe Anbieter auf der Insel abgewickelt.",
   },
-  {
-    q: "Kann ich auf der Insel mein Auto mitnehmen?",
-    a: "Helgoland ist autofrei. Auf der Insel sind Sie zu Fuß, mit dem Fahrrad oder mit Elektrofahrzeugen unterwegs.",
-  },
 ];
 
 export default function KontaktPage() {

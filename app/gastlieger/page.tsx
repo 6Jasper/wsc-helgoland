@@ -79,6 +79,35 @@ export default function GastliegerPage() {
       </section>
 
       <section className="bg-bg-surface px-6 md:px-14 py-20 md:py-[140px]">
+        <div className="max-w-container mx-auto grid gap-12 lg:grid-cols-2 lg:items-center">
+          <Reveal variant="cinematic">
+            <div>
+              <h2
+                className="m-0 text-text-primary font-light"
+                style={{ fontSize: "clamp(32px, 4vw, 56px)", lineHeight: 1.08, letterSpacing: "-.02em" }}
+              >
+                Hinweis zum <span className="font-bold">Südhafen.</span>
+              </h2>
+              <p className="body-copy mt-6 max-w-prose">
+                Im östlichen Bereich der Steganlage stand bis 1945 der größte deutsche U-Boot-Bunker der Nordsee. Nach der
+                Sprengung der Insel 1947 sind Reste des Bunkers im Hafenbecken liegengeblieben. Bei Niedrigwasser werden
+                Steine und Beton sichtbar.
+              </p>
+              <p className="body-copy mt-4 max-w-prose">
+                Wer im Südhafen festmachen möchte, stimmt das vorab mit dem Verein ab und wird von einem Mitglied eingewiesen.
+                Befahren erfolgt auf eigene Gefahr.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal variant="cinematic" delay={0.1}>
+            <div className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
+              <Image src="/img/wsch_untiefe2.jpg" alt="Steine im Südhafen bei Niedrigwasser" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
         <div className="max-w-container mx-auto grid gap-14 lg:grid-cols-[1fr_1.4fr]">
           <Reveal variant="cinematic">
             <div className="lg:sticky lg:top-32">
@@ -97,9 +126,8 @@ export default function GastliegerPage() {
                 <div className="text-accent-warm text-[11px] tracking-eyebrowWide uppercase">Wichtig: Südhafen</div>
                 <h3 className="mt-3 text-text-primary font-semibold text-[24px] md:text-[28px] tracking-tightish">Nur nach vorheriger Absprache mit dem Vorstand.</h3>
                 <p className="body-copy mt-4 max-w-xl">
-                  Der östliche Bereich der Steganlage gilt als unrein. Es liegen Trümmer eines U-Boot-Bunkers im Hafenbecken. Ein eigenständiges
-                  Anlaufen ist ausgeschlossen. Wer in den Südhafen will, schreibt vor der Abfahrt eine kurze E-Mail. Ohne diese
-                  Vorabsprache ist ein Anlauf nicht möglich.
+                  Wer in den Südhafen will, schreibt vor der Abfahrt eine kurze E-Mail. Ohne diese Vorabsprache ist ein Anlauf
+                  nicht möglich.
                 </p>
                 <a
                   href="mailto:kontakt@wsc-helgoland.de"
@@ -131,7 +159,7 @@ export default function GastliegerPage() {
         </div>
       </section>
 
-      <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
+      <section className="bg-bg-surface px-6 md:px-14 py-20 md:py-[140px]">
         <div className="max-w-container mx-auto">
           <Reveal variant="cinematic">
             <div className="max-w-3xl">
@@ -147,7 +175,7 @@ export default function GastliegerPage() {
           <Reveal variant="cinematic" delay={0.1}>
             <div className="mt-12 grid gap-4 md:gap-5 sm:grid-cols-3">
               {GEBUEHREN_NORDOST.map((g) => (
-                <div key={g.label} className="rounded bg-bg-surface border border-border-subtle p-7 md:p-8 shadow-soft">
+                <div key={g.label} className="rounded bg-bg-panel border border-border-subtle p-7 md:p-8 shadow-soft">
                   <div className="text-text-dim text-[11px] tracking-eyebrowWide uppercase">{g.label}</div>
                   <div
                     className="mt-4 text-text-primary font-light tracking-tightish"
@@ -163,7 +191,7 @@ export default function GastliegerPage() {
         </div>
       </section>
 
-      <section className="bg-bg-surface px-6 md:px-14 py-20 md:py-[140px]">
+      <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
         <div className="max-w-container mx-auto grid gap-14 lg:grid-cols-2 lg:items-start">
           <Reveal variant="cinematic">
             <div>
@@ -227,7 +255,7 @@ export default function GastliegerPage() {
         </div>
       </section>
 
-      <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[120px]">
+      <section className="bg-bg-surface px-6 md:px-14 py-20 md:py-[120px]">
         <div className="max-w-container mx-auto grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-center">
           <Reveal variant="cinematic">
             <h2 className="m-0 text-text-primary font-light" style={{ fontSize: "clamp(28px, 3.4vw, 44px)", lineHeight: 1.1, letterSpacing: "-.02em" }}>

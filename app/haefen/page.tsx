@@ -177,35 +177,6 @@ export default function HaefenPage() {
         </div>
       </section>
 
-      <section className="relative bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
-        <div className="max-w-container mx-auto grid gap-12 lg:grid-cols-2 lg:items-center">
-          <Reveal variant="cinematic">
-            <div className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
-              <Image src="/img/wsch_untiefe2.jpg" alt="Steine im Südhafen bei Niedrigwasser" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
-            </div>
-          </Reveal>
-          <Reveal variant="cinematic" delay={0.1}>
-            <div>
-              <h2
-                className="m-0 text-text-primary font-light"
-                style={{ fontSize: "clamp(32px, 4vw, 56px)", lineHeight: 1.08, letterSpacing: "-.02em" }}
-              >
-                Hinweis zum <span className="font-bold">Südhafen.</span>
-              </h2>
-              <p className="body-copy mt-6 max-w-prose">
-                Im östlichen Bereich der Steganlage stand bis 1945 der größte deutsche U-Boot-Bunker der Nordsee. Nach der
-                Sprengung der Insel 1947 sind Reste des Bunkers im Hafenbecken liegengeblieben. Bei Niedrigwasser werden Steine
-                und Beton sichtbar.
-              </p>
-              <p className="body-copy mt-4 max-w-prose">
-                Wer im Südhafen festmachen möchte, stimmt das vorab mit dem Verein ab und wird von einem Mitglied eingewiesen.
-                Befahren erfolgt auf eigene Gefahr.
-              </p>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
       <section className="bg-bg-surface px-6 md:px-14 py-20 md:py-[140px]">
         <div className="max-w-container mx-auto">
           <Reveal variant="cinematic">
