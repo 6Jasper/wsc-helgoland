@@ -12,7 +12,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "Warum darf man den Südhafen nicht eigenständig anlaufen?",
-    a: "Im Hafenbecken liegen Trümmer eines U-Boot-Bunkers aus dem Zweiten Weltkrieg. Der Bereich gilt als unrein. Aus diesem Grund führt ein erfahrenes Vereinsmitglied Sie beim Anlauf ein.",
+    a: "Im östlichen Bereich der Steganlage liegen Trümmer eines U-Boot-Bunkers aus dem Zweiten Weltkrieg. Dieser Bereich gilt als unrein. Aus diesem Grund weist ein erfahrenes Vereinsmitglied Sie beim Anlauf ein.",
   },
   {
     q: "Was kostet der Liegeplatz?",
@@ -20,7 +20,7 @@ const FAQ: FaqItem[] = [
   },
   {
     q: "Wie kann ich Mitglied werden?",
-    a: "Über einen schriftlichen Aufnahmeantrag mit zwei Bürgen aus dem Verein. Über die Aufnahme entscheidet die zuständige Spartenversammlung. Die Bearbeitung dauert in der Regel zwei bis drei Monate. Ein Aufnahmegespräch oder ein Sportbootführerschein sind nicht erforderlich.",
+    a: "Über einen schriftlichen Aufnahmeantrag mit zwei Bürgen aus dem Verein. Über die Aufnahme entscheidet die zuständige Spartenversammlung. Ein Aufnahmegespräch oder ein Sportbootführerschein sind nicht erforderlich.",
   },
   {
     q: "Gibt es im Clubhaus eine Gastronomie?",
@@ -85,8 +85,8 @@ export default function KontaktPage() {
                 <li className="border-t border-border-subtle pt-5">
                   <strong className="text-text-primary block mb-2">Mit dem eigenen Boot</strong>
                   Anlauf in der Regel von Cuxhaven, Büsum, Wilhelmshaven oder Hörnum. Aus den Niederlanden, Großbritannien oder
-                  Skandinavien führen die üblichen Routen ebenfalls nach Helgoland. Bitte beachten: Der Südhafen gilt als unrein
-                  und ist nur nach Vorabstimmung anzulaufen.
+                  Skandinavien führen die üblichen Routen ebenfalls nach Helgoland. Bitte beachten: Der östliche Bereich der
+                  Steganlage im Südhafen gilt als unrein und ist nur nach Vorabstimmung anzulaufen.
                 </li>
                 <li className="border-t border-border-subtle pt-5">
                   <strong className="text-text-primary block mb-2">Mit der Fähre</strong>

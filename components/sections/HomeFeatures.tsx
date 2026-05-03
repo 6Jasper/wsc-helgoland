@@ -24,14 +24,14 @@ const FEATURES: Feature[] = [
   {
     href: "/gastlieger",
     title: "Informationen für Gastlieger",
-    body: "Helgoland ist keine Marina. Wir geben freie Plätze unserer Mitglieder frei. Was vor dem Anlauf zu wissen ist.",
+    body: "Helgoland betreibt keine Marina. Wir geben freie Plätze unserer Mitglieder frei. Was vor dem Anlauf zu wissen ist.",
     image: "/img/wsch_liegeplatz.jpg",
     alt: "WSCH Liegeplätze mit Insel im Hintergrund",
   },
   {
     href: "/regatten",
     title: "Regatten und Wettfahrten",
-    body: "Helgoländer Herbstregatta, Nordseewoche zu Pfingsten und der Störtebeker Opti-Cup für den Nachwuchs.",
+    body: "Nordseewoche zu Pfingsten, Störtebeker Opti-Cup im Sommer und Helgoländer Herbstregatta Anfang September.",
     image: "/img/06092025_regatta-32.jpg",
     alt: "Yacht unter vollen Segeln vor Helgoland",
   },
@@ -50,9 +50,9 @@ const FEATURES: Feature[] = [
     alt: "WSCH Clubhaus",
   },
   {
-    href: "/regeln",
-    title: "Hafenregeln",
-    body: "Geschwindigkeit, Nachtruhe, Strom, Müll. Was im Hafen erlaubt ist und was nicht.",
+    href: "/hafenordnung",
+    title: "Hafenordnung",
+    body: "Schrittgeschwindigkeit, Nachtruhe, Strom, Müll, Versicherungspflicht. Was im Hafen gilt.",
     image: "/img/wsch_liegeplatzueberblick.jpg",
     alt: "WSCH Liegeplätze von oben",
   },
@@ -66,7 +66,7 @@ export function HomeFeatures() {
           <SectionHeader
             title="Alles auf"
             titleAccent="einen Blick."
-            subtitle="Die wichtigsten Themen direkt von der Startseite. Alles andere liegt zwei Klicks entfernt."
+            subtitle="Die wichtigsten Themen direkt von der Startseite. Alles andere liegt einen Klick entfernt."
             maxSubtitle={760}
           />
         </div>

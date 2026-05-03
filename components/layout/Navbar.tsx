@@ -42,14 +42,14 @@ export default function Navbar() {
       }`}
     >
       <div className="px-6 md:px-14">
-        <div className="mx-auto max-w-[1280px] flex items-center justify-between h-[80px] md:h-[96px]">
-          <Link href="/" className="flex items-center gap-3 flex-shrink-0 transition-opacity hover:opacity-85" aria-label="WSC Helgoland · Startseite">
+        <div className="mx-auto max-w-[1280px] flex items-center justify-between h-[88px] md:h-[112px]">
+          <Link href="/" className="flex items-center gap-4 flex-shrink-0 transition-opacity hover:opacity-85" aria-label="WSC Helgoland · Startseite">
             <Image
               src="/img/wsch_logo.png"
               alt="WSC Helgoland"
-              width={56}
-              height={56}
-              className="h-12 w-auto md:h-14 object-contain"
+              width={88}
+              height={88}
+              className="h-16 w-auto md:h-20 object-contain"
               priority
             />
             <span className="hidden sm:block leading-tight">

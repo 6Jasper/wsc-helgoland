@@ -22,7 +22,7 @@ export function Manifesto() {
             sich seit 1965 um die Sportbootliegeplätze auf der Insel und betreibt zwei Vereinsanlagen, eine im Südhafen und eine
             im Nordosthafen.{" "}
             <span style={{ fontWeight: 700 }}>
-              Wir sind ein eingetragener Verein mit ehrenamtlichem Vorstand und aktiven Mitgliedern.
+              Wir sind ein eingetragener Verein mit ehrenamtlichem Vorstand sowie aktiven und fördernden Mitgliedern.
             </span>
           </p>
         </Reveal>

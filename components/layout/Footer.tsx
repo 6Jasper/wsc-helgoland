@@ -36,7 +36,7 @@ export default function Footer() {
               <ul className="space-y-3">
                 <li><Link href="/haefen" className="text-text-body hover:text-text-primary transition-colors">Häfen</Link></li>
                 <li><Link href="/gastlieger" className="text-text-body hover:text-text-primary transition-colors">Gastlieger</Link></li>
-                <li><Link href="/regeln" className="text-text-body hover:text-text-primary transition-colors">Hafenregeln</Link></li>
+                <li><Link href="/hafenordnung" className="text-text-body hover:text-text-primary transition-colors">Hafenordnung</Link></li>
                 <li><Link href="/liegeplatzordnung" className="text-text-body hover:text-text-primary transition-colors">Liegeplatzordnung</Link></li>
                 <li><Link href="/hallenordnung" className="text-text-body hover:text-text-primary transition-colors">Hallenordnung</Link></li>
                 <li><Link href="/winterlager" className="text-text-body hover:text-text-primary transition-colors">Winterlager</Link></li>

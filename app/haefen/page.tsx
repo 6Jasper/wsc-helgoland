@@ -34,7 +34,7 @@ const HAEFEN: Hafen[] = [
     image: "/img/wsch_suedhafenluftbild.jpg",
     alt: "Südhafen Helgoland aus der Luft",
     body:
-      "Schutzhafen mit der Hauptsteganlage des Vereins. Der Südhafen gilt als unrein: An der Stelle der heutigen Stege stand bis Kriegsende ein U-Boot-Bunker, dessen Trümmer bis heute im Hafenbecken liegen. Wer hier festmachen möchte, fährt nicht eigenständig ein, sondern wird von einem Mitglied geführt.",
+      "Schutzhafen mit der Steganlage des Vereins. Der östliche Bereich der Steganlage gilt als unrein: An der Stelle der heutigen Stege stand bis Kriegsende ein U-Boot-Bunker, dessen Trümmer bis heute im Hafenbecken liegen. Wer hier festmachen möchte, fährt nicht eigenständig ein, sondern wird von einem Mitglied eingewiesen.",
     facts: [
       ["Eigentümer", "Bund"],
       ["Steganlage", "WSCH"],
@@ -48,7 +48,7 @@ const HAEFEN: Hafen[] = [
     image: "/img/wsch_binnenhafen.jpg",
     alt: "Binnenhafen Helgoland mit Hummerbuden",
     body:
-      "Der Binnenhafen gehört der Gemeinde Helgoland. Hier legen die Passagierfähren Halunder Jet und Nordlicht an. Sportboote dürfen im Binnenhafen nicht festmachen. Die Bunkerstation für Sportboot-Diesel liegt direkt vor den Hummerbuden. Der Hafen wurde zuletzt vertieft.",
+      "Der Binnenhafen gehört der Gemeinde Helgoland. Hier legen die Passagierfähren Halunder Jet und Nordlicht an. Sportboote dürfen im Binnenhafen nicht festmachen. Die Bunkerstation für Sportboote liegt direkt vor den Hummerbuden. Der Hafen wurde zuletzt vertieft.",
     facts: [
       ["Eigentümer", "Gemeinde Helgoland"],
       ["Passagierfähren", "Halunder Jet, Nordlicht"],
@@ -141,6 +141,42 @@ export default function HaefenPage() {
         ))}
       </div>
 
+      <section className="bg-bg-surface px-6 md:px-14 py-20 md:py-[140px]">
+        <div className="max-w-container mx-auto grid gap-12 lg:grid-cols-2 lg:items-center">
+          <Reveal variant="cinematic">
+            <div className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
+              <Image src="/img/helgoland_panorama-4.jpg" alt="Düne vor Helgoland aus der Luft" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+            </div>
+          </Reveal>
+          <Reveal variant="cinematic" delay={0.1}>
+            <div>
+              <h2
+                className="m-0 text-text-primary font-light"
+                style={{ fontSize: "clamp(32px, 4vw, 56px)", lineHeight: 1.08, letterSpacing: "-.02em" }}
+              >
+                Die <span className="font-bold">Düne.</span>
+              </h2>
+              <p className="body-copy mt-6 max-w-prose">
+                Die Düne ist die kleinere, vorgelagerte Insel von Helgoland. Sie wird über die Dünenfähre erreicht und ist
+                weitgehend Naturschutzgebiet. Für Sportboote gilt:
+              </p>
+              <ul className="mt-6 space-y-4">
+                {[
+                  "Anlanden an der Düne ist verboten.",
+                  "Kitesurfen ist verboten.",
+                  "Das Einfahren in den Dünenhafen ist verboten.",
+                ].map((it) => (
+                  <li key={it} className="flex gap-4 text-text-body text-[15px] md:text-[16px]">
+                    <span className="mt-[2px] text-accent-warm font-semibold flex-shrink-0 w-5 text-center" aria-hidden>×</span>
+                    <span className="leading-relaxed">{it}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="relative bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
         <div className="max-w-container mx-auto grid gap-12 lg:grid-cols-2 lg:items-center">
           <Reveal variant="cinematic">
@@ -157,7 +193,7 @@ export default function HaefenPage() {
                 Hinweis zum <span className="font-bold">Südhafen.</span>
               </h2>
               <p className="body-copy mt-6 max-w-prose">
-                Bis 1945 stand an der Stelle der heutigen Steganlage der größte deutsche U-Boot-Bunker der Nordsee. Nach der
+                Im östlichen Bereich der Steganlage stand bis 1945 der größte deutsche U-Boot-Bunker der Nordsee. Nach der
                 Sprengung der Insel 1947 sind Reste des Bunkers im Hafenbecken liegengeblieben. Bei Niedrigwasser werden Steine
                 und Beton sichtbar.
               </p>

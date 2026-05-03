@@ -18,10 +18,65 @@ export default function RegattenPage() {
     <>
       <PageHero
         title={<>Regatten und <span style={{ fontWeight: 600 }}>Wettfahrten.</span></>}
-        lead="Drei feste Termine im Helgoländer Segeljahr: die Nordseewoche zu Pfingsten, die Helgoländer Herbstregatta Anfang September und der Störtebeker Opti-Cup für den Nachwuchs."
+        lead="Drei feste Termine im Helgoländer Segeljahr: die Nordseewoche zu Pfingsten, der Störtebeker Opti-Cup im Sommer und die Helgoländer Herbstregatta Anfang September."
         image="/img/06092025_regatta-32.jpg"
         alt="Yacht unter vollen Segeln vor Helgoland"
       />
+
+      <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
+        <div className="max-w-container mx-auto grid gap-14 lg:grid-cols-2 lg:items-center">
+          <Reveal variant="cinematic">
+            <div className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
+              <Image src="/img/wsch_nordseewoche-1.jpg" alt="Yacht der Nordseewoche vor Helgoland" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+            </div>
+          </Reveal>
+          <Reveal variant="cinematic" delay={0.1}>
+            <div>
+              <h2 className="m-0 text-text-primary font-light" style={{ fontSize: "clamp(34px, 4.6vw, 60px)", lineHeight: 1.05, letterSpacing: "-.02em" }}>
+                Nordseewoche zu <span className="font-bold">Pfingsten.</span>
+              </h2>
+              <p className="body-copy mt-6 max-w-prose">
+                Die Nordseewoche ist die traditionsreichste Hochsee-Regatta der Nordsee. Mit über hundert Jahren Geschichte und
+                Crews aus Deutschland, den Niederlanden, Dänemark und Skandinavien, die zu Bahnen rund um Helgoland starten.
+              </p>
+              <p className="body-copy mt-4 max-w-prose">
+                Der WSC Helgoland ist Mitveranstalter. Ausschreibung, Klasseneinteilung und Anmeldung laufen zentral über die
+                Nordseewoche.
+              </p>
+              <a
+                href="https://nordseewoche.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-3 mt-8 px-7 py-3 text-[15px] font-bold rounded-full border border-border-strong text-text-primary hover:border-text-primary hover:translate-x-1 transition-all duration-300 group"
+              >
+                <span>Zur Nordseewoche</span>
+                <span className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="bg-bg-surface px-6 md:px-14 py-20 md:py-[140px]">
+        <div className="max-w-container mx-auto grid gap-14 lg:grid-cols-2 lg:items-center">
+          <Reveal variant="cinematic">
+            <div>
+              <h2 className="m-0 text-text-primary font-light" style={{ fontSize: "clamp(34px, 4.6vw, 60px)", lineHeight: 1.05, letterSpacing: "-.02em" }}>
+                Störtebeker <span className="font-bold">Opti-Cup.</span>
+              </h2>
+              <p className="body-copy mt-6 max-w-prose">
+                Der Störtebeker Opti-Cup ist eine Regatta für die Optimisten-Klasse, ausgetragen im Sommer. Damit führen wir den
+                Nachwuchs an Bedingungen heran, wie sie auf der Nordsee herrschen.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal variant="cinematic" delay={0.1}>
+            <div className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
+              <Image src="/img/wsch_nordseewoche-3.jpg" alt="Yachten unterwegs" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
       <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
         <div className="max-w-container mx-auto grid gap-14 lg:gap-20 lg:grid-cols-[0.9fr_1.2fr] lg:items-center">
@@ -96,61 +151,6 @@ export default function RegattenPage() {
                   />
                 </div>
               ))}
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
-        <div className="max-w-container mx-auto grid gap-14 lg:grid-cols-2 lg:items-center">
-          <Reveal variant="cinematic">
-            <div className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
-              <Image src="/img/wsch_nordseewoche-1.jpg" alt="Yacht der Nordseewoche vor Helgoland" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
-            </div>
-          </Reveal>
-          <Reveal variant="cinematic" delay={0.1}>
-            <div>
-              <h2 className="m-0 text-text-primary font-light" style={{ fontSize: "clamp(34px, 4.6vw, 60px)", lineHeight: 1.05, letterSpacing: "-.02em" }}>
-                Nordseewoche zu <span className="font-bold">Pfingsten.</span>
-              </h2>
-              <p className="body-copy mt-6 max-w-prose">
-                Die Nordseewoche ist eines der traditionsreichsten Hochsee-Regattaformate in der Deutschen Bucht. Crews aus
-                Deutschland, den Niederlanden, Dänemark und Skandinavien starten zu Bahnen rund um Helgoland.
-              </p>
-              <p className="body-copy mt-4 max-w-prose">
-                Der WSC Helgoland ist Mitveranstalter der Nordseewoche. Die Ausschreibung, die Klasseneinteilung und die
-                Anmeldung laufen zentral über die Nordseewoche.
-              </p>
-              <a
-                href="https://nordseewoche.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 mt-8 px-7 py-3 text-[15px] font-bold rounded-full border border-border-strong text-text-primary hover:border-text-primary hover:translate-x-1 transition-all duration-300 group"
-              >
-                <span>Zur Nordseewoche</span>
-                <span className="transition-transform duration-300 group-hover:translate-x-1">↗</span>
-              </a>
-            </div>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="bg-bg-surface px-6 md:px-14 py-20 md:py-[140px]">
-        <div className="max-w-container mx-auto grid gap-14 lg:grid-cols-2 lg:items-center">
-          <Reveal variant="cinematic">
-            <div>
-              <h2 className="m-0 text-text-primary font-light" style={{ fontSize: "clamp(34px, 4.6vw, 60px)", lineHeight: 1.05, letterSpacing: "-.02em" }}>
-                Störtebeker <span className="font-bold">Opti-Cup.</span>
-              </h2>
-              <p className="body-copy mt-6 max-w-prose">
-                Der Störtebeker Opti-Cup ist eine Regatta für die Optimisten-Klasse. Damit führen wir den Nachwuchs an
-                Bedingungen heran, wie sie auf der Nordsee herrschen.
-              </p>
-            </div>
-          </Reveal>
-          <Reveal variant="cinematic" delay={0.1}>
-            <div className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
-              <Image src="/img/wsch_nordseewoche-3.jpg" alt="Yachten unterwegs" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
             </div>
           </Reveal>
         </div>

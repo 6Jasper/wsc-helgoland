@@ -18,20 +18,20 @@ const STEPS = [
   {
     no: "03",
     title: "Antrag einreichen",
-    body: "Der unterschriebene Antrag geht an den Vorstand. Bei Jugendlichen sind die Unterschriften der gesetzlichen Vertreter notwendig.",
+    body: "Der unterschriebene Antrag geht an die Spartenleiter oder den Vorstand. Bei Jugendlichen sind die Unterschriften der gesetzlichen Vertreter notwendig.",
   },
   {
     no: "04",
     title: "Spartenversammlung entscheidet",
-    body: "Über die Aufnahme entscheidet die Mitgliederversammlung oder die zuständige Spartenversammlung (Segel oder Motorboot). Bei Zustimmung folgt die Begrüßung in der nächsten Mitgliederversammlung. Die Bearbeitung dauert in der Regel zwei bis drei Monate.",
+    body: "Über die Aufnahme entscheidet die zuständige Spartenversammlung (Segel oder Motorboot). Bei Zustimmung folgt die Begrüßung in der nächsten Mitgliederversammlung.",
   },
 ];
 
 const KATEGORIEN = [
-  { name: "Aktives Mitglied · Segeln", body: "Volle Mitgliedschaft mit Liegeplatz-Anrecht und Stimmrecht in der Segelsparte." },
-  { name: "Aktives Mitglied · Motorboot", body: "Volle Mitgliedschaft mit Liegeplatz-Anrecht und Stimmrecht in der Motorbootsparte." },
-  { name: "Jugendsparte", body: "Für Mitglieder unter 18 Jahren. Die Zustimmung der gesetzlichen Vertreter wird benötigt." },
-  { name: "Passives Mitglied", body: "Förderndes Mitglied ohne Stimmrecht in der Mitgliederversammlung. Auch juristische Personen." },
+  "Aktives Mitglied · Segeln",
+  "Aktives Mitglied · Motorboot",
+  "Jugendsparte",
+  "Passives Mitglied",
 ];
 
 export default function MitgliedschaftPage() {
@@ -52,9 +52,8 @@ export default function MitgliedschaftPage() {
                 Vom Antrag <span className="font-bold">zur Mitgliedschaft.</span>
               </h2>
               <p className="body-copy mt-6">
-                Vier Schritte, in der Regel zwei bis drei Monate. Sie brauchen zwei Bürgen aus dem Verein und unterschreiben mit
-                der Antragsstellung, dass Sie die Satzung anerkennen. Ein Aufnahmegespräch oder ein Sportbootführerschein sind
-                nicht erforderlich.
+                Sie brauchen zwei Bürgen aus dem Verein und unterschreiben mit der Antragsstellung, dass Sie die Satzung
+                anerkennen. Ein Aufnahmegespräch oder ein Sportbootführerschein sind nicht erforderlich.
               </p>
               <a
                 href="/dokumente/wsch-aufnahmeantrag.pdf"
@@ -95,11 +94,19 @@ export default function MitgliedschaftPage() {
             </div>
           </Reveal>
           <Reveal variant="cinematic" delay={0.1}>
-            <div className="mt-14 grid gap-4 md:gap-5 sm:grid-cols-2">
-              {KATEGORIEN.map((k) => (
-                <div key={k.name} className="rounded bg-bg-panel border border-border-subtle p-7 md:p-8 shadow-soft">
-                  <div className="text-text-primary text-[18px] md:text-[20px] font-semibold tracking-tightish">{k.name}</div>
-                  <p className="mt-3 text-text-body text-[14px] md:text-[15px] leading-relaxed">{k.body}</p>
+            <div className="mt-14 grid gap-3 md:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+              {KATEGORIEN.map((name, i) => (
+                <div
+                  key={name}
+                  className="relative rounded bg-bg-panel border border-border-subtle p-7 md:p-8 shadow-soft min-h-[160px] md:min-h-[180px] flex flex-col justify-between"
+                >
+                  <div className="text-accent-tide text-[11px] tracking-eyebrowWide uppercase">{String(i + 1).padStart(2, "0")}</div>
+                  <div
+                    className="text-text-primary font-light tracking-tightish"
+                    style={{ fontSize: "clamp(20px, 1.8vw, 26px)", lineHeight: 1.15, letterSpacing: "-.01em" }}
+                  >
+                    {name}
+                  </div>
                 </div>
               ))}
             </div>
@@ -115,17 +122,13 @@ export default function MitgliedschaftPage() {
                 Beitrag und <span className="font-bold">Arbeitsdienst.</span>
               </h2>
               <p className="body-copy mt-6 max-w-prose">
-                Der Jahresbeitrag wird Anfang April per SEPA-Lastschrift eingezogen. Bei der Aufnahme ist zusätzlich ein
-                Aufnahmebeitrag fällig. Die Höhe ist in der Beitrags- und Gebührenordnung geregelt und wird auf Anfrage
-                mitgeteilt.
+                Der Jahresbeitrag wird 1× jährlich per SEPA-Lastschrift eingezogen. Bei der Aufnahme aktiver Mitglieder ist
+                zusätzlich ein Aufnahmebeitrag fällig. Die Höhe ist in der Beitrags- und Gebührenordnung geregelt und wird auf
+                Anfrage mitgeteilt.
               </p>
               <p className="body-copy mt-4 max-w-prose">
                 Bootsbesitzer sind zur Teilnahme am Arbeitsdienst verpflichtet. Wer fernbleibt, kann den Dienst durch
-                freiwillige Meldung zum Wartungsdienst nachholen. Wird er nicht nachgeholt, wird ein Geldbetrag in Rechnung
-                gestellt, der von der Mitgliederversammlung festgelegt wird.
-              </p>
-              <p className="body-copy mt-4 max-w-prose">
-                Ein Austritt ist mit einer Frist von mindestens 30 Tagen zum Schluss des Geschäftsjahres möglich.
+                freiwillige Meldung zum Wartungsdienst nachholen.
               </p>
             </div>
           </Reveal>
