@@ -66,6 +66,31 @@ export default function Footer() {
               Vereinsregister Amtsgericht Pinneberg VR 591 PI · Steuernummer 18/291/72014
             </div>
           </div>
+
+          <div className="mt-6 pt-6 border-t border-border-subtle flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs text-text-dim">
+            <div>
+              Drohnenaufnahmen:{" "}
+              <a
+                href="https://falmstudios.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-text-muted hover:text-text-primary transition-colors underline-offset-4 hover:underline"
+              >
+                falmstudios.com
+              </a>
+            </div>
+            <div>
+              Webseiten-Design:{" "}
+              <a
+                href="https://zehdendigital.de"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-text-muted hover:text-text-primary transition-colors underline-offset-4 hover:underline"
+              >
+                zehdendigital.de
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
