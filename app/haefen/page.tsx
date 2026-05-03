@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
+import { ImageGallery } from "@/components/ui/ImageGallery";
 
 export const metadata = { title: "Häfen Helgolands" };
 
@@ -144,11 +145,6 @@ export default function HaefenPage() {
       <section className="bg-bg-surface px-6 md:px-14 py-20 md:py-[140px]">
         <div className="max-w-container mx-auto grid gap-12 lg:grid-cols-2 lg:items-center">
           <Reveal variant="cinematic">
-            <div className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
-              <Image src="/img/helgoland_panorama-4.jpg" alt="Düne vor Helgoland aus der Luft" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
-            </div>
-          </Reveal>
-          <Reveal variant="cinematic" delay={0.1}>
             <div>
               <h2
                 className="m-0 text-text-primary font-light"
@@ -174,6 +170,11 @@ export default function HaefenPage() {
               </ul>
             </div>
           </Reveal>
+          <Reveal variant="cinematic" delay={0.1}>
+            <div className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
+              <Image src="/img/wsch_duene.jpg" alt="Düne vor Helgoland aus der Luft" fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -192,18 +193,8 @@ export default function HaefenPage() {
           </Reveal>
 
           <Reveal variant="cinematic" delay={0.15}>
-            <div className="mt-12 grid gap-3 md:gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {GALERIE.map((g) => (
-                <div key={g.src} className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
-                  <Image
-                    src={g.src}
-                    alt={g.alt}
-                    fill
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-700 ease-soft hover:scale-[1.04]"
-                  />
-                </div>
-              ))}
+            <div className="mt-12">
+              <ImageGallery images={GALERIE} />
             </div>
           </Reveal>
         </div>

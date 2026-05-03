@@ -1,16 +1,17 @@
 import Image from "next/image";
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
+import { ImageGallery, type GalleryImage } from "@/components/ui/ImageGallery";
 
 export const metadata = { title: "Regatten und Wettfahrten" };
 
-const GALERIE = [
-  "/img/06092025_regatta-19.jpg",
-  "/img/06092025_regatta-32.jpg",
-  "/img/06092025_regatta-10.jpg",
-  "/img/06092025_regatta-15.jpg",
-  "/img/06092025_regatta-17.jpg",
-  "/img/06092025_regatta-28.jpg",
+const GALERIE: GalleryImage[] = [
+  { src: "/img/06092025_regatta-19.jpg", alt: "Boote der Helgoländer Herbstregatta auf glitzerndem Wasser" },
+  { src: "/img/06092025_regatta-32.jpg", alt: "Yacht unter vollen Segeln vor Helgoland" },
+  { src: "/img/06092025_regatta-10.jpg", alt: "Spi-Reach bei der Herbstregatta" },
+  { src: "/img/06092025_regatta-15.jpg", alt: "Regattafeld vor Helgoland" },
+  { src: "/img/06092025_regatta-17.jpg", alt: "Yacht unter Genaker" },
+  { src: "/img/06092025_regatta-28.jpg", alt: "Regattafeld bei glatter See" },
 ];
 
 export default function RegattenPage() {
@@ -79,15 +80,15 @@ export default function RegattenPage() {
       </section>
 
       <section className="bg-bg-primary px-6 md:px-14 py-20 md:py-[140px]">
-        <div className="max-w-container mx-auto grid gap-14 lg:gap-20 lg:grid-cols-[0.9fr_1.2fr] lg:items-center">
+        <div className="max-w-container mx-auto grid gap-14 lg:grid-cols-2 lg:items-center">
           <Reveal variant="cinematic">
-            <div className="relative aspect-square bg-white rounded overflow-hidden shadow-soft">
+            <div className="relative aspect-[4/3] rounded overflow-hidden shadow-soft">
               <Image
-                src="/img/herbstregatta_logo.png"
-                alt="Helgoländer Herbstregatta"
+                src="/img/wsch_helgregatta.jpg"
+                alt="Yacht unter Spinnaker bei der Helgoländer Herbstregatta vor der Langen Anna"
                 fill
-                sizes="(min-width: 1024px) 40vw, 100vw"
-                className="object-contain p-10 md:p-16"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                className="object-cover"
                 priority
               />
             </div>
@@ -139,18 +140,8 @@ export default function RegattenPage() {
           </Reveal>
 
           <Reveal variant="cinematic" delay={0.15}>
-            <div className="mt-12 grid gap-3 md:gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {GALERIE.map((src) => (
-                <div key={src} className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
-                  <Image
-                    src={src}
-                    alt=""
-                    fill
-                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
-                    className="object-cover transition-transform duration-700 ease-soft hover:scale-[1.04]"
-                  />
-                </div>
-              ))}
+            <div className="mt-12">
+              <ImageGallery images={GALERIE} />
             </div>
           </Reveal>
         </div>

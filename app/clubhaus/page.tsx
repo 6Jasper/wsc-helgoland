@@ -2,8 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { PageHero } from "@/components/ui/PageHero";
 import { Reveal } from "@/components/ui/Reveal";
+import { ImageGallery, type GalleryImage } from "@/components/ui/ImageGallery";
 
 export const metadata = { title: "Clubhaus" };
+
+const GALERIE: GalleryImage[] = [
+  { src: "/img/wsch_clubhaus3.jpg", alt: "Clubhaus mit Bootshalle aus der Luft" },
+  { src: "/img/wsch_anlagemitclubhaus2.jpg", alt: "Vereinsanlage mit Liegeplätzen" },
+  { src: "/img/wsch_clubhaus2.jpg", alt: "Clubhaus von der Hafenseite" },
+  { src: "/img/wsch_topdown.jpg", alt: "Steganlage von oben" },
+];
 
 export default function ClubhausPage() {
   return (
@@ -48,19 +56,23 @@ export default function ClubhausPage() {
       </section>
 
       <section className="bg-bg-surface px-6 md:px-14 py-20 md:py-[120px]">
-        <div className="max-w-container mx-auto grid gap-3 md:gap-4 sm:grid-cols-3">
-          <div className="relative aspect-[4/5] overflow-hidden rounded shadow-soft sm:row-span-2">
-            <Image src="/img/wsch_clubhaus3.jpg" alt="Clubhaus mit Bootshalle aus der Luft" fill sizes="(min-width: 640px) 33vw, 100vw" className="object-cover" />
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded shadow-soft sm:col-span-2">
-            <Image src="/img/wsch_anlagemitclubhaus2.jpg" alt="Vereinsanlage mit Liegeplätzen" fill sizes="(min-width: 640px) 66vw, 100vw" className="object-cover" />
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
-            <Image src="/img/wsch_clubhaus2.jpg" alt="Clubhaus von der Hafenseite" fill sizes="(min-width: 640px) 33vw, 100vw" className="object-cover" />
-          </div>
-          <div className="relative aspect-[4/3] overflow-hidden rounded shadow-soft">
-            <Image src="/img/wsch_topdown.jpg" alt="Steganlage von oben" fill sizes="(min-width: 640px) 33vw, 100vw" className="object-cover" />
-          </div>
+        <div className="max-w-container mx-auto">
+          <Reveal variant="cinematic">
+            <h2 className="m-0 text-text-primary font-light max-w-3xl" style={{ fontSize: "clamp(28px, 3.4vw, 44px)", lineHeight: 1.1, letterSpacing: "-.02em" }}>
+              Clubhaus und <span className="font-bold">Anlage.</span>
+            </h2>
+            <p className="body-copy mt-5 max-w-xl">
+              Drohnenaufnahmen vom Clubhaus, der Bootshalle und der Steganlage am Südhafen.
+            </p>
+          </Reveal>
+          <Reveal variant="cinematic" delay={0.15}>
+            <div className="mt-12">
+              <ImageGallery
+                images={GALERIE}
+                className="grid gap-3 md:gap-4 grid-cols-1 sm:grid-cols-2"
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
     </>
