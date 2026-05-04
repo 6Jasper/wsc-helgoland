@@ -9,11 +9,11 @@ export const metadata = { title: "Informationen für Gastlieger" };
 const STEPS = [
   {
     title: "Vor der Abfahrt",
-    body: "Wer im Südhafen festmachen möchte, stimmt das vor der Abfahrt mit dem Vorstand ab. Diese Vorabsprache ist Pflicht und nicht verhandelbar. Im Nordosthafen ist keine Voranmeldung nötig.",
+    body: "Wer in der Steganlage im Südhafen festmachen möchte, meldet sich bitte vorher an. Das Befahren der Steganlage erfolgt auf eigene Gefahr. Ortsunkundigen ist das Befahren wegen des unreinen Grundes (Stahlbetontrümmer) nicht zu empfehlen. Im Nordosthafen ist keine Anmeldung nötig.",
   },
   {
     title: "Anlauf und Einweisung",
-    body: "Im Hafen wird mit Schrittgeschwindigkeit gefahren. Wer in den Südhafen einläuft, wird von einem Mitglied eingewiesen, weil im Hafenbecken Trümmer eines früheren U-Boot-Bunkers liegen.",
+    body: "Im Hafen wird langsam und rücksichtsvoll gefahren. Belästigungen durch Lärm und Abgase sind zu vermeiden. Wer die Steganlage im Südhafen nach Anmeldung anläuft, wird durch ein Mitglied eingewiesen.",
   },
   {
     title: "Liegeplatz",
@@ -124,11 +124,11 @@ export default function GastliegerPage() {
           <div className="space-y-12">
             <Reveal variant="cinematic">
               <div className="rounded bg-accent-warm/10 border border-accent-warm/30 p-7 md:p-8">
-                <div className="text-accent-warm text-[11px] tracking-eyebrowWide uppercase">Wichtig: Südhafen</div>
-                <h3 className="mt-3 text-text-primary font-semibold text-[24px] md:text-[28px] tracking-tightish">Nur nach vorheriger Absprache mit dem Vorstand.</h3>
+                <div className="text-accent-warm text-[11px] tracking-eyebrowWide uppercase">Hinweis: Südhafen</div>
+                <h3 className="mt-3 text-text-primary font-semibold text-[24px] md:text-[28px] tracking-tightish">Vorab anmelden.</h3>
                 <p className="body-copy mt-4 max-w-xl">
-                  Wer in den Südhafen will, schreibt vor der Abfahrt eine kurze E-Mail. Ohne diese Vorabsprache ist ein Anlauf
-                  nicht möglich.
+                  Wer im Südhafen festmachen möchte, schreibt vor der Abfahrt eine kurze E-Mail. Bei Ankunft weist ein
+                  Mitglied ein. Das Befahren erfolgt auf eigene Gefahr.
                 </p>
                 <a
                   href="mailto:kontakt@wsc-helgoland.de"
